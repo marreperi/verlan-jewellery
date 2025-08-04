@@ -4245,9 +4245,6 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   width:100%;
   padding:11.53846px 0;
   margin-bottom:0;
-  border-bottom:1px solid;
-  border-bottom-color:{{ settings.color_drawer_border | default: "#343535" }};
-  border-bottom-color:var(--colorDrawerBorder);
 }
 
 .drawer__fixed-header{
@@ -6579,7 +6576,7 @@ html[dir=rtl] .predictive-result__layout [data-type-products]{
   display:flex;
   flex-wrap:wrap;
   justify-content:stretch;
-  margin:15px 0 20px 0
+  margin:15px 0 0px 0
 }
 
 @media only screen and (min-width:769px){
