@@ -1,4 +1,7 @@
-<infinite-scroll data-next="{{ next_page }}" data-page-size="{{ page_size }}" data-end-text="{{ end_text }}">
+<infinite-scroll
+  data-next="{{ next_page }}"
+  data-page-size="{{ page_size }}"
+  data-end-text="{{ end_text }}">
   {% if page_size > 1 %}
     <div class="loadingBox">
       <span id="loading_1" class="loadingScroll">&nbsp</span>
@@ -135,20 +138,33 @@
     -webkit-animation-delay: 1.64s;
     -moz-animation-delay: 1.64s;
   }
- 
+
   /* Pristege */
-  [class^="pagination"], [class^="Pagination"], .pagination {
+  [class^="pagination"],
+  [class^="Pagination"],
+  .pagination {
     display: none !important;
   }
- 
+
   .js .features--show-element-staggering .ProductList--grid div.ProductItem {
     visibility: visible;
   }
- 
+
   .js .product-card[reveal-on-scroll="true"] {
     opacity: 1;
   }
- 
+
+  /* Force images to be visible for infinite scroll loaded content */
+  .image-wrap img:not([role=presentation]) {
+    opacity: 1 !important;
+  }
+  .image-wrap .animate-me {
+    opacity: 1 !important;
+  }
+  .image-wrap svg {
+    opacity: 1 !important;
+  }
+
   @keyframes loading_animation {
     0% {
       transform: scale(1);
@@ -213,19 +229,19 @@
       this.scrollToTopFx.bind(this)
     );
   }
- 
-  initGrid() {
-    const gridOptions = [".ProductListWrapper", "#main-collection-product-grid", "#product-grid", ".product-list"];
-    for (let gridName of gridOptions) {
-      let grid = document.querySelector(gridName);
-      if (grid) {
-        this.gridName = gridName;
-        this.gridContainer = grid;
-        break;
-      }
-    }
-  }
- 
+   
+           initGrid() {
+           const gridOptions = [".ProductListWrapper", "#main-collection-product-grid", "#product-grid", ".product-list", ".collection-grid__wrapper .grid", ".grid--uniform"];
+           for (let gridName of gridOptions) {
+             let grid = document.querySelector(gridName);
+             if (grid) {
+               this.gridName = gridName;
+               this.gridContainer = grid;
+               break;
+             }
+           }
+         }
+   
   init() {
     const observer = new IntersectionObserver(this.revealItem.bind(this), {
       root: null,
@@ -233,7 +249,7 @@
     });
     observer.observe(this);
   }
- 
+   
   fetchNextPage(e) {
     if (!this.dataset.next) {
       console.warn("No next page URL provided.");
@@ -250,13 +266,58 @@
         const grid = t.querySelector(this.gridName);
         if (grid) {
           this.gridContainer.insertAdjacentHTML("beforeend", grid.innerHTML);
+          console.log("Successfully loaded next page products");
+          
+          // Trigger AOS animations for newly loaded content
+          if (typeof AOS !== 'undefined') {
+            AOS.refresh();
+          }
+          
+          // Update the next page URL for the next fetch
+          const nextPageUrl = this.getNextPageUrl(e);
+          if (nextPageUrl) {
+            this.dataset.next = nextPageUrl;
+            console.log("Updated next page URL to:", nextPageUrl);
+          }
         } else {
-          console.warn("No grid found in fetched page.");
+          console.warn("No grid found in fetched page. Looking for:", this.gridName);
+          // Try alternative selectors if the main one fails
+          const alternativeSelectors = [".grid--uniform", ".collection-grid__wrapper .grid", ".grid"];
+          for (let selector of alternativeSelectors) {
+            const altGrid = t.querySelector(selector);
+            if (altGrid) {
+              this.gridContainer.insertAdjacentHTML("beforeend", altGrid.innerHTML);
+              console.log("Found grid using alternative selector:", selector);
+              
+              // Trigger AOS animations for newly loaded content
+              if (typeof AOS !== 'undefined') {
+                AOS.refresh();
+              }
+              
+              // Update the next page URL for the next fetch
+              const nextPageUrl = this.getNextPageUrl(e);
+              if (nextPageUrl) {
+                this.dataset.next = nextPageUrl;
+                console.log("Updated next page URL to:", nextPageUrl);
+              }
+              break;
+            }
+          }
         }
       })
       .catch((e) => {
-        console.error("Error:", e);
+        console.error("Error fetching next page:", e);
       });
+  }
+  
+  getNextPageUrl(htmlContent) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlContent, "text/html");
+    const infiniteScrollElement = doc.querySelector("infinite-scroll");
+    if (infiniteScrollElement && infiniteScrollElement.dataset.next) {
+      return infiniteScrollElement.dataset.next;
+    }
+    return null;
   }
   revealItem(e, t) {
     const [i] = e;
@@ -274,6 +335,6 @@
     document.documentElement.scrollTop = 0;
     e.currentTarget.style.display = "none";
   }
-}
-customElements.define("infinite-scroll", InfiniteScroll);
+  }
+  customElements.define("infinite-scroll", InfiniteScroll);
 </script>
