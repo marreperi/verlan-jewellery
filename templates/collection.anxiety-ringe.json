@@ -1,0 +1,127 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": true,
+        "collection_image_enable": true,
+        "parallax": true,
+        "parallax_direction": "top"
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "settings": {}
+        },
+        "subcollections": {
+          "type": "subcollections",
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 2,
+            "rows_per_page": 7,
+            "mobile_flush_grid": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "subcollections",
+        "product_grid"
+      ],
+      "settings": {
+        "enable_sidebar": false,
+        "collapsed": false,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": false
+      }
+    },
+    "testimonials_YNrywQ": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_6CzRrf": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Ich bin total begeistert von dem schönen Ring. Er ist ein super schlichtes, hochwertiges Acessoire, das einfach nicht jeder hat! Die Kugeln lassen sich ganz leicht verschieben und können so z.B. auch beim Knibbeln helfen. Nicht zu toppen ist aber vor allem, wie der Ring versendet wird - so wunderschön verpackt!! Große Empfehlung!</p>",
+            "author": "Miriam",
+            "author_info": "12.12.23"
+          }
+        },
+        "testimonial_zbTtXg": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Sehr schöner handgefertigter Schmuck und dadurch jedes Teil einzigartig.</p>",
+            "author": "Irina R.",
+            "author_info": "13.11.23"
+          }
+        },
+        "testimonial_YnQqnq": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>sehr schöner Artikel, liebevoll verpackt...mega Kundenservice, schneller und kompetenter Kontakt...uneingeschränkt empfehlenswert !</p>",
+            "author": "Sabine a K",
+            "author_info": "06.02.24"
+          }
+        },
+        "testimonial_LppNAg": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonial_tDmmWy": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Herzlichen Dank für die schnelle und zuverlässige Abwicklung. Der Schmuck sieht nicht nur toll aus sondern wirkt auch sehr hochwertig.</p>",
+            "author": "Nicole Khan",
+            "author_info": "09.01.24"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_6CzRrf",
+        "testimonial_zbTtXg",
+        "testimonial_YnQqnq",
+        "testimonial_LppNAg",
+        "testimonial_tDmmWy"
+      ],
+      "settings": {
+        "title": "Erfahrungsberichte",
+        "align_text": "center",
+        "round_images": true,
+        "color_background": "#f9f9f9",
+        "color_text": "#1c1d1d"
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "main-collection",
+    "testimonials_YNrywQ"
+  ]
+}

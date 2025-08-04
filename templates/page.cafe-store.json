@@ -1,0 +1,208 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "1646732417395a7413": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/verlan-jewellery-handmade-ring.jpg",
+        "image_mask": "none",
+        "image2": "shopify://shop_images/Ring-handgemacht-silber-schmuck-bali-manufaktur-verlan-jewellery_f67d283c-b0fa-429f-b7d9-d52271b72760.jpg",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "#WHOMADEMYJEWELLERY",
+        "text": "<p>Die <a href=\"https://www.verlan-jewellery.com\" title=\"VERLAN Jewellery | Fair hergestellter Schmuck aus Bali | Entdecke unsere Ringe, Ketten & Ohrringe aus Sterlingsilber \">VERLAN Jewellery</a> Manufaktur liegt im Herzen Balis und wird von einer lokalen Familie betreut. Uns liegt die hohe Qualität jedes einzelnen <a href=\"https://verlan-jewellery.com/collections/verlan-jewellery-alle-schmuckstuecke\" title=\"Entdecke unseren handgefertigten Schmuck aus Bali | 925 Silber | Fair und umweltschonend handgemacht\">Schmuckstückes</a> sowie eine faire Zusammenarbeit mit unseren ProduzentInnen sehr am Herzen.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "1646732878db94bf07": {
+      "type": "text-columns",
+      "blocks": {
+        "16467328781f96024a-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/manufaktur-verlan-jewellery-handmade.jpg",
+            "image_mask": "none",
+            "image_width": 310,
+            "title": "Was bedeutet Fair Fashion?",
+            "text": "<p>Mode ist dann fair, wenn sie gerecht hergestellt wird. <br/>Also Menschen, die sie herstellen, grundlegende Rechte besitzen, <br/>selbstbestimmt handeln können, gesundheitlich geschützt werden und einen angemessenen Lohn verdienen.<br/>All diese Punkte stehen für uns an höchster Stelle.<br/>Neben einer umweltfreundlichen Produktion legen wir hohen Wert auf einen respektvollen Umgang.<br/>Wir zahlen einen marktunüblich hohen Lohn an alle unsere balinesischen MitarbeiterInnen, respektieren Feiertage und übernehmen ab diesem Jahr die Krankenkassenversicherungskosten unserer PartnerInnen auf der Insel.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "16467328781f96024a-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/handmade-with-love-verlan-jewellery-manufaktur.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Umweltschonende Produktion",
+            "text": "<p>Für alle unsere Schmuckstücke verwenden wir <strong>Sterling Silber</strong>, eine <strong>22 Karat Vergoldung</strong> und unterschiedliche <strong>Halbedelsteine</strong>.<br/></p><p>Das Silber, welches für unseren Schmuck verwendet wird, beziehen wir von <a href=\"https://www.antam.com/en/csr/human-rights-i\" target=\"_blank\" title=\"ANTAM | Recycltes Silber für unsere handgefertigten Schmuckstücke aus Bali | Boho Schmuck im Bali Look\">ANTAM</a>.<br/>Zusätzlich wird für den Großteil unserer Schmuckstücke <strong>recyceltes Silber</strong> verwendet.</p><p>Auch beim Versand achten wir auf unsere Umwelt: Wir <strong>vermeiden Plastik</strong>, indem wir Kartons, Flyer & Visitenkarten aus recyceltem Papier verwenden. Versandkartons werden wiederverwendet und VERLAN Jewellery ist Teil des Dualsystems <a href=\"https://www.gruener-punkt.de/de/\" target=\"_blank\" title=\"VERLAN Jewellery beteiligt sich am Dualen System | Geüner Punkt | Plastikfreier Versand\">Grüner Punkt</a>.<br/>♡</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16467328781f96024a-0",
+        "16467328781f96024a-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    },
+    "1647143304a4b69976": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/200301__Verstellbare_Groesse_291.jpg",
+        "image_mask": "none",
+        "image2": "shopify://shop_images/200301__Verstellbare_Groesse_281.jpg",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "",
+        "text": "<p>Viele unserer Ringe bieten wir dir auch in einer verstellbaren Größe an.<br/>Hier bekommst du einen Eindruck von einem verstellbaren Ring.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "1647144505bc3ef042": {
+      "type": "slideshow",
+      "blocks": {
+        "164714450562b10ef9-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/verlan_cafe_hamburg_karoviertel.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "164714450562b10ef9-0"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "164714471225a6188b": {
+      "type": "rich-text",
+      "blocks": {
+        "16471447120b1bbec5-0": {
+          "type": "heading",
+          "settings": {
+            "title": "VERLAN Café"
+          }
+        },
+        "16471447120b1bbec5-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Besuche uns in unserem VERLAN Café in der <a href=\"https://www.google.de/maps/place/VERLAN+Caf%C3%A9/@53.5584063,9.9702904,20z/data=!4m5!3m4!1s0x47b18f6af0146bcf:0x8058741904a33b85!8m2!3d53.5583644!4d9.9704724?hl=de-de\" target=\"_blank\" title=\"VERLAN Jewellery Café und Store - Hamburg\">Marktstraße 102</a> im Karoviertel / Hamburg.<br/>Hier servieren wir dir neben leckerem Kaffee, veganen Leckereien, unsere gesamte Kollektion, Einzelstücke & handgefertigte Accessoires.<br/><br/><a href=\"https://maps.app.goo.gl/r48bpcpFzMPCEK9D8\" target=\"_blank\" title=\"https://maps.app.goo.gl/r48bpcpFzMPCEK9D8\">Hier entlang</a> zu unseren aktuellen Öffnungszeiten.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "16471447120b1bbec5-0",
+        "16471447120b1bbec5-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1647144721856ce1b7": {
+      "type": "contact-form",
+      "settings": {
+        "title": "SCHREIB UNS",
+        "text": "<p>Du hast eine Frage zu unserem Café-Store? Wir freuen uns von dir zu hören!</p>",
+        "show_phone": false,
+        "narrow_column": true
+      }
+    },
+    "79a43110-139a-4f75-9b9a-1bd530acffb7": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Verlan_cafe_hamburg_shopping.jpg",
+        "image_mask": "none",
+        "image2": "shopify://shop_images/verlan_cafe_schmuck.jpg",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1646732417395a7413",
+    "1646732878db94bf07",
+    "1647143304a4b69976",
+    "1647144505bc3ef042",
+    "164714471225a6188b",
+    "1647144721856ce1b7",
+    "79a43110-139a-4f75-9b9a-1bd530acffb7"
+  ]
+}

@@ -1,0 +1,324 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1647163691437955dc": {
+      "type": "background-image-text",
+      "settings": {
+        "subtitle": "",
+        "title": "",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "image": "shopify://shop_images/lovina_ringe_verlan_jewellery_black_friday_rabatt.jpg",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": true,
+        "parallax_direction": "top",
+        "lazyload_images": true
+      }
+    },
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": false,
+        "collection_image_enable": true,
+        "parallax": true,
+        "parallax_direction": "top"
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "settings": {}
+        },
+        "subcollections": {
+          "type": "subcollections",
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 4,
+            "rows_per_page": 7,
+            "mobile_flush_grid": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "subcollections",
+        "product_grid"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": false
+      }
+    },
+    "164716434708e1e0fb": {
+      "type": "rich-text",
+      "blocks": {
+        "16471643473b22e543-0": {
+          "type": "heading",
+          "settings": {
+            "title": ""
+          }
+        },
+        "16471643473b22e543-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><strong> Bei einem Einkauf ab 99€ schenken wir dir einen LOVINA Ring dazu.<br/>Lege hierfür einfach den passenden LOVINA Ring mit in deinen Warenkorb.</strong><br/>(LOVINA Ringe werden nicht bei Adventskalendern und Schmuck-Sets mit versendet. )</p>"
+          }
+        }
+      },
+      "block_order": [
+        "16471643473b22e543-0",
+        "16471643473b22e543-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1647163828154c6277": {
+      "type": "featured-product",
+      "blocks": {
+        "16471638283c35d245-0": {
+          "type": "price",
+          "settings": {}
+        },
+        "16471638283c35d245-1": {
+          "type": "description",
+          "settings": {
+            "is_tab": true
+          }
+        },
+        "16471638283c35d245-2": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "dropdown",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "16471638283c35d245-3": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true
+          }
+        }
+      },
+      "block_order": [
+        "16471638283c35d245-0",
+        "16471638283c35d245-1",
+        "16471638283c35d245-2",
+        "16471638283c35d245-3"
+      ],
+      "settings": {
+        "featured_product": "lovina-ring-gold",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": false,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "164716384654e7ea32": {
+      "type": "featured-product",
+      "blocks": {
+        "164716384661816cb7-0": {
+          "type": "price",
+          "settings": {}
+        },
+        "164716384661816cb7-1": {
+          "type": "description",
+          "settings": {
+            "is_tab": true
+          }
+        },
+        "164716384661816cb7-2": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "dropdown",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "164716384661816cb7-3": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true
+          }
+        }
+      },
+      "block_order": [
+        "164716384661816cb7-0",
+        "164716384661816cb7-1",
+        "164716384661816cb7-2",
+        "164716384661816cb7-3"
+      ],
+      "settings": {
+        "featured_product": "lovina-ring-silber",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "right",
+        "image_size": "medium",
+        "product_zoom_enable": false,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "16471639914cd58a16": {
+      "type": "logo-list",
+      "blocks": {
+        "164716399152412b02-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/nachhaltig_fair_hergestellter_schmuck_aus_recyceltem_silber_verlan_jewellery_hande_icon_864ee858-6eed-4bcb-89c2-7c4157c3adb1.png",
+            "link": ""
+          }
+        },
+        "164716399152412b02-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/nachhaltig_fair_hergestellter_schmuck_aus_recyceltem_silber_verlan_jewellery_blatter_icon_d897da7b-c66f-4ac2-9a5d-8579b2e8b578.png",
+            "link": ""
+          }
+        },
+        "164716399152412b02-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/plastikfreier_versand_nachhaltig_fair_hergestellter_schmuck_aus_recyceltem_silber_verlan_jewellery_blatter_icon_a3d977e4-cb1f-4c4b-8f8a-2db9b2a7124a.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "164716399152412b02-0",
+        "164716399152412b02-1",
+        "164716399152412b02-2"
+      ],
+      "settings": {
+        "title": "",
+        "logo_opacity": 76,
+        "divider": false
+      }
+    },
+    "1647179738ce2636b2": {
+      "type": "testimonials",
+      "blocks": {
+        "1647179738b4362638-0": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Sehr schöner und hochwertiger Schmuck! Besonders die Philosophie von VERLAN hat mich überzeugt.  🌸</p>",
+            "author": "Liza Happe",
+            "author_info": ""
+          }
+        },
+        "1647179738b4362638-3": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Schöne Kette, liebevolle Verpackung und schneller Versand. Nicht meine letzte Bestellung!!</p>",
+            "author": "Andrea Baumgart",
+            "author_info": ""
+          }
+        },
+        "1647179738b4362638-4": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Sehr liebevoll gefertigte Stücke, die allesamt schon Lieblingsstücke geworden sind. :)</p>",
+            "author": "Katharina",
+            "author_info": ""
+          }
+        },
+        "e4b0199e-527e-4bcf-9440-d1f4bf794ad8": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Die Ohrringe sind in Live einfach nochmal viel schöner! Super hochwertig verarbeitet! & dazu noch ein schneller Versand!</p>",
+            "author": "Maike Grzybeck",
+            "author_info": ""
+          }
+        },
+        "92774f82-3724-4c7e-9c34-2ed4783750ee": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Die Kette sieht wahnsinnig schön aus und hat eine perfekte Länge, die <br/>man auch noch verstellen kann. Mit dem dazugehörigen Ring ein super <br/>schönes Set! :) Sicher nicht meine letzte Bestellung.</p>",
+            "author": "Ann-Kathrin Knoll",
+            "author_info": ""
+          }
+        },
+        "4b502fde-1df7-4570-9d61-48f5a4601919": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Wunderschöner Ring, den ich seit einigen Wochen fast täglich trage :) <br/>Auch die Verpackung war super schön und mit ganz viel Liebe gemacht. <br/>Danke!</p>",
+            "author": "Lena",
+            "author_info": ""
+          }
+        }
+      },
+      "block_order": [
+        "1647179738b4362638-0",
+        "1647179738b4362638-3",
+        "1647179738b4362638-4",
+        "e4b0199e-527e-4bcf-9440-d1f4bf794ad8",
+        "92774f82-3724-4c7e-9c34-2ed4783750ee",
+        "4b502fde-1df7-4570-9d61-48f5a4601919"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Testimonials",
+        "align_text": "center",
+        "round_images": true,
+        "color_background": "#f9f9f9",
+        "color_text": "#1c1d1d"
+      }
+    }
+  },
+  "order": [
+    "1647163691437955dc",
+    "collection-header",
+    "main-collection",
+    "164716434708e1e0fb",
+    "1647163828154c6277",
+    "164716384654e7ea32",
+    "16471639914cd58a16",
+    "1647179738ce2636b2"
+  ]
+}

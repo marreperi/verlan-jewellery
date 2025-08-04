@@ -1,0 +1,53 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "product.ketten-ohne-anhaenger-abne.json",
+  "context": {
+    "market": "de"
+  },
+  "sections": {
+    "main": {
+      "settings": {},
+      "blocks": {
+        "tab_KTLNF": {
+          "type": "tab",
+          "disabled": false,
+          "settings": {
+            "title": "Ketten Layering Tipps",
+            "content": "<p>Du möchtest mehrere Ketten layern und die Längen flexibel einstellen?<br/>Schau dir <a href=\"https://www.instagram.com/reel/CUt4p6WFYQO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\" target=\"_blank\" title=\"https://www.instagram.com/reel/CUt4p6WFYQO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==\">hier unseren Trick</a> dazu an.</p>",
+            "page": ""
+          }
+        },
+        "tab_nFUe6L": {
+          "settings": {
+            "content": "<p><strong>Wie pflege ich mein Schmuckstück richtig?</strong>In unserem Blogbeitrag zur <a href=\"/blogs/verlan-jewellery-bali-blog/wie-pflege-ich-mein-schmuckstuck\" target=\"_blank\" title=\"Wie pflege ich mein Schmuckstück?\">Schmuck Pflege</a> erhältst du alle wichtigen Informationen von uns.<em>♡</em></p>"
+          }
+        },
+        "judgeme_preview_badge_product_page_bf4ed826": {
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "price",
+        "judgeme_preview_badge_product_page_bf4ed826",
+        "separator",
+        "variant_picker",
+        "buy_buttons",
+        "description",
+        "tab_KTLNF",
+        "tab_nFUe6L",
+        "tab",
+        "contact",
+        "4295efae-1bc0-4dce-bdb3-92ced01e4df8"
+      ]
+    }
+  }
+}

@@ -1,0 +1,193 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": true,
+        "collection_image_enable": true,
+        "parallax": true,
+        "parallax_direction": "top"
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "settings": {}
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "disabled": true,
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 4,
+            "rows_per_page": 7,
+            "mobile_flush_grid": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "product_grid"
+      ],
+      "settings": {
+        "enable_sidebar": false,
+        "collapsed": false,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": false
+      }
+    },
+    "a7275be4-0b4a-43b6-8f13-f141b8e17718": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--18508020908300__a7275be4-0b4a-43b6-8f13-f141b8e17718-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/goldene_doppelkreis_kette_karma_necklace-2.jpg",
+            "link": "",
+            "width": "33%",
+            "alignment": "center"
+          }
+        },
+        "template--18508020908300__a7275be4-0b4a-43b6-8f13-f141b8e17718-liquid-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Verschenke etwas Handgemachtes zu Weihnachten</h2><p>Dieses Jahr versteckt sich ein Stück Bali unterm Weihnachtsbaum. ✨ <br />Wir haben unsere Umtauschfrist bis zum 06.01.2024 verlängert. </p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--18508020908300__a7275be4-0b4a-43b6-8f13-f141b8e17718-image-1",
+        "template--18508020908300__a7275be4-0b4a-43b6-8f13-f141b8e17718-liquid-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    },
+    "52c851d1-1763-4955-ab53-605190cbd3d9": {
+      "type": "countdown",
+      "blocks": {
+        "template--18508020908300__52c851d1-1763-4955-ab53-605190cbd3d9-content-1": {
+          "type": "content",
+          "settings": {
+            "heading": "Weihnachten",
+            "heading_size": "h2",
+            "text": "",
+            "content_alignment": "center"
+          }
+        },
+        "template--18508020908300__52c851d1-1763-4955-ab53-605190cbd3d9-timer-1": {
+          "type": "timer",
+          "settings": {
+            "year": "2023",
+            "month": "12",
+            "day": "24",
+            "hour": "01",
+            "minute": "00",
+            "hide_timer": true,
+            "text": ""
+          }
+        },
+        "template--18508020908300__52c851d1-1763-4955-ab53-605190cbd3d9-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_link": "",
+            "button": "",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--18508020908300__52c851d1-1763-4955-ab53-605190cbd3d9-content-1",
+        "template--18508020908300__52c851d1-1763-4955-ab53-605190cbd3d9-timer-1",
+        "template--18508020908300__52c851d1-1763-4955-ab53-605190cbd3d9-button-1"
+      ],
+      "settings": {
+        "layout": "banner",
+        "full_width": false,
+        "text_color": "#5c5c5c",
+        "background_color": "#f3f3f3",
+        "overlay_color": "#000",
+        "overlay_opacity": 0,
+        "lazyload_images": true
+      }
+    },
+    "d3d6d195-08d4-4a85-9285-f604e93527d8": {
+      "type": "text-columns",
+      "blocks": {
+        "template--18508020908300__d3d6d195-08d4-4a85-9285-f604e93527d8-text_block-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DSCF2300.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Ohrringe",
+            "text": "<p>Wie wäre es mit einem handgemachten Paar Ohrringen unterm Weihnachtsbaum?</p>",
+            "button_label": "Alle Ohrringe",
+            "button_link": "shopify://collections/ohrringe"
+          }
+        },
+        "template--18508020908300__d3d6d195-08d4-4a85-9285-f604e93527d8-text_block-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/verlan_gutschein_last_minute_geschenk_e916815b-5457-465a-a7d3-9f0b66550171.png",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "GUTSCHEIN",
+            "text": "<p>Du möchtest die beschenkte Person selbst wählen lassen?<br/>Dann ist unser Gutschein das perfekte Geschenk!</p>",
+            "button_label": "VERLAN GUTSCHEIN",
+            "button_link": "shopify://products/gutschein"
+          }
+        },
+        "template--18508020908300__d3d6d195-08d4-4a85-9285-f604e93527d8-text_block-3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DSCF2316.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "KETTEN",
+            "text": "<p>Überrasche einen Lieblingsmenschen mit einer besonderen Kette zu Weihnachten.</p>",
+            "button_label": "KETTEN ENTDECKEN",
+            "button_link": "shopify://collections/ketten"
+          }
+        }
+      },
+      "block_order": [
+        "template--18508020908300__d3d6d195-08d4-4a85-9285-f604e93527d8-text_block-1",
+        "template--18508020908300__d3d6d195-08d4-4a85-9285-f604e93527d8-text_block-2",
+        "template--18508020908300__d3d6d195-08d4-4a85-9285-f604e93527d8-text_block-3"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "main-collection",
+    "a7275be4-0b4a-43b6-8f13-f141b8e17718",
+    "52c851d1-1763-4955-ab53-605190cbd3d9",
+    "d3d6d195-08d4-4a85-9285-f604e93527d8"
+  ]
+}

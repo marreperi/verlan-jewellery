@@ -1,0 +1,123 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "1646732417395a7413": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/verlan-jewellery-handmade-ring.jpg",
+        "image2": "shopify://shop_images/Ring-handgemacht-silber-schmuck-bali-manufaktur-verlan-jewellery_f67d283c-b0fa-429f-b7d9-d52271b72760.jpg",
+        "subtitle": "",
+        "title": "#WHOMADEMYJEWELLERY",
+        "text": "<p>Die <a href=\"https://www.verlan-jewellery.com\" title=\"VERLAN Jewellery | Fair hergestellter Schmuck aus Bali | Entdecke unsere Ringe, Ketten & Ohrringe aus Sterlingsilber \">VERLAN Jewellery</a> Manufaktur liegt im Herzen Balis und wird von einer lokalen Familie betreut. Uns liegt die hohe Qualität jedes einzelnen <a href=\"https://verlan-jewellery.com/collections/verlan-jewellery-alle-schmuckstuecke\" title=\"Entdecke unseren handgefertigten Schmuck aus Bali | 925 Silber | Fair und umweltschonend handgemacht\">Schmuckstückes</a> sowie eine faire Zusammenarbeit mit unseren ProduzentInnen sehr am Herzen.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "1646732878db94bf07": {
+      "type": "text-columns",
+      "disabled": true,
+      "blocks": {
+        "16467328781f96024a-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/manufaktur-verlan-jewellery-handmade.jpg",
+            "image_width": 310,
+            "title": "Was bedeutet Fair Fashion?",
+            "text": "<p>Mode ist dann fair, wenn sie gerecht hergestellt wird. <br/>Also Menschen, die sie herstellen, grundlegende Rechte besitzen, <br/>selbstbestimmt handeln können, gesundheitlich geschützt werden und einen angemessenen Lohn verdienen.<br/>All diese Punkte stehen für uns an höchster Stelle.<br/>Neben einer umweltfreundlichen Produktion legen wir hohen Wert auf einen respektvollen Umgang.<br/>Wir zahlen einen marktunüblich hohen Lohn an alle unsere balinesischen MitarbeiterInnen, respektieren Feiertage und übernehmen ab diesem Jahr die Krankenkassenversicherungskosten unserer PartnerInnen auf der Insel.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "16467328781f96024a-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/handmade-with-love-verlan-jewellery-manufaktur.jpg",
+            "image_width": 650,
+            "title": "Umweltschonende Produktion",
+            "text": "<p>Für alle unsere Schmuckstücke verwenden wir <strong>Sterling Silber</strong>, eine <strong>22 Karat Vergoldung</strong> und unterschiedliche <strong>Halbedelsteine</strong>.<br/></p><p>Das Silber, welches für unseren Schmuck verwendet wird, beziehen wir von <a href=\"https://www.antam.com/en/csr/human-rights-i\" target=\"_blank\" title=\"ANTAM | Recycltes Silber für unsere handgefertigten Schmuckstücke aus Bali | Boho Schmuck im Bali Look\">ANTAM</a>.<br/>Zusätzlich wird für den Großteil unserer Schmuckstücke <strong>recyceltes Silber</strong> verwendet.</p><p>Auch beim Versand achten wir auf unsere Umwelt: Wir <strong>vermeiden Plastik</strong>, indem wir Kartons, Flyer & Visitenkarten aus recyceltem Papier verwenden. Versandkartons werden wiederverwendet und VERLAN Jewellery ist Teil des Dualsystems <a href=\"https://www.gruener-punkt.de/de/\" target=\"_blank\" title=\"VERLAN Jewellery beteiligt sich am Dualen System | Geüner Punkt | Plastikfreier Versand\">Grüner Punkt</a>.<br/>♡</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16467328781f96024a-0",
+        "16467328781f96024a-2"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    },
+    "164714401690d2ec3a": {
+      "type": "background-image-text",
+      "settings": {
+        "subtitle": "",
+        "title": "",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "image": "shopify://shop_images/ueber_uns_verlan_jewellery_handmgeachtr_schmuck_aus_bali_fair_fashion_b4d83d6a-f42a-4ba2-a09d-661f4962fedb.jpg",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": false
+      }
+    },
+    "1647144078c8dbcf97": {
+      "type": "rich-text",
+      "blocks": {
+        "16471440788c6b76de-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Alles begann, als..."
+          }
+        },
+        "16471440788c6b76de-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p> ich 2015 zum ersten Mal aus dem Flieger stieg und es hieß:<br/>Selamat Datang!<br/>Herzlich willkommen auf Bali!<br/>Die tropischen Temperaturen, die warmherzigen Menschen, das köstliche Essen – den Bali Vibe spürt man sofort! Das Gefühl und die Erfahrungen, die ich auf Bali sammelte, wollte ich mit anderen Menschen teilen.<br/>Ich bin es gewohnt, dass (bei aller Liebe) die Sonne in Hamburg eher selten scheint. Daher die Frage: Wie kann ich ein Stückchen Bali nach Hamburg holen? <br/>Diese Frage gepaart mit meiner Liebe zu besonderen Schmuckstücken ergab <a href=\"https://www.verlan-jewellery.com/\">VERLAN Jewellery</a>. <br/>Auf der Insel habe ich den Kontakt zu einer Manufaktur aufgebaut, die im Herzen Balis ihrem Silberschmied Handwerk in dritter Generation nachkommt. <br/>Gemeinsam entwickeln wir seit 2019 Kollektionen, die von balinesischen Formen und Traditionen inspiriert werden.<br/>Ich freue mich so großartige PartnerInnen auf der Insel gefunden zu haben, die ihr Handwerk mit viel Liebe betreiben und hoffe, meine Leidenschaft mit Euch teilen zu können!<br/>Hinter <a href=\"https://www.verlan-jewellery.com\">VERLAN Jewellery</a> stecke ich: Sandra (Wahlhamburgerin & Van-Liebhaberin) und ein kleines Team an fantastischen Menschen, ohne die alles nur halb so viel Spaß machen würde.<br/>Ein riesiges Dankeschön geht an Nadine, ohne die es nie zum Label, dem Onlineshop oder einer halbwegs korrekten Grammatik gekommen wäre.<br/>♥</p>"
+          }
+        }
+      },
+      "block_order": [
+        "16471440788c6b76de-0",
+        "16471440788c6b76de-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1646732417395a7413",
+    "1646732878db94bf07",
+    "164714401690d2ec3a",
+    "1647144078c8dbcf97"
+  ]
+}

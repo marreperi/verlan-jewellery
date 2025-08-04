@@ -1,0 +1,73 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "list-collections-template",
+      "blocks": {
+        "8b6e7f47-ff1f-4c55-a75c-9a564ea6f934": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "8b6e7f47-ff1f-4c55-a75c-9a564ea6f934"
+      ],
+      "settings": {
+        "title_enable": false,
+        "display_type": "all",
+        "sort": "alphabetical",
+        "grid": "4"
+      }
+    },
+    "logo-list": {
+      "type": "logo-list",
+      "blocks": {
+        "logo1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/nachhaltig_fair_hergestellter_schmuck_aus_recyceltem_silber_verlan_jewellery_hande_icon_864ee858-6eed-4bcb-89c2-7c4157c3adb1.png",
+            "link": ""
+          }
+        },
+        "logo2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/nachhaltig_hergestellter_schmuck_aus_recyceltem_silber_verlan_jewellery.png",
+            "link": ""
+          }
+        },
+        "logo3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/plastikfreier_versand_nachhaltig_fair_hergestellter_schmuck_aus_recyceltem_silber_verlan_jewellery_blatter_icon_a3d977e4-cb1f-4c4b-8f8a-2db9b2a7124a.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo1",
+        "logo2",
+        "logo3"
+      ],
+      "settings": {
+        "title": "",
+        "logo_opacity": 76,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "logo-list"
+  ]
+}

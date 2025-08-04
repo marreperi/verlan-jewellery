@@ -1,0 +1,140 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "t:sections.header-group.name",
+  "sections": {
+    "countdown_XB7Pjd": {
+      "type": "countdown",
+      "blocks": {
+        "content_LY6mQT": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "heading_size": "h2",
+            "text": "<p>10% Rabatt auf unsere gesamte Kollektion mit dem Code: <strong>EASTERPRESENT</strong></p>",
+            "content_alignment": "left"
+          }
+        },
+        "timer_DPbgmM": {
+          "type": "timer",
+          "disabled": true,
+          "settings": {
+            "year": "2025",
+            "month": "04",
+            "day": "21",
+            "hour": "23",
+            "minute": "00",
+            "hide_timer": true,
+            "text": ""
+          }
+        },
+        "button_aV8AfD": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_link": "",
+            "button": "Shop Collection",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "content_LY6mQT",
+        "timer_DPbgmM",
+        "button_aV8AfD"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "banner",
+        "full_width": true,
+        "text_color": "#ffffff",
+        "background_color": "#e7beba",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "lazyload_images": true
+      }
+    },
+    "announcement": {
+      "type": "announcement",
+      "blocks": {
+        "announcement-1": {
+          "type": "announcement",
+          "settings": {
+            "text": "BEI EINEM EINKAUF AB 99€ SCHENKEN WIR DIR EINEN LOVINA RING ZU DEINER BESTELLUNG (KLICK HIER)",
+            "link_text": "",
+            "link": "shopify://collections/lovina-ringe-aktion"
+          }
+        }
+      },
+      "block_order": [
+        "announcement-1"
+      ],
+      "settings": {
+        "announcement_compact": true
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "1524770014057": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Verlan_Logo_Circle_white_98729de9-4205-4c6d-b00a-283bdb6687d6.png",
+            "desktop_logo_width": 100,
+            "mobile_logo_width": 60
+          }
+        },
+        "1524770296206": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Hassle-free returns",
+            "link_text": "30-day postage paid returns",
+            "link": ""
+          }
+        },
+        "d9fc6f2a-4968-4824-a715-650efa49bdec": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Bei einem Einkauf ab 99€ schenken wir dir einen passenden LOVINA Ring zu deiner Bestellung (klick hier)",
+            "link_text": "",
+            "link": "shopify://collections/lovina-ringe-aktion"
+          }
+        }
+      },
+      "block_order": [
+        "1524770014057",
+        "1524770296206",
+        "d9fc6f2a-4968-4824-a715-650efa49bdec"
+      ],
+      "settings": {
+        "main_menu_link_list": "main-menu",
+        "mega_menu_images": true,
+        "main_menu_alignment": "center-split",
+        "header_style": "sticky",
+        "sticky_index": false,
+        "sticky_collection": false,
+        "toolbar_menu": "",
+        "toolbar_social": false,
+        "show_locale_selector": true,
+        "show_currency_selector": false,
+        "show_currency_flags": false
+      }
+    }
+  },
+  "order": [
+    "countdown_XB7Pjd",
+    "announcement",
+    "header"
+  ]
+}

@@ -1,0 +1,250 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": true,
+        "collection_image_enable": true,
+        "parallax": true,
+        "parallax_direction": "top"
+      }
+    },
+    "rich_text_eGxFdm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cLEeie": {
+          "type": "heading",
+          "settings": {
+            "title": ""
+          }
+        },
+        "text_dVhniW": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Trage deine eigenen Initialen oder die eines anderen Lieblingsmenschen ganz nah bei dir!<br/>Wähle aus dem ganzen Alphabet die wichtigsten Buchstaben für dich aus und trage sie im Layerlook.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cLEeie",
+        "text_dVhniW"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "disabled": true,
+          "settings": {}
+        },
+        "subcollections": {
+          "type": "subcollections",
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 4,
+            "rows_per_page": 7,
+            "mobile_flush_grid": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "subcollections",
+        "product_grid"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": false,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": false
+      }
+    },
+    "164718178854faeb08": {
+      "type": "featured-product",
+      "blocks": {
+        "1647181788df9267b5-0": {
+          "type": "price",
+          "settings": {}
+        },
+        "1647181788df9267b5-1": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "1647181788df9267b5-2": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "dropdown",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "1647181788df9267b5-3": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": false
+          }
+        }
+      },
+      "block_order": [
+        "1647181788df9267b5-0",
+        "1647181788df9267b5-1",
+        "1647181788df9267b5-2",
+        "1647181788df9267b5-3"
+      ],
+      "settings": {
+        "featured_product": "buchstaben-anhaenger-initialen-kette-gold",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": false,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "featured_product_HAWKAG": {
+      "type": "featured-product",
+      "blocks": {
+        "price_KgVpaG": {
+          "type": "price",
+          "settings": {}
+        },
+        "description_c4pRgg": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "variant_picker_cYD6xP": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "dropdown",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "buy_buttons_f4Jz6p": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true
+          }
+        }
+      },
+      "block_order": [
+        "price_KgVpaG",
+        "description_c4pRgg",
+        "variant_picker_cYD6xP",
+        "buy_buttons_f4Jz6p"
+      ],
+      "settings": {
+        "featured_product": "buchstaben-anhaenger-kette-silber",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "right",
+        "image_size": "medium",
+        "product_zoom_enable": false,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "16471820097362b6c6": {
+      "type": "logo-list",
+      "blocks": {
+        "1647182009b1fea5e0-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/nachhaltig_fair_hergestellter_schmuck_aus_recyceltem_silber_verlan_jewellery_hande_icon_864ee858-6eed-4bcb-89c2-7c4157c3adb1.png",
+            "link": ""
+          }
+        },
+        "1647182009b1fea5e0-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/nachhaltig_hergestellter_schmuck_aus_recyceltem_silber_verlan_jewellery.png",
+            "link": ""
+          }
+        },
+        "1647182009b1fea5e0-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/plastikfreier_versand_nachhaltig_fair_hergestellter_schmuck_aus_recyceltem_silber_verlan_jewellery_blatter_icon_a3d977e4-cb1f-4c4b-8f8a-2db9b2a7124a.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1647182009b1fea5e0-0",
+        "1647182009b1fea5e0-1",
+        "1647182009b1fea5e0-2"
+      ],
+      "settings": {
+        "title": "",
+        "logo_opacity": 70,
+        "divider": false
+      }
+    },
+    "background_image_text_YJyygY": {
+      "type": "background-image-text",
+      "settings": {
+        "subtitle": "",
+        "title": "",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "image": "shopify://shop_images/Banner.jpg",
+        "layout": "left",
+        "height": 450,
+        "framed": false,
+        "parallax": true,
+        "parallax_direction": "top",
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "rich_text_eGxFdm",
+    "main-collection",
+    "164718178854faeb08",
+    "featured_product_HAWKAG",
+    "16471820097362b6c6",
+    "background_image_text_YJyygY"
+  ]
+}

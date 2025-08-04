@@ -1,0 +1,148 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "article-template",
+      "disabled": true,
+      "settings": {
+        "image_hero": true,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "social_sharing_blog": false
+      }
+    },
+    "165286968616720d7d": {
+      "type": "rich-text",
+      "blocks": {
+        "1652869686f8c0fc79-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Wir verraten euch die besten Restaurants in Canggu und Umgebung<strong> fürs Frühstück, Mittag- & Abendessen</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "1652869686f8c0fc79-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1652869418c7ed20b6": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/mason_restaurant_bali_canggu_verlan_beste_restaurants.jpg",
+        "subtitle": "",
+        "title": "MASON",
+        "text": "<p>Moderne, australische Küche mit den besten biologischen Zutaten kreiert hier für euch Fine Dining. <br/><br/>In der offenen Küche werden mit zeitlosen Kochmethoden die leckersten Speisen zubereitet, die Canggu zu bieten hat.<br/><strong>Unser Tip</strong>: Der Pulled Beef Burger & Green Salad</p>",
+        "button_label": "MASON",
+        "button_link": "https://masonbali.com/",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "blog-posts": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "title": "You may also like",
+        "blog": "",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": true,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    },
+    "1652870854c82112bc": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/zali-restaurant-bali-canggu-best-restaurants-canggu-verlan-jewellery.jpg",
+        "subtitle": "",
+        "title": "ZALI",
+        "text": "<p>Wenn wir jeden Abend das selbe essen müssten... Es wäre bei Zali!<br/><br/>Libanesische Köstlichkeiten, die frisch zubereitet werden und von denen man nicht genug bekommt.<br/><strong><br/>Unser Tipp</strong>: Das Baba Ghanoush</p>",
+        "button_label": "ZALI",
+        "button_link": "https://www.instagram.com/zalifrombeirut/?utm_medium=copy_link&hl=de",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "1652871375dfda5f0b": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/shady_shack_bali_canggu_restaurant_breakfast_verlan.jpg",
+        "image2": "shopify://shop_images/shady_shack_bali_canggu_best_breakfast_verlan_jewellery.jpg",
+        "subtitle": "",
+        "title": "The Shady Shack",
+        "text": "<p>Zu unserer Liste mit den besten Restaurants in Canggu gehört auf jeden Fall das Shady Shack.<br/><br/>Eine kleine Frühstücksoase mit leckeren vegetarischen und veganen Gerichten. <br/><strong>Unser Tipp</strong>: Die frisch gepressten Juices</p>",
+        "button_label": "THE SHADY SHACK",
+        "button_link": "https://www.facebook.com/Theshadyshackbali/",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "16528720342747b9ef": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/breakfast_sensorium_bali_canggu_best_restaurants_verlan.jpg",
+        "image2": "shopify://shop_images/william_sensorium_best_restaurant_canggu_breakfast.jpg",
+        "subtitle": "",
+        "title": "Sensorium",
+        "text": "<p>Australische Küche meets japanische Leidenschaft.<br/><br/>Wir versprechen dir: Nichts schmeckt hier wie erwartet, alles schmeckt besser als erhofft.<br/><strong>Unser Tipp</strong>: Das Avocado on Toast</p>",
+        "button_label": "Sensorium",
+        "button_link": "https://sensoriumbali.co.id/",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "165287266224b07f09": {
+      "type": "text-and-image",
+      "settings": {
+        "image2": "shopify://shop_images/yuki_bali_best_restaurant_sushi_in_canggu_verlan_jewellery.jpg",
+        "subtitle": "",
+        "title": "YUKI",
+        "text": "<p>Das beste Sushi in Canggu bekommt ihr im Yuki!<br/><br/>Mit Blick aufs Meer könnt ihr hier nicht nur wahnsinnig leckere Fischspeisen genießen, es gibt auch kreative vegane Optionen.</p>",
+        "button_label": "YUKI",
+        "button_link": "https://www.facebook.com/YUKI-BALI-104054238761920/",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165286968616720d7d",
+    "1652869418c7ed20b6",
+    "blog-posts",
+    "1652870854c82112bc",
+    "1652871375dfda5f0b",
+    "16528720342747b9ef",
+    "165287266224b07f09"
+  ]
+}

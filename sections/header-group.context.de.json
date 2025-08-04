@@ -1,0 +1,28 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "header-group.json",
+  "context": {
+    "market": "de"
+  },
+  "sections": {
+    "header": {
+      "settings": {},
+      "blocks": {
+        "d9fc6f2a-4968-4824-a715-650efa49bdec": {
+          "settings": {
+            "text": "VERLAN BLACK WEEKS: SPARE 20% AUF UNSERE GESAMTE KOLLEKTION! CODE: BLACK_WEEKS",
+            "link": ""
+          }
+        }
+      }
+    }
+  }
+}

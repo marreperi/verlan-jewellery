@@ -1,0 +1,251 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "dropdown",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "f1054829-d87d-4e26-b46a-6f473eaff8ee": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Größenfinder",
+            "content": "",
+            "page": "ringe-grossenfinder"
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "title": "Versand Informationen",
+            "content": "<p>Wir packen jeden Kalender per Hand und mit viel Liebe für dich.<br/>Der Versand startet ab dem 14.11.2024.<br/>Du erhältst eine Versandinfo per Mail von uns, mit der du dein Paket verfolgen kannst.<br/>Eine lokale Abholung bei uns im VERLAN Café ist ebenfalls möglich - auch hierfür bekommst du eine Mail mit einer Abholbenachrichtigung.</p>",
+            "page": ""
+          }
+        },
+        "4e6e6a87-9df3-45b3-8ec4-3ab890a41f05": {
+          "type": "tab",
+          "settings": {
+            "title": "Häufig gestellte Fragen",
+            "content": "<p><strong>Wo gebe ich meine Ringgröße an?<br/></strong>Deine Ringgröße gibst du am besten im Notizfeld am Ende deiner Bestellung an, oder schickst uns eine kurze Mail an hello@verlan-jewellery.com.<br/>Deine Ringgröße findest du ganz leicht in unserem <a href=\"https://verlan-jewellery.com/pages/ringgroessen-tabelle\" target=\"_blank\" title=\"Ringgröße heraus finden | Wie finde ich meine Ringgröße heraus?\">Größenfinder</a> heraus.</p><p><strong>Kann ich mir Schmuckstücke wünschen?<br/></strong>Du kannst im Notizfeld eine Info für uns hinterlassen, wenn du bereits Schmuckstücke aus unserer Kollektion besitzt. <br/>Du kannst auch weitere Schmuckwünsche hinterlassen, wir können allerdings nicht versprechen, diese zu erfüllen.<br/>Trust us - jeder Kalender wird mit Liebe gepackt und es sind unsere Bestseller im Kalender versteckt. ♡</p><p><strong>Ich trage z.B. keine Ohrringe - könnt ihr das berücksichtigen?</strong><br/>Natürlich! Bitte hinterlasse uns solch eine Information auch im Notizfeld.</p><p><strong>Kann ich den Kalender umtauschen?<br/></strong>Unser Adventskalender und einzelne Schmuckstücke sind vom Umtausch ausgeschlossen.<br/>Falls es allerdings ein Problem mit deinem Kalender gab, melde dich bitte umgehend per Mail an uns.</p><p><strong>Was für Produkte erwarten mich im Adventskalender?<br/></strong>Jedes Produkt wurde von uns sorgfältig ausgewählt und wird mit Liebe für dich verpackt.<br/>Unser Ziel ist es einen Adventskalender zu kreieren, bei dem dich jedes Türchen zum Strahlen bringt!</p><p><strong>Lohnt sich der Kalender auch ein zweites Mal?<br/></strong>Auf jeden Fall!<br/>Die Schmuckauswahl ist selbstverständlich eine andere und auch die Produkte werden dich dieses Jahr aufs Neue überraschen.</p><p><strong>Der Kalender soll ein Geschenk werden - was muss ich beachten?<br/></strong>Unser Adventskalender eignet sich super als Geschenk! <br/>Falls du die Ringgröße der beschenkten Person nicht kennst, schreib uns das am besten in das Notizfeld.<br/>Wir verschicken den Kalender auch gern direkt an die beschenkte Person - gebe hierfür ihre Adresse als Versandadresse an.</p><p><strong>Wo bekomme ich weitere Sneak Peaks?</strong><br/>Auf unserem <a href=\"https://www.instagram.com/verlan.jewellery/?hl=de\" target=\"_blank\" title=\"VERLAN Jewellery Schmuck Adventskalender - Instagram\">Instagram Account</a> bekommst du in den nächsten Wochen weitere Einblicke vom Kalender.</p><p><strong>Wie lange kann ich den VERLAN Adventskalender kaufen?</strong><br/>Es gibt auch in diesem Jahr nur eine kleine Stückzahl der Kalender. <br/>Sei am besten schnell, wenn du gern einen Schmuck Adventskalender hättest.</p>",
+            "page": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "title": "Stell uns deine Frage",
+            "phone": false
+          }
+        }
+      },
+      "block_order": [
+        "price",
+        "separator",
+        "variant_picker",
+        "buy_buttons",
+        "description",
+        "f1054829-d87d-4e26-b46a-6f473eaff8ee",
+        "tab",
+        "4e6e6a87-9df3-45b3-8ec4-3ab890a41f05",
+        "contact"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": false,
+        "thumbnail_position": "beside",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "settings": {
+        "max_width": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5,
+        "products_per_row": 3
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "16471606190f221768": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "1647162002f99b2945": {
+      "type": "testimonials",
+      "blocks": {
+        "1647162001209417cf-0": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "1647162001209417cf-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "1647162001209417cf-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "1647162001209417cf-3": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "1647162001209417cf-4": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
+        }
+      },
+      "block_order": [
+        "1647162001209417cf-0",
+        "1647162001209417cf-1",
+        "1647162001209417cf-2",
+        "1647162001209417cf-3",
+        "1647162001209417cf-4"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Testimonials",
+        "align_text": "center",
+        "round_images": true,
+        "color_background": "#f9f9f9",
+        "color_text": "#1c1d1d"
+      }
+    },
+    "166754872052effbce": {
+      "type": "apps",
+      "blocks": {
+        "7e5b8c95-909e-4672-95b5-43ddf2faf3d9": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "7e5b8c95-909e-4672-95b5-43ddf2faf3d9"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "16471620547b9c435b": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/verlan-jewellery-handmade-ring.jpg",
+        "image_mask": "none",
+        "image2": "shopify://shop_images/Zuschnitt-ring-verlan-jewellery.jpg",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "",
+        "text": "<p>Alle Schmuckstücke von <a href=\"https://www.verlan-jewellery.com/\" target=\"_blank\">VERLAN Jewellery</a> werden fair produziert und umweltschonend im Herzen Balis handgemacht.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "sub",
+    "product-recommendations",
+    "recently-viewed",
+    "16471606190f221768",
+    "1647162002f99b2945",
+    "166754872052effbce",
+    "16471620547b9c435b",
+    "collection-return"
+  ]
+}

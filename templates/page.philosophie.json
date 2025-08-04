@@ -1,0 +1,122 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "1646732417395a7413": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/verlan-jewellery-handmade-ring.jpg",
+        "image_mask": "none",
+        "image2": "shopify://shop_images/Ring-handgemacht-silber-schmuck-bali-manufaktur-verlan-jewellery_f67d283c-b0fa-429f-b7d9-d52271b72760.jpg",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "#WHOMADEMYJEWELLERY",
+        "text": "<p>Im Herzen Balis befindet sich die familiengeführte Manufaktur, in der die Schmuckstücke von VERLAN Jewellery entstehen. Hier wird jedes einzelne Schmuckstück mit viel Liebe zum Detail per Hand gefertigt. Zusätzlich gibt es Schmuckstücke, wie beispielsweise unseren MEDEWI oder SUNSET Ring, die in einem <a href=\"https://verlan-jewellery.com/blogs/verlan-jewellery-bali-blog/cire-perdue-gussvervahren-was-steckt-dahinter\"><span style=\"text-decoration:underline\">Gussverfahren namens Cire-Perdue</span></a> auf der Nachbarinsel Java mit Hilfe von Wachsformen per Hand gegossen werden. Die hierbei gegossenen Rohlinge werden anschließend in unserer Manufaktur auf Bali gefeilt, veredelt, vergoldet und poliert.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "center",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "1646732878db94bf07": {
+      "type": "text-columns",
+      "blocks": {
+        "16467328781f96024a-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/manufaktur-verlan-jewellery-handmade.jpg",
+            "image_mask": "none",
+            "image_width": 310,
+            "title": "Was bedeutet Fair Fashion?",
+            "text": "<p>Mode ist dann fair, wenn sie gerecht hergestellt wird. <br/>Also Menschen, die sie herstellen, grundlegende Rechte besitzen, <br/>selbstbestimmt handeln können, gesundheitlich geschützt werden und einen angemessenen Lohn verdienen.<br/>All diese Punkte stehen für uns an höchster Stelle.<br/>Neben einer umweltfreundlichen Produktion legen wir hohen Wert auf einen respektvollen Umgang.<br/>Wir zahlen einen marktunüblich hohen Lohn an alle unsere balinesischen MitarbeiterInnen, respektieren Feiertage und übernehmen ab diesem Jahr die Krankenkassenversicherungskosten unserer PartnerInnen auf der Insel.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "16467328781f96024a-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/handmade-with-love-verlan-jewellery-manufaktur.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Umweltschonende Produktion",
+            "text": "<p>Für alle unsere Schmuckstücke verwenden wir <strong>Sterling Silber</strong>, eine <strong>22 Karat Vergoldung</strong> und unterschiedliche <strong>Halbedelsteine</strong>.<br/></p><p>Das Silber, welches für unseren Schmuck verwendet wird, beziehen wir von <a href=\"https://www.antam.com/en/csr/human-rights-i\" target=\"_blank\" title=\"ANTAM | Recycltes Silber für unsere handgefertigten Schmuckstücke aus Bali | Boho Schmuck im Bali Look\">ANTAM</a>.<br/>Zusätzlich wird für den Großteil unserer Schmuckstücke <strong>recyceltes Silber</strong> verwendet.</p><p>Auch beim Versand achten wir auf unsere Umwelt: Wir <strong>vermeiden Plastik</strong>, indem wir Kartons, Flyer & Visitenkarten aus recyceltem Papier verwenden. Versandkartons werden wiederverwendet und VERLAN Jewellery ist Teil des Dualsystems <a href=\"https://www.gruener-punkt.de/de/\" target=\"_blank\" title=\"VERLAN Jewellery beteiligt sich am Dualen System | Geüner Punkt | Plastikfreier Versand\">Grüner Punkt</a>.<br/>♡</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16467328781f96024a-0",
+        "16467328781f96024a-2"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    },
+    "164714432625bc0ac0": {
+      "type": "logo-list",
+      "blocks": {
+        "1647144326aec094a9-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/nachhaltig_fair_hergestellter_schmuck_aus_recyceltem_silber_verlan_jewellery_hande_icon_864ee858-6eed-4bcb-89c2-7c4157c3adb1.png",
+            "link": ""
+          }
+        },
+        "1647144326aec094a9-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/nachhaltig_hergestellter_schmuck_aus_recyceltem_silber_verlan_jewellery.png",
+            "link": ""
+          }
+        },
+        "1647144326aec094a9-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/plastikfreier_versand_nachhaltig_fair_hergestellter_schmuck_aus_recyceltem_silber_verlan_jewellery_blatter_icon_a3d977e4-cb1f-4c4b-8f8a-2db9b2a7124a.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1647144326aec094a9-0",
+        "1647144326aec094a9-1",
+        "1647144326aec094a9-3"
+      ],
+      "settings": {
+        "title": "",
+        "logo_opacity": 76,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1646732417395a7413",
+    "1646732878db94bf07",
+    "164714432625bc0ac0"
+  ]
+}

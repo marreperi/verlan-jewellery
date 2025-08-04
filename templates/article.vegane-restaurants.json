@@ -1,0 +1,201 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "article-template",
+      "disabled": true,
+      "settings": {
+        "image_hero": true,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "social_sharing_blog": false
+      }
+    },
+    "165286968616720d7d": {
+      "type": "rich-text",
+      "blocks": {
+        "1652869686f8c0fc79-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<h3><strong>Wo kann man in Canggu am besten vegan essen? Wir verraten euch die besten veganen Restaurants & Cafès!</strong></h3><p>Es ist nicht schwer sich auf Bali vegetarisch oder sogar vegan zu ernähren. Die lokale Küche bietet viele leckere Gerichte wie <em>Gado Gado</em> (warmes Gemüse mit Reis & Erdnusssoße), <em>Urap Urap</em> (Gemüsesalat mit Kokossambal) oder <em>Plecing Kangkung</em> (Wasserspinat mit scharfem Sambal).</p><p>Kleiner Tip: '<em>Saya adalah vegan' </em>bedeutet 'Ich bin vegan' auf Indonesisch - erklärt bei euren Restaurantbesuchen genau, was ihr essn möchtet und was nicht.</p><p>Wir verraten euch unsere liebsten Restaurants in Canggu und Umgebung. Manche davon sind 100% vegan und bei manchen reicht die vegane Auswahl aus, um unterschiedliche Geschmäcker zu treffen.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "1652869686f8c0fc79-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1652869418c7ed20b6": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Bildschirmfoto_2024-02-09_um_04.33.53.png",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "I AM VEGAN BABE",
+        "text": "<p>Zentral gelegen in Canggu findet ihr hier ein veganes Paradies, das keine Wünsche offen lässt!<br/>Vegane Burger, Bowls und Kuchen: Im I am vegan Babe könnte man den ganzen Tag verbringen.<br/><strong>Unser Tip</strong>: Das Knobi-Champignon Toast & die Zimtschnecken!</p>",
+        "button_label": "I AM VEGAN BABE",
+        "button_link": "https://www.instagram.com/iamveganbabe?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "blog-posts": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "title": "You may also like",
+        "blog": "",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": true,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    },
+    "1652870854c82112bc": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/zali-restaurant-bali-canggu-best-restaurants-canggu-verlan-jewellery.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "ZALI",
+        "text": "<p>Wenn wir jeden Abend das selbe essen müssten... Es wäre bei Zali!<br/><br/>Libanesische Köstlichkeiten, die frisch zubereitet werden und von denen man nicht genug bekommt.<br/>Das Menu ist nicht 100% vegan, aber es gibt genug Auswahl, um es sich richtig schmecken zu lassen.<br/><strong><br/>Unser Tipp</strong>: Das Baba Ghanoush</p>",
+        "button_label": "ZALI",
+        "button_link": "https://www.instagram.com/zalifrombeirut/?utm_medium=copy_link&hl=de",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "1652871375dfda5f0b": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/shady_shack_bali_canggu_restaurant_breakfast_verlan.jpg",
+        "image_mask": "none",
+        "image2": "shopify://shop_images/shady_shack_bali_canggu_best_breakfast_verlan_jewellery.jpg",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "The Shady Shack",
+        "text": "<p>Du hast Lust auf eine große Auswahl beim Frühstück und möchtest mal was anderes als ein Avo Toast essen?<br/>Dann bist du im Shady Shack gut aufgehoben.<br/><br/>Die kleine Frühstücksoase mit leckeren vegetarischen und veganen Gerichten zählt definitiv zu unseren liebsten veganen Cafès / Restaurants in Canggu.<br/><strong>Unser Tipp</strong>: Der vegane Burger & frisch gepressten Säfte</p>",
+        "button_label": "THE SHADY SHACK",
+        "button_link": "https://www.facebook.com/Theshadyshackbali/",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "16528720342747b9ef": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Bildschirmfoto_2024-02-09_um_05.01.50.png",
+        "image_mask": "none",
+        "image2": "shopify://shop_images/Bildschirmfoto_2024-02-09_um_05.03.25.png",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "MANGGIS",
+        "text": "<p>Auf der anderen Seite des Short Cuts, in Berawa, versteckt sich das Manggis.<br/>100% vegan gibt es hier eine riesige Auswahl an Köstlichkeiten.<br/><strong>Unser Tipp</strong>: Gyros & Der Cheesecake </p>",
+        "button_label": "MANGGIS",
+        "button_link": "https://www.instagram.com/manggisincanggu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "165287266224b07f09": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Bildschirmfoto_2024-02-09_um_05.28.00.png",
+        "image_mask": "none",
+        "image2": "shopify://shop_images/Bildschirmfoto_2024-02-09_um_05.07.53.png",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "KYND",
+        "text": "<p>Dir fehlt das Spiegelei am Morgen? Dann schau mal im Kynd vorbei - wir hatten noch nie ein veganes Eigeld, das uns fast vom Teller gelaufen wäre.<br/><strong>Unser Tipp</strong>: Die Bolognese</p>",
+        "button_label": "KYND",
+        "button_link": "https://www.instagram.com/kyndcommunity?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "text_and_image_wbzQW7": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Bildschirmfoto_2024-02-09_um_05.15.35.png",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "TYGR",
+        "text": "<p>Wir haben bisher noch kein 100% veganes Sushi restaurant entdeckt, aber sind im TYGR bisher immer geschmacklich auf unsere Kosten gekommen.<br/><strong>Unser Tipp: </strong>Der Bao Ban Burger mit Jackfruit & Jackfruit Katsu Teriyaki Sushi</p>",
+        "button_label": "TYGR",
+        "button_link": "https://www.instagram.com/tygrsushi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "165286968616720d7d",
+    "1652869418c7ed20b6",
+    "blog-posts",
+    "1652870854c82112bc",
+    "1652871375dfda5f0b",
+    "16528720342747b9ef",
+    "165287266224b07f09",
+    "text_and_image_wbzQW7"
+  ]
+}

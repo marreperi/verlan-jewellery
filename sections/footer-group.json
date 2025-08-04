@@ -1,0 +1,127 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "t:sections.footer-group.name",
+  "sections": {
+    "footer-promotions": {
+      "type": "footer-promotions",
+      "blocks": {
+        "footer-promotions-0": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "title": "Site-wide promotion",
+            "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "footer-promotions-1": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "title": "Site-wide promotion",
+            "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "footer-promotions-2": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "title": "Site-wide promotion",
+            "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "footer-promotions-0",
+        "footer-promotions-1",
+        "footer-promotions-2"
+      ],
+      "settings": {
+        "hide_homepage": true,
+        "image_size": "wide"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "767afba6-3fe9-4dbf-994d-521fc7c24526": {
+          "type": "menu",
+          "settings": {
+            "show_footer_title": true,
+            "menu": "hilfe",
+            "container_width": 25
+          }
+        },
+        "09e152e1-41bd-4996-82a6-fb57939f9082": {
+          "type": "menu",
+          "settings": {
+            "show_footer_title": true,
+            "menu": "bestellung",
+            "container_width": 25
+          }
+        },
+        "1494301487049": {
+          "type": "menu",
+          "settings": {
+            "show_footer_title": true,
+            "menu": "footer",
+            "container_width": 17
+          }
+        },
+        "1494292487693": {
+          "type": "newsletter",
+          "settings": {
+            "show_footer_title": true,
+            "title": "VERLAN NEWSLETTER",
+            "text": "<p>Erfahre vor allen anderen über neue Kollektionen, Gewinnspiele und Aktionen.<br/>Wir versprechen: Liebesbriefe anstatt Spam-Mails 💌</p>",
+            "container_width": 30
+          }
+        },
+        "1494301487048": {
+          "type": "logo_social",
+          "disabled": true,
+          "settings": {
+            "desktop_logo_height": 50,
+            "container_width": 95
+          }
+        }
+      },
+      "block_order": [
+        "767afba6-3fe9-4dbf-994d-521fc7c24526",
+        "09e152e1-41bd-4996-82a6-fb57939f9082",
+        "1494301487049",
+        "1494292487693",
+        "1494301487048"
+      ],
+      "settings": {
+        "show_locale_selector": false,
+        "show_currency_selector": true,
+        "show_currency_flags": true,
+        "show_payment_icons": true,
+        "show_copyright": true,
+        "copyright_text": ""
+      }
+    }
+  },
+  "order": [
+    "footer-promotions",
+    "footer"
+  ]
+}
