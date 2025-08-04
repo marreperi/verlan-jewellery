@@ -69,7 +69,7 @@
         "announcement-1": {
           "type": "announcement",
           "settings": {
-            "text": "BEI EINEM EINKAUF AB 99€ SCHENKEN WIR DIR EINEN LOVINA RING ZU DEINER BESTELLUNG (KLICK HIER)",
+            "text": "Gratis Lovina Ring ab 99€",
             "link_text": "",
             "link": "shopify://collections/lovina-ringe-aktion"
           }
@@ -88,7 +88,7 @@
         "1524770014057": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Verlan_Logo_Circle_white_98729de9-4205-4c6d-b00a-283bdb6687d6.png",
+            "logo": "shopify://shop_images/Verlan_Logo_Circle_black_868e49ce-4b8c-4203-ac5b-8174c65b5eb6.png",
             "desktop_logo_width": 100,
             "mobile_logo_width": 60
           }

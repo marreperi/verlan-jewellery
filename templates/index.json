@@ -9,28 +9,117 @@
  */
 {
   "sections": {
+    "story_slider_RkpAg4": {
+      "type": "story-slider",
+      "blocks": {
+        "block_GxVnyd": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/D675DF8C-843E-4892-80E5-0469868C423C.jpg",
+            "heading": "Ringe",
+            "url": "",
+            "highlight": false,
+            "show_badge1": false,
+            "badge1_text": "-50%",
+            "badge1_color": "#d9534f",
+            "badge1_text_color": "#ffffff",
+            "animation_enabled": false,
+            "animation_type": "bounce"
+          }
+        },
+        "block_XyjAi9": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/DOM09488_Kopie_2.jpg",
+            "heading": "Ketten",
+            "url": "",
+            "highlight": false,
+            "show_badge1": false,
+            "badge1_text": "-50%",
+            "badge1_color": "#d9534f",
+            "badge1_text_color": "#ffffff",
+            "animation_enabled": false,
+            "animation_type": "bounce"
+          }
+        },
+        "block_UKCPxF": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/regenbogen_ohrstecker_verlan__jewellery.jpg",
+            "heading": "Ohrringe",
+            "url": "",
+            "highlight": false,
+            "show_badge1": false,
+            "badge1_text": "-50%",
+            "badge1_color": "#d9534f",
+            "badge1_text_color": "#ffffff",
+            "animation_enabled": false,
+            "animation_type": "bounce"
+          }
+        },
+        "block_rMwQMT": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/komang_armband_kunzit_verlan_Kopie.jpg",
+            "heading": "Armbänder",
+            "url": "",
+            "highlight": false,
+            "show_badge1": false,
+            "badge1_text": "-50%",
+            "badge1_color": "#d9534f",
+            "badge1_text_color": "#ffffff",
+            "animation_enabled": false,
+            "animation_type": "bounce"
+          }
+        },
+        "block_pDmUEw": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/Verlan_Jewellery_Unique-Ketten_gold_987_80f5e3de-9bff-4c30-bb98-f5e19f40e627.jpg",
+            "heading": "Unique",
+            "url": "",
+            "highlight": false,
+            "show_badge1": false,
+            "badge1_text": "-50%",
+            "badge1_color": "#d9534f",
+            "badge1_text_color": "#ffffff",
+            "animation_enabled": false,
+            "animation_type": "bounce"
+          }
+        }
+      },
+      "block_order": [
+        "block_GxVnyd",
+        "block_XyjAi9",
+        "block_UKCPxF",
+        "block_rMwQMT",
+        "block_pDmUEw"
+      ],
+      "name": "SH Story Slider",
+      "settings": {
+        "padding-oben": 20,
+        "padding-unten": 20,
+        "background-color": "#ffffff",
+        "highlight-color": "#d1b190",
+        "highlight-border-width": 2.5,
+        "desktop-size": 92,
+        "desktop-distance": 9,
+        "mobile-size": 20,
+        "mobile-distance": 2,
+        "abgerundete_ecken": 100,
+        "badge1_translate_x": -20,
+        "badge1_translate_y": 35,
+        "badge1_border_radius": 20,
+        "badge1_font_size": 9,
+        "badge1_padding_vertical": 0,
+        "fontsize": 12,
+        "font-weight": 400,
+        "schriftfarbe": "#000000"
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "08007286-050d-4e62-b5ff-139b6081d551": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "handmade with love",
-            "title": "VERLAN Jewellery",
-            "title_size": 43,
-            "subheading": "Hol dir dein Stück Bali nach Hause",
-            "link": "shopify://collections/verlan-jewellery-alle-schmuckstuecke",
-            "link_text": "Jetzt entdecken",
-            "link_2": "shopify://collections/verlan-jewellery-alle-schmuckstuecke",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-bottom horizontal-center",
-            "image": "shopify://shop_images/verlan_jewellery_schmuck_handgemacht_bali.jpg",
-            "image_mobile": "shopify://shop_images/verlan_jewellery_schmuck_handgemacht_bali.jpg",
-            "parallax_direction": "top",
-            "overlay_opacity": 6
-          }
-        },
         "0f3a0ed3-ef62-40bf-a07a-e94a1479fac6": {
           "type": "image",
           "settings": {
@@ -48,50 +137,10 @@
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
-        },
-        "ca3919dd-a8f2-4feb-95dd-958a784bbaf3": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "top_subheading": "",
-            "title": "24 nachhaltige Überraschungen",
-            "title_size": 43,
-            "subheading": "Entdecke unseren limitierten",
-            "link": "shopify://products/schmuck-adventskalender",
-            "link_text": "Adventskalender",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-bottom horizontal-center",
-            "image": "shopify://shop_images/Adventskalender_schmuck_verlan_jewellery_weihnachtskalender.png",
-            "parallax_direction": "top",
-            "overlay_opacity": 8
-          }
-        },
-        "image_ky8Dye": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "title": "Buchstaben Ketten",
-            "title_size": 40,
-            "subheading": "Entdecke unsere Initialen Ketten",
-            "link": "shopify://collections/buchstaben-ketten",
-            "link_text": "jetzt shoppen",
-            "link_2": "shopify://collections/buchstaben-ketten",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-bottom horizontal-center",
-            "image": "shopify://shop_images/Buchstaben_kette_verlan_jewelry.jpg",
-            "parallax_direction": "top",
-            "overlay_opacity": 0
-          }
         }
       },
       "block_order": [
-        "08007286-050d-4e62-b5ff-139b6081d551",
-        "0f3a0ed3-ef62-40bf-a07a-e94a1479fac6",
-        "ca3919dd-a8f2-4feb-95dd-958a784bbaf3",
-        "image_ky8Dye"
+        "0f3a0ed3-ef62-40bf-a07a-e94a1479fac6"
       ],
       "settings": {
         "section_height": "550px",
@@ -153,6 +202,7 @@
         "16467421862962fb38-2",
         "16467421862962fb38-3"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "logo_opacity": 76,
@@ -174,8 +224,8 @@
             "cta_link2": "",
             "image": "shopify://shop_images/Sanur_jawan_labradorit_stein_pandawa_ring_verlan_gold_schmuck_bali_fair_handgemacht_wasserfest_verstellbarer_ring_zitronen_handgemachter_jewellery.jpg",
             "video_url": "",
-            "width": "50",
-            "height": 800,
+            "width": "33",
+            "height": 500,
             "text_size": 100,
             "text_align": "vertical-bottom horizontal-center",
             "color_accent": "rgba(0,0,0,0)",
@@ -195,10 +245,31 @@
             "cta_link2": "",
             "image": "shopify://shop_images/ketten_verlan_silber_ketten.jpg",
             "video_url": "",
-            "width": "50",
+            "width": "33",
             "height": 500,
             "text_size": 100,
             "text_align": "vertical-bottom horizontal-center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "advanced_FHxzQP": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Fair & umweltschonend",
+            "heading": "",
+            "textarea": "handgefertigt",
+            "cta_text1": "unsere ohrringe",
+            "cta_link1": "shopify://collections/ohrringe",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/goldene_doppelkreis_kette_karma_necklace-2.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
             "framed": false
@@ -207,7 +278,8 @@
       },
       "block_order": [
         "promo-0",
-        "promo-1"
+        "promo-1",
+        "advanced_FHxzQP"
       ],
       "settings": {
         "full_width": true,
@@ -222,6 +294,7 @@
       "blocks": {
         "promo2-0": {
           "type": "advanced",
+          "disabled": true,
           "settings": {
             "subheading": "Fair & umweltschonend",
             "heading": "",
@@ -277,6 +350,7 @@
         "promo2-1",
         "promo2-2"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "gutter_size": 20,
@@ -287,6 +361,7 @@
     },
     "1653406381a9b6b3c5": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "SILBER SCHMUCKSTÜCKE",
         "home_featured_products": "silber-schmuck",
@@ -350,6 +425,7 @@
         "16467258194a32d6db-2",
         "16467258194a32d6db-3"
       ],
+      "disabled": true,
       "settings": {
         "featured_product": "amo-kette-gold",
         "divider": false,
@@ -432,6 +508,7 @@
     },
     "featured_collection_YmptkL": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "UNIQUE COLLECTION",
         "home_featured_products": "unique-collection-goldene-ketten",
@@ -462,6 +539,7 @@
     }
   },
   "order": [
+    "story_slider_RkpAg4",
     "slideshow",
     "featured-collection",
     "16467421861b340939",
