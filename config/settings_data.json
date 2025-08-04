@@ -315,6 +315,13 @@
         "type": "shopify://apps/pandectes-gdpr-compliance/blocks/banner/58c0baa2-6cc1-480c-9ea6-38d6d559556a",
         "disabled": false,
         "settings": {}
+      },
+      "6933373160360723723": {
+        "type": "shopify://apps/swishlist-simple-wishlist/blocks/wishlist_settings/bfcb80f2-f00d-42ae-909a-9f00c726327b",
+        "disabled": false,
+        "settings": {
+          "custom_css": ""
+        }
       }
     }
   },
@@ -512,7 +519,9 @@
             "toolbar_social": true,
             "show_locale_selector": true,
             "show_currency_selector": true,
-            "show_currency_flags": true
+            "show_currency_flags": true,
+            "mobile_overlay_color": "rgba(0,0,0,0.3)",
+            "mobile_text_color": "#ffffff"
           }
         },
         "footer": {
@@ -736,7 +745,9 @@
             "header_style": "normal",
             "sticky_index": true,
             "sticky_collection": false,
-            "toolbar_social": false
+            "toolbar_social": false,
+            "mobile_overlay_color": "rgba(0,0,0,0.3)",
+            "mobile_text_color": "#ffffff"
           }
         },
         "footer": {
