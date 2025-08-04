@@ -15,9 +15,9 @@
       "type": "mr-vue-cart",
       "name": "Dynamischer Warenkorb",
       "settings": {
-        "recommendations_title": "Dazu passt auch",
+        "recommendations_title": "",
         "recommendations": [],
-        "use_recommended": true,
+        "use_recommended": false,
         "slider_sticky": false,
         "order_note": false,
         "order_note_footer_text": "Notiz hinzufügen",

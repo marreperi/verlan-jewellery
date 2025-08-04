@@ -128,7 +128,12 @@
         "toolbar_social": false,
         "show_locale_selector": true,
         "show_currency_selector": false,
-        "show_currency_flags": false
+        "show_currency_flags": false,
+        "mobile_primary_menu": "main-menu",
+        "mobile_secondary_menu": "sekund-res-menu",
+        "mobile_overlay_color": "#0000004d",
+        "mobile_text_color": "#ffffff",
+        "mobile_menu_gap": 8
       }
     }
   },
