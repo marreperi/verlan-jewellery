@@ -1,0 +1,437 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "custom.overlay",
+  "name": "Overlay Group",
+  "sections": {
+    "mr_vue_cart_TaDNEj": {
+      "type": "mr-vue-cart",
+      "blocks": {
+        "shipping_rate_de": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "DE",
+            "country_name": "Deutschland",
+            "price": 5.5,
+            "delivery_time": "2-3 Werktage",
+            "restrictions": ""
+          }
+        },
+        "shipping_rate_eu": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "AT",
+            "country_name": "Österreich",
+            "price": 12.5,
+            "delivery_time": "3-5 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_ch": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "CH, LIE",
+            "country_name": "Schweiz, Lichtenstein",
+            "price": 25,
+            "delivery_time": "3-7 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_mRJ73L": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "NL",
+            "country_name": "Niederlande",
+            "price": 17.5,
+            "delivery_time": "2-4 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_Cznnd3": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "BE",
+            "country_name": "Belgien",
+            "price": 17.5,
+            "delivery_time": "2-4 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_DJ6jAK": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "FR",
+            "country_name": "Frankreich (OHNE ÜBERSEEGEBIETE)",
+            "price": 17.5,
+            "delivery_time": "2-4 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_at": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "LUX",
+            "country_name": "Luxemburg",
+            "price": 17.5,
+            "delivery_time": "2-4 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_gYJJXp": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "CZ",
+            "country_name": "Tschechien",
+            "price": 17.5,
+            "delivery_time": "2-4 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_yGdqgT": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "PL",
+            "country_name": "Polen",
+            "price": 17.5,
+            "delivery_time": "2-4 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_7nU3Vz": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "DK",
+            "country_name": "Dänemark",
+            "price": 17.5,
+            "delivery_time": "2-4 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_Wj33j6": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "MCO",
+            "country_name": "Monaco",
+            "price": 17.5,
+            "delivery_time": "2-4 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_6qN6Tz": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "IT",
+            "country_name": "Italien",
+            "price": 18.5,
+            "delivery_time": "3-5 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_DeyhLK": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "SVK",
+            "country_name": "Slowakei",
+            "price": 18.5,
+            "delivery_time": "3-5 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_9kGM7Q": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "SVN",
+            "country_name": "Slowenien",
+            "price": 18.5,
+            "delivery_time": "2-4 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_A8CM3t": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "HU",
+            "country_name": "Ungarn",
+            "price": 18.5,
+            "delivery_time": "2-4 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_j74cgk": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "SE",
+            "country_name": "Schweden",
+            "price": 18.5,
+            "delivery_time": "2-4 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_3HCWpw": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "ES",
+            "country_name": "Spanien",
+            "price": 18.5,
+            "delivery_time": "2-4 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_PFpYqU": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "PRT",
+            "country_name": "Portugal",
+            "price": 16.5,
+            "delivery_time": "4-6 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_HtJtDb": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "EST",
+            "country_name": "Estland",
+            "price": 16.5,
+            "delivery_time": "4-6 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_HAGEJE": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "LVA",
+            "country_name": "Lettland",
+            "price": 16.5,
+            "delivery_time": "4-6 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_98hnDr": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "IRL",
+            "country_name": "Irland",
+            "price": 16.5,
+            "delivery_time": "4-6 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_KaznTr": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "LTU",
+            "country_name": "Litauen",
+            "price": 16.5,
+            "delivery_time": "4-6 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_XR8tp7": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "HR",
+            "country_name": "Kroatien",
+            "price": 16.5,
+            "delivery_time": "4-6 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_ytaPny": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "ROU",
+            "country_name": "Rumänien",
+            "price": 16.5,
+            "delivery_time": "4-6 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_Xg8RPM": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "BGR",
+            "country_name": "Bulgarien",
+            "price": 16.5,
+            "delivery_time": "4-6 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_mRBeb8": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "GRC",
+            "country_name": "Griechenland",
+            "price": 16.5,
+            "delivery_time": "4-6 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_QEyV9A": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "NO",
+            "country_name": "Norwegen",
+            "price": 29,
+            "delivery_time": "4-6 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_4MUgge": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "BIH",
+            "country_name": "Bosnien-Herzegowina",
+            "price": 29,
+            "delivery_time": "4-6 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_j6bGVc": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "SRB",
+            "country_name": "Serbien",
+            "price": 29,
+            "delivery_time": "4-6 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        },
+        "shipping_rate_Q4R6wE": {
+          "type": "shipping_rate",
+          "settings": {
+            "country_code": "ISL",
+            "country_name": "Island",
+            "price": 29,
+            "delivery_time": "4-6 Werktage",
+            "restrictions": "bis 4kg"
+          }
+        }
+      },
+      "block_order": [
+        "shipping_rate_de",
+        "shipping_rate_eu",
+        "shipping_rate_ch",
+        "shipping_rate_mRJ73L",
+        "shipping_rate_Cznnd3",
+        "shipping_rate_DJ6jAK",
+        "shipping_rate_at",
+        "shipping_rate_gYJJXp",
+        "shipping_rate_yGdqgT",
+        "shipping_rate_7nU3Vz",
+        "shipping_rate_Wj33j6",
+        "shipping_rate_6qN6Tz",
+        "shipping_rate_DeyhLK",
+        "shipping_rate_9kGM7Q",
+        "shipping_rate_A8CM3t",
+        "shipping_rate_j74cgk",
+        "shipping_rate_3HCWpw",
+        "shipping_rate_PFpYqU",
+        "shipping_rate_HtJtDb",
+        "shipping_rate_HAGEJE",
+        "shipping_rate_98hnDr",
+        "shipping_rate_KaznTr",
+        "shipping_rate_XR8tp7",
+        "shipping_rate_ytaPny",
+        "shipping_rate_Xg8RPM",
+        "shipping_rate_mRBeb8",
+        "shipping_rate_QEyV9A",
+        "shipping_rate_4MUgge",
+        "shipping_rate_j6bGVc",
+        "shipping_rate_Q4R6wE"
+      ],
+      "name": "Dynamischer Warenkorb",
+      "settings": {
+        "recommendations_title": "Dazu passt auch",
+        "recommendations": [],
+        "use_recommended": true,
+        "slider_sticky": false,
+        "order_note": false,
+        "order_note_footer_text": "Notiz hinzufügen",
+        "order_note_heading": "Möchtest du uns noch etwas mitteilen?",
+        "order_note_confirm": "Speichern",
+        "enable_free_shipping": true,
+        "freeshipping": 7500,
+        "fs_not_reached": "Du bist nur price vom kostenlosen Versand entfernt!",
+        "fs_reached": "Deine Bestellung ist Versandkostenfrei",
+        "enable_free_gift": true,
+        "free_gift_product": "em-blond-200-ml-geschenk",
+        "free_gift_threshold": 12000,
+        "gift_not_reached": "Du bist nur price vom gratis Geschenk entfernt!",
+        "gift_reached": "Du erhältst ein gratis Geschenk!",
+        "enable_second_free_gift": true,
+        "second_free_gift_product": "schafkopfkarten",
+        "second_free_gift_threshold": 18000,
+        "second_gift_reached": "Du erhältst ein zweites kostenloses Geschenk",
+        "second_gift_not_reached": "Du bist nur price vom zweiten Geschenk entfernt!",
+        "shipping_fee_text": "Versandkosten",
+        "shipping_is_free": "Kostenlos",
+        "express_shipping": "",
+        "cart_heading": "Warenkorb",
+        "empty_cart": "Dein Warenkorb ist leer",
+        "empty_cart_button": "Produkte entdecken",
+        "subtotal": "Zwischensumme",
+        "checkout_button_text": "Jetzt sicher zur Kasse",
+        "remove_text": "Entfernen",
+        "old_cart": "#site-cart-sidebar",
+        "button_class": ".button",
+        "cart_icon_class": "[data-js-sidebar-handle]",
+        "cart_count_bubble_class": "[data-header-cart-count]",
+        "add_to_cart_class": ".add-to-cart",
+        "drawer_width": 600,
+        "drawer_width_mobile": 90,
+        "background_header": "#ffffff",
+        "background_footer": "#f5f4eb",
+        "background_main": "#ffffff",
+        "background_shipping_bar_container": "#ffffff",
+        "background_shipping_bar": "#d1d1d1",
+        "background_shipping_progress": "#000000",
+        "background_product_card": "",
+        "background_slider": "",
+        "background_slider_card_arrows": "#f9f9f9",
+        "background_slider_button": "",
+        "background_express_shipping": "",
+        "background_order_note_button": "",
+        "background_order_note": "",
+        "background_inputs": "#ffffff",
+        "font_header_icon": "#ffffff",
+        "font_header_footer": "#000000",
+        "font_shipping_bar": "#000000",
+        "font_product_card": "#000000",
+        "font_compare_at_price": "",
+        "font_slider_heading": "",
+        "font_slider_card_arrows": "",
+        "font_slider_button": "#ffffff",
+        "font_express_shipping": "",
+        "font_order_note_button": "",
+        "font_order_note": "",
+        "font_inputs": "",
+        "shadow_header_footer": "#efefef",
+        "alpha_header_footer": 0,
+        "shadow_product_card": "#ffffff",
+        "alpha_product_card": 1,
+        "shadow_product_card_slider": "#ffffff",
+        "alpha_product_card_slider": 0,
+        "radius_header_footer": 0,
+        "radius_shipping_bar_container": 0,
+        "radius_product_card": 0,
+        "radius_product_image": 0,
+        "radius_slider_product_card": 0,
+        "radius_slider_product_image": 0,
+        "radius_order_note_button": 0,
+        "radius_order_note": 0,
+        "radius_inputs": 0,
+        "b2b_customer_tag": "b2b",
+        "show_payment_icons": false
+      }
+    }
+  },
+  "order": ["mr_vue_cart_TaDNEj"]
+}

@@ -1432,11 +1432,6 @@ newsletter-reminder .color-scheme-none{
 }
   }
 
-.hotspot-content__block.is-active{
-    display:block;
-    max-height:none;
-  }
-
 .hotspot-content__block .grid-product__image-wrap{
     margin:0;
   }
@@ -5592,7 +5587,7 @@ form+.footer__social{
 
 .site-header{
   position:relative;
-  padding:7px 0;
+  padding: 0px;
   background:{{ settings.color_header | default: "#fff" }};
   background:var(--colorNav)
 }
@@ -9458,6 +9453,15 @@ html[dir=rtl] .grid-product__content{
     -webkit-overflow-scrolling:touch
   }
 
+  .grid-overflow-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .grid-overflow-wrapper {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+
     .grid-overflow-wrapper .grid{
       white-space:nowrap;
       display:flex;
@@ -12992,4 +12996,12 @@ html[dir=rtl] .product-single__meta .rte{
   .template-giftcard .logo{
     color:#58686f;
   }
+}
+
+/* custom styles */
+
+[data-section-type="collection-grid"] .section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }

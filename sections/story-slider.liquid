@@ -1,0 +1,539 @@
+<div class="sh-bubbles">
+  <div class="sh-bubbles-inner">
+    {% for block in section.blocks %}
+      <a href="{{ block.settings.url }}">
+        <div class="sh-bubble-wrapper">
+          <div class="
+              sh-bubble-container
+              {% if block.settings.highlight == true %}sh-bubbles-highlight{% endif %}
+              {% if block.settings.animation_enabled %}
+                {% case block.settings.animation_type %}
+                  {% when 'bounce' %}sh-bubbles-bounce
+                  {% when 'scale' %}sh-bubbles-scale
+                  {% when 'swing' %}sh-bubbles-swing
+                {% endcase %}
+              {% endif %}
+            ">
+            <img src="{{ block.settings.image | img_url: '200x' }}" alt="{{ block.settings.heading }}">
+          </div>
+          {% if block.settings.show_badge1 %}
+            <div class="sh-badge1" style="background-color: {{ block.settings.badge1_color }}; color: {{ block.settings.badge1_text_color }};">
+              {{ block.settings.badge1_text }}
+            </div>
+          {% endif %}
+        </div>
+        <div style="font-size:{{ section.settings.fontsize }}px; font-weight:{{ section.settings['font-weight'] }};">
+          {{ block.settings.heading }}
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  {% assign schriftart = section.settings.schriftart %}
+  {{ section.settings.schriftart | font_face }}
+
+  .sh-bubbles-inner {
+    margin: auto;
+    padding: {{ section.settings.padding-oben }}px 10px {{ section.settings.padding-unten }}px 10px;
+    text-align: center;
+    max-width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  .sh-bubbles-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sh-bubbles {
+    background: {{ section.settings.background-color }};
+    display: block;
+  }
+
+  .sh-bubbles a {
+    width: 100%;
+    display: inline-block;
+    margin-right: {{ section.settings.desktop-distance }}px;
+    max-width: {{ section.settings.desktop-size }}px;
+    text-align: center;
+    font-size: {{ section.settings.fontsize }}px;
+    color: {{ section.settings.schriftfarbe }};
+    text-decoration: none;
+    line-height: 20px;
+  }
+
+  @media only screen and (max-width: 749px) {
+    .sh-bubbles a {
+      margin-right: {{ section.settings.mobile-distance }}%;
+      max-width: {{ section.settings.mobile-size }}%;
+    }
+  }
+
+  .sh-bubble-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+  }
+
+  .sh-bubble-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .sh-bubble-container img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .sh-bubbles-highlight {
+    border-color: {{ section.settings.highlight-color }}
+     !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0;
+    left: 0;
+    border-radius: 50% !important;
+    content: ' ' !important;
+    border: {{ section.settings.highlight-border-width | default: 2.5 }}
+    px solid;
+  }
+
+  .sh-badge1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: {{ block.settings.badge1_color }};
+    color: {{ block.settings.badge1_text_color }};
+    z-index: 2;
+    transform: translate(calc(-50% + {{ section.settings.badge1_translate_x | default: -20 }}px), calc(-50% + {{ section.settings.badge1_translate_y | default: 35 }}px));
+    padding: {{ section.settings.badge1_padding_vertical | default: 5 }}
+    px 10px;
+    border-radius: {{ section.settings.badge1_border_radius | default: 20 }}px;
+    font-size: {{ section.settings.badge1_font_size | default: 9 }}px;
+  }
+
+  .sh-bubbles-bounce {
+    animation: sh-bounce 2s infinite;
+  }
+
+  .sh-bubbles-scale {
+    animation: sh-scale 2s infinite;
+  }
+
+  .sh-bubbles-swing {
+    animation: sh-swing 2s infinite;
+  }
+
+  @keyframes sh-bounce {
+    0,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes sh-scale {
+    0,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes sh-swing {
+    20% {
+      transform: rotate(15deg);
+    }
+    40% {
+      transform: rotate(-10deg);
+    }
+    60% {
+      transform: rotate(5deg);
+    }
+    80% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": {
+      "en": "SH Story Slider",
+      "de": "SH Story Slider"
+    },
+    "settings": [
+      {
+        "type": "header",
+        "content": {
+          "en": "Section settings",
+          "de": "Grundeinstellungen"
+        }
+      },
+      {
+        "type": "range",
+        "id": "padding-oben",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "default": 20,
+        "label": {
+          "en": "Distance to top",
+          "de": "Abstand nach oben"
+        }
+      },
+      {
+        "type": "range",
+        "id": "padding-unten",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "default": 12,
+        "label": {
+          "en": "Distance to bottom",
+          "de": "Abstand nach unten"
+        }
+      },
+      {
+        "type": "color",
+        "id": "background-color",
+        "default": "#F9F6F2",
+        "label": {
+          "en": "Background Color of Section",
+          "de": "Hintergrundfarbe der Section"
+        }
+      }, {
+        "type": "color",
+        "id": "highlight-color",
+        "default": "#D1B190",
+        "label": {
+          "en": "Highlight Stroke Color",
+          "de": "Farbe der Hervorhebung"
+        }
+      }, {
+        "type": "range",
+        "id": "highlight-border-width",
+        "min": 1,
+        "max": 10,
+        "step": 0.5,
+        "default": 2.5,
+        "label": {
+          "en": "Border Width of Highlight",
+          "de": "Kontur Dicke der Hervorhebung"
+        }
+      }, {
+        "type": "header",
+        "content": {
+          "en": "Bubble settings",
+          "de": "Bubble Einstellungen"
+        }
+      }, {
+        "type": "range",
+        "id": "desktop-size",
+        "min": 50,
+        "max": 150,
+        "step": 1,
+        "default": 92,
+        "label": {
+          "en": "Imagesize desktop",
+          "de": "Bildgröße Desktop"
+        }
+      }, {
+        "type": "range",
+        "id": "desktop-distance",
+        "min": 0,
+        "max": 60,
+        "step": 1,
+        "default": 9,
+        "label": {
+          "en": "Distance between desktop",
+          "de": "Zwischenabstand Desktop"
+        }
+      }, {
+        "type": "range",
+        "id": "mobile-size",
+        "min": 13,
+        "max": 36,
+        "step": 1,
+        "default": 20,
+        "label": {
+          "en": "Imagesize mobile",
+          "de": "Bildgröße Mobilgeräte"
+        }
+      }, {
+        "type": "range",
+        "id": "mobile-distance",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "default": 2,
+        "label": {
+          "en": "Distance between mobile",
+          "de": "Zwischenabstand Mobilgeräte"
+        }
+      }, {
+        "type": "range",
+        "id": "abgerundete_ecken",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 100,
+        "label": {
+          "en": "Image Roundness",
+          "de": "Bilder Abrundung"
+        }
+      }, {
+        "type": "header",
+        "content": {
+          "en": "Badge Settings",
+          "de": "Badge Einstellungen"
+        }
+      }, {
+        "type": "range",
+        "id": "badge1_translate_x",
+        "min": -40,
+        "max": 40,
+        "step": 1,
+        "default": -20,
+        "label": {
+          "en": "Badge Horizontal Position (px)",
+          "de": "Badge Horizontale Position (px)"
+        }
+      }, {
+        "type": "range",
+        "id": "badge1_translate_y",
+        "min": -50,
+        "max": 50,
+        "step": 1,
+        "default": 35,
+        "label": {
+          "en": "Badge Vertical Position (px)",
+          "de": "Badge Vertikale Position (px)"
+        }
+      }, {
+        "type": "range",
+        "id": "badge1_border_radius",
+        "min": 0,
+        "max": 20,
+        "step": 1,
+        "default": 20,
+        "label": {
+          "en": "Badge Border Radius (px)",
+          "de": "Badge Randradius (px)"
+        }
+      }, {
+        "type": "range",
+        "id": "badge1_font_size",
+        "min": 8,
+        "max": 24,
+        "step": 1,
+        "default": 9,
+        "label": {
+          "en": "Badge Font Size (px)",
+          "de": "Badge Schriftgröße (px)"
+        }
+      }, {
+        "type": "range",
+        "id": "badge1_padding_vertical",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "default": 0,
+        "label": {
+          "en": "Badge Height",
+          "de": "Badge Höhe"
+        }
+      }, {
+        "type": "header",
+        "content": {
+          "en": "Font Settings",
+          "de": "Schrift Einstellungen"
+        }
+      }, {
+        "type": "range",
+        "id": "fontsize",
+        "min": 6,
+        "max": 24,
+        "step": 1,
+        "default": 12,
+        "label": {
+          "en": "Font Size",
+          "de": "Schriftgröße"
+        }
+      }, {
+        "type": "range",
+        "id": "font-weight",
+        "min": 100,
+        "max": 900,
+        "step": 100,
+        "default": 400,
+        "label": {
+          "en": "Font Weight",
+          "de": "Schriftdicke"
+        }
+      }, {
+        "type": "color",
+        "id": "schriftfarbe",
+        "default": "#000",
+        "label": {
+          "en": "Font Color",
+          "de": "Schriftfarbe"
+        }
+      }
+    ],
+    "blocks": [
+      {
+        "name": {
+          "en": "Block",
+          "de": "Block"
+        },
+        "type": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": {
+              "en": "Image / Icon",
+              "de": "Bild / Icon"
+            }
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "default": "Kategorie A",
+            "label": {
+              "en": "Bubble Text",
+              "de": "Bubble Text"
+            }
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": {
+              "en": "Link",
+              "de": "Link"
+            }
+          },
+          {
+            "type": "checkbox",
+            "id": "highlight",
+            "label": {
+              "en": "Highlight Bubble",
+              "de": "Bubble hervorheben"
+            }
+          }, {
+            "type": "checkbox",
+            "id": "show_badge1",
+            "label": {
+              "en": "Show Badge",
+              "de": "Badge anzeigen"
+            },
+            "default": false
+          }, {
+            "type": "text",
+            "id": "badge1_text",
+            "label": {
+              "en": "Badge Text",
+              "de": "Badge Text"
+            },
+            "default": "-50%"
+          }, {
+            "type": "color",
+            "id": "badge1_color",
+            "label": {
+              "en": "Badge Background Color",
+              "de": "Badge Hintergrundfarbe"
+            },
+            "default": "#d9534f"
+          }, {
+            "type": "color",
+            "id": "badge1_text_color",
+            "label": {
+              "en": "Badge Text Color",
+              "de": "Badge Schriftfarbe"
+            },
+            "default": "#ffffff"
+          }, {
+            "type": "checkbox",
+            "id": "animation_enabled",
+            "label": {
+              "en": "Enable Animation",
+              "de": "Animation aktivieren"
+            },
+            "default": false
+          }, {
+            "type": "select",
+            "id": "animation_type",
+            "label": {
+              "en": "Animation Type",
+              "de": "Animationstyp"
+            },
+            "default": "bounce",
+            "options": [
+              {
+                "value": "bounce",
+                "label": {
+                  "en": "Bounce",
+                  "de": "Hüpfen"
+                }
+              }, {
+                "value": "scale",
+                "label": {
+                  "en": "Scale",
+                  "de": "Pulsieren"
+                }
+              }, {
+                "value": "swing",
+                "label": {
+                  "en": "Swing",
+                  "de": "Schwingen"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": {
+          "en": "SH Story Slider",
+          "de": "SH Story Slider"
+        },
+        "blocks": [
+          {
+            "type": "block"
+          }, {
+            "type": "block"
+          }, {
+            "type": "block"
+          }, {
+            "type": "block"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
