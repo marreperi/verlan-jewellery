@@ -320,7 +320,7 @@
         "type": "shopify://apps/swishlist-simple-wishlist/blocks/wishlist_settings/bfcb80f2-f00d-42ae-909a-9f00c726327b",
         "disabled": false,
         "settings": {
-          "custom_css": ""
+          "custom_css": ".st-wishlist-button[data-type=\"details\"] {\n    position: absolute;\n    right: 0;\n    top: -10px;\n}"
         }
       }
     }
