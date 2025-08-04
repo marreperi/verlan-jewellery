@@ -12994,3 +12994,14 @@ html[dir=rtl] .product-single__meta .rte{
   align-items: flex-end;
   justify-content: space-between;
 }
+
+.product-block.product-block--price {
+  display: flex;
+  align-items: baseline;
+}
+
+@media (max-width: 768px) {
+  .product-block.product-block--price {
+    justify-content: center;
+  }
+}
