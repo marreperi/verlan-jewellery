@@ -31,7 +31,9 @@
   section: section,
   main_menu: main_menu,
   toolbar_menu: toolbar_menu,
-  logo_alignment: logo_alignment
+  logo_alignment: logo_alignment,
+  mobile_primary_menu: linklists[section.settings.mobile_primary_menu],
+  mobile_secondary_menu: linklists[section.settings.mobile_secondary_menu]
 -%}
 {%- render 'cart-drawer' -%}
 
@@ -336,6 +338,44 @@
       "id": "show_currency_flags",
       "label": "t:sections.header.settings.show_currency_flags.label",
       "default": true
+    },
+    {
+      "type": "header",
+      "content": "Mobile settings"
+    },
+    {
+      "type": "link_list",
+      "id": "mobile_primary_menu",
+      "label": "Primary mobile menu",
+      "info": "Menu items will display with background images"
+    },
+    {
+      "type": "link_list",
+      "id": "mobile_secondary_menu",
+      "label": "Secondary mobile menu",
+      "info": "Simple text links below primary menu"
+    },
+    {
+      "type": "color",
+      "id": "mobile_overlay_color",
+      "label": "Primary menu overlay color",
+      "default": "rgba(0,0,0,0.3)"
+    },
+    {
+      "type": "color",
+      "id": "mobile_text_color",
+      "label": "Primary menu text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "mobile_menu_gap",
+      "label": "Primary menu gap",
+      "min": 4,
+      "max": 20,
+      "step": 2,
+      "default": 8,
+      "unit": "px"
     }
   ],
   "blocks": [

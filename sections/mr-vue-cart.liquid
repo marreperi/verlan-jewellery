@@ -542,27 +542,8 @@
             <button
               type="submit"
               name="checkout"
-              class="{{ ss.button_class | replace: ".", " " | replace: "#", " " }} checkout-button-{{ si }} button button--solid button--product button--loader">
-              <svg
-                fill="#ffffff"
-                width="25"
-                height="25"
-                viewBox="0 0 35 35"
-                data-name="Layer 2"
-                id="Layer_2"
-                xmlns="http://www.w3.org/2000/svg"
-                stroke="#ffffff">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path d="M17.5,34.44A3.07,3.07,0,0,1,15.89,34L9.82,30.45A14.79,14.79,0,0,1,2.25,17.7V8A3.2,3.2,0,0,1,4.34,5L16.4.57a3.2,3.2,0,0,1,2.2,0L30.66,5a3.2,3.2,0,0,1,2.09,3V17.7a14.79,14.79,0,0,1-7.57,12.75L19.11,34A3.07,3.07,0,0,1,17.5,34.44Zm0-31.56a.67.67,0,0,0-.24,0L5.2,7.33A.69.69,0,0,0,4.75,8V17.7a12.3,12.3,0,0,0,6.33,10.59l6.07,3.56a.73.73,0,0,0,.7,0l6.07-3.56h0A12.3,12.3,0,0,0,30.25,17.7V8a.69.69,0,0,0-.45-.65L17.74,2.92A.67.67,0,0,0,17.5,2.88Z"></path>
-                  <path d="M16.4,22.35a1.3,1.3,0,0,1-.81-.29l-4.27-3.6a1.25,1.25,0,0,1,1.61-1.92l3.35,2.82L22,13.06a1.25,1.25,0,0,1,1.86,1.68l-6.48,7.2A1.27,1.27,0,0,1,16.4,22.35Z"></path>
-                </g>
-              </svg>
-              Jetzt sicher zur Kasse
+              class="{{ ss.button_class | replace: ".", " " | replace: "#", " " }} checkout-button-{{ si }} btn btn--primary button--product button--loader">
+              Zur Kasse
             </button>
 
             <!-- Order Note Button -->
@@ -1307,7 +1288,7 @@
           if (!shippingThreshold) return { display: 'none' };
           
           const borderStyle = this.cart.total_price >= shippingThreshold.value
-            ? `2px solid #698c00`
+            ? `2px solid #afd7c9`
             : '';
 
           const maxThreshold = Math.max(...thresholds.map(t => t.value));
@@ -1343,7 +1324,7 @@
           const giftPosition = (giftThreshold.value / maxThreshold) * 100;
 
           return {
-            border: this.cart.total_price >= giftThreshold.value ? '2px solid #698c00' : '2px solid {{ss.background_shipping_bar}}',
+            border: this.cart.total_price >= giftThreshold.value ? '2px solid #afd7c9' : '2px solid {{ss.background_shipping_bar}}',
             position: 'absolute',
             left: `${giftPosition}%`,
             transform: 'translateX(-50%)'
@@ -1360,7 +1341,7 @@
           const secondGiftPosition = (secondGiftThreshold.value / maxThreshold) * 100;
 
           return {
-            border: this.cart.total_price >= secondGiftThreshold.value ? '2px solid #698c00' : '2px solid {{ss.background_shipping_bar}}',
+            border: this.cart.total_price >= secondGiftThreshold.value ? '2px solid #afd7c9' : '2px solid {{ss.background_shipping_bar}}',
             position: 'absolute',
             left: `${secondGiftPosition}%`,
             transform: 'translateX(-50%)'
@@ -2383,7 +2364,7 @@ height: fit-content;
 /* Special styling for free gift items */
 .item-container-{{ si }} .has-hidden-prop {
   background: #F0F3E5;
-  border: 2px solid #698c00;
+  border: 2px solid #afd7c9;
   padding: 5px 15px;
   border-radius: 8px;
 }
@@ -2441,6 +2422,7 @@ border-top-right-radius: {{ ss.radius_header_footer }}px;
 box-shadow: 0px 0px 15px 0px{{ss.shadow_header_footer | color_modify: 'alpha', ss.alpha_header_footer }};
 border-top: 1px solid{{ss.shadow_header_footer}};
 position: relative;
+font-size: smaller;
 
 @media(max-width: 500px) {
   padding: 10px 20px;
@@ -2453,12 +2435,11 @@ position: relative;
   align-items: center;
   gap: 8px;
   padding: 10px 15px;
-  background: #fff3cd;
-  border: 1px solid #ffeaa7;
-  border-radius: 4px;
+  background: #e8f3f1;
+  border: 1px solid #afd7c9;
   margin-top: 15px;
   font-size: 14px;
-  color: #856404;
+  color: #5a8967;
 }
 
 .warning-icon {
@@ -2475,6 +2456,7 @@ position: relative;
   justify-content: space-between;
   align-items: center;
   padding: 0;
+  margin-bottom:5px;
 }
 
 .cart__item-row:last-child {
@@ -2483,15 +2465,14 @@ position: relative;
 
 .cart__item--subtotal {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .cart__item--total {
-  font-weight: bold;
-  font-size: 18px;
+  font-size: 12px;
   border-top: 2px solid #efefef;
-  margin-top: 0;
-  padding-top: 10px;
+  margin-top: 5px;
+  padding-top: 5px;
 }
 
 /* Shipping Selector */
@@ -2503,7 +2484,7 @@ position: relative;
 }
 
 .shipping-label {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   color: #000;
   margin-bottom: 0;
@@ -2522,7 +2503,7 @@ position: relative;
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 16px;
+  font-size: 12px;
   color: #000;
   font-weight: 400;
   text-decoration: underline;
@@ -2555,7 +2536,6 @@ position: relative;
   right: 0;
   background: white;
   border: 1px solid #ddd;
-  border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   max-height: 200px;
@@ -2597,18 +2577,17 @@ position: relative;
 
 .cart__shipping-cost {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 12px;
   color: #000;
 }
 
 .cart__shipping-cost .free-shipping {
-  color: #698c00;
+  color: #afd7c9;
 }
 
 .cart__total-cost {
-  font-size: 18px;
+  font-size: 12px;
   color: #000;
-  font-weight: 600;
 }
 
 /* Checkout Button */
@@ -2675,6 +2654,7 @@ a {
 .checkout-button-{{ si }} {
   width: 100%;
   margin-top: 10px;
+  min-height: 50px;
 }
 
 .close-{{ si }} {
@@ -2745,7 +2725,7 @@ a {
 .pulse-dot-{{ si }} {
   width: 8px;
   height: 8px;
-  background: #698c00;
+  background: #afd7c9;
   border-radius: 50%;
 }
 
@@ -2778,14 +2758,14 @@ a {
 
 .progress-{{ si }} {
   height: 100%;
-  background: #698c00;
+  background: #afd7c9;
   display: block !important;
   transition: width 1s ease;
 }
 
 .progress-{{ si }} {
   height: 100%;
-  background: #698c00;
+  background: #afd7c9;
   display: block !important;
   transition: width 1s ease;
 }
@@ -3101,14 +3081,14 @@ font-size: small;
 
 .progress-{{ si }} {
   height: 100%;
-  background: #698c00;
+  background: #afd7c9;
   display: block !important;
   transition: width 1s ease;
 }
 
 .progress-{{ si }} {
   height: 100%;
-  background: #698c00;
+  background: #afd7c9;
   display: block !important;
   transition: width 1s ease;
 }
@@ -3442,7 +3422,6 @@ font-size: small;
   flex: 1;
   padding: 10px 12px;
   border: 1px solid #ddd;
-  border-radius: 4px;
   font-size: 14px;
   background-color: #f5f5f5;
 }
@@ -3462,7 +3441,6 @@ font-size: small;
   background-color: #000;
   color: #fff;
   border: none;
-  border-radius: 4px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -3508,7 +3486,6 @@ font-size: small;
 .discount-message-{{ si }} {
   margin-top: 8px;
   padding: 8px 12px;
-  border-radius: 4px;
   font-size: 13px;
   font-weight: 500;
 }
@@ -3587,7 +3564,6 @@ font-size: small;
   padding: 4px 8px;
   background-color: #28a745;
   color: white;
-  border-radius: 4px;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -3600,7 +3576,6 @@ font-size: small;
   padding: 10px 15px;
   background-color: #f8f9fa;
   border: 1px solid #e9ecef;
-  border-radius: 4px;
 }
 
 .bulk-shipment-note-content {
@@ -3676,7 +3651,6 @@ font-size: small;
   padding: 4px 8px;
   background-color: #28a745;
   color: white;
-  border-radius: 4px;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -3705,7 +3679,6 @@ font-size: small;
   border: 1px solid #dc3545;
   color: #dc3545;
   padding: 4px 8px;
-  border-radius: 4px;
   font-size: 12px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -3737,7 +3710,6 @@ font-size: small;
   flex: 1;
   padding: 10px 12px;
   border: 1px solid #ddd;
-  border-radius: 4px;
   font-size: 14px;
 }
 
@@ -3756,7 +3728,6 @@ font-size: small;
   background-color: #000;
   color: white;
   border: none;
-  border-radius: 4px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -3795,7 +3766,6 @@ font-size: small;
 .discount-message-{{ si }} {
   margin-top: 10px;
   padding: 8px 12px;
-  border-radius: 4px;
   font-size: 14px;
   font-weight: 500;
 }
