@@ -1,7 +1,53 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "footer",
   "name": "t:sections.footer-group.name",
   "sections": {
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title": "VERLAN NEWSLETTER",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Erfahre vor allen anderen über neue Kollektionen, Gewinnspiele und Aktionen.<br/>Wir versprechen: Liebesbriefe anstatt Spam-Mails 💌</p>"
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "text",
+        "form"
+      ],
+      "settings": {
+        "align_text": "center",
+        "image_width": "33",
+        "image_mask": "none",
+        "image_position": "right",
+        "color_background": "#f9f9f9",
+        "color_text": "#1c1d1d",
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
     "footer-promotions": {
       "type": "footer-promotions",
       "blocks": {
@@ -10,6 +56,7 @@
           "disabled": true,
           "settings": {
             "enable_image": true,
+            "image_mask": "none",
             "title": "Site-wide promotion",
             "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
             "button_label": "Optional button",
@@ -21,6 +68,7 @@
           "disabled": true,
           "settings": {
             "enable_image": true,
+            "image_mask": "none",
             "title": "Site-wide promotion",
             "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
             "button_label": "Optional button",
@@ -32,6 +80,7 @@
           "disabled": true,
           "settings": {
             "enable_image": true,
+            "image_mask": "none",
             "title": "Site-wide promotion",
             "text": "<p>Use this section to promote content throughout every page of your site. Add images for further impact.</p>",
             "button_label": "Optional button",
@@ -52,6 +101,14 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "1494301487048": {
+          "type": "logo_social",
+          "settings": {
+            "logo": "shopify://shop_images/Verlan_Logo_Circle_black_868e49ce-4b8c-4203-ac5b-8174c65b5eb6.png",
+            "desktop_logo_height": 100,
+            "container_width": 25
+          }
+        },
         "767afba6-3fe9-4dbf-994d-521fc7c24526": {
           "type": "menu",
           "settings": {
@@ -73,33 +130,15 @@
           "settings": {
             "show_footer_title": true,
             "menu": "footer",
-            "container_width": 17
-          }
-        },
-        "1494292487693": {
-          "type": "newsletter",
-          "settings": {
-            "show_footer_title": true,
-            "title": "VERLAN NEWSLETTER",
-            "text": "<p>Erfahre vor allen anderen über neue Kollektionen, Gewinnspiele und Aktionen.<br/>Wir versprechen: Liebesbriefe anstatt Spam-Mails 💌</p>",
-            "container_width": 30
-          }
-        },
-        "1494301487048": {
-          "type": "logo_social",
-          "disabled": true,
-          "settings": {
-            "desktop_logo_height": 50,
-            "container_width": 95
+            "container_width": 25
           }
         }
       },
       "block_order": [
+        "1494301487048",
         "767afba6-3fe9-4dbf-994d-521fc7c24526",
         "09e152e1-41bd-4996-82a6-fb57939f9082",
-        "1494301487049",
-        "1494292487693",
-        "1494301487048"
+        "1494301487049"
       ],
       "settings": {
         "show_locale_selector": false,
@@ -109,36 +148,11 @@
         "show_copyright": true,
         "copyright_text": ""
       }
-    },
-    "newsletter": {
-      "type": "newsletter",
-      "blocks": {
-        "title": {
-          "type": "title",
-          "settings": {
-            "title": "Sign up and save",
-            "heading_size": "h2"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>"
-          }
-        },
-        "form": {
-          "type": "form"
-        }
-      },
-      "block_order": ["title", "text", "form"],
-      "settings": {
-        "align_text": "center",
-        "color_background": "#f9f9f9",
-        "color_text": "#1c1d1d",
-        "top_padding": true,
-        "bottom_padding": true
-      }
     }
   },
-  "order": ["footer-promotions", "footer", "newsletter"]
+  "order": [
+    "newsletter",
+    "footer-promotions",
+    "footer"
+  ]
 }
