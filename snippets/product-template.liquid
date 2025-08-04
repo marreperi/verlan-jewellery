@@ -129,7 +129,10 @@
               {%- else -%}
                 <h1 class="h2 product-single__title">
                   {%- unless product.empty? -%}
-                    {{ product.title }}
+                    <div class="product-title-container">
+                      {{ product.title }}
+                    </div>
+                    <button class="st-wishlist-button" type="button" data-type="details" data-handle="{{product.handle}}"></button>
                   {%- else -%}
                     {{ 'home_page.onboarding.product_title' | t }}
                   {%- endunless -%}
@@ -137,9 +140,9 @@
               {%- endif -%}
 
 
-{% comment %}Start automatically added Judge.me widget{% endcomment %}
-  {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
-{% comment %}End automatically added Judge.me widget{% endcomment %}
+              {% comment %}Start automatically added Judge.me widget{% endcomment %}
+                {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
+              {% comment %}End automatically added Judge.me widget{% endcomment %}
               {%- if sku_enable -%}
                 <p data-sku class="product-single__sku">
                   {%- if current_variant.sku -%}
