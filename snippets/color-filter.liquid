@@ -1,0 +1,278 @@
+{% comment %}
+Color Filter Snippet
+- collection: Liquid collection object
+- enable_color_filter: boolean to enable/disable color filter
+{% endcomment %}
+
+{%- if enable_color_filter -%}
+  {%- liquid
+    assign color_metafield_key = 'schmuko.color_list'
+    assign color_metafield_namespace = 'products'
+    assign available_colors = ''
+    assign color_counts = ''
+    
+    # Get all unique colors from collection products
+    for product in collection.products
+      assign product_colors = product.metafields[color_metafield_namespace][color_metafield_key]
+      if product_colors != blank
+        assign product_colors_array = product_colors | split: ','
+        for color in product_colors_array
+          assign color_trimmed = color | strip
+          unless available_colors contains color_trimmed
+            assign available_colors = available_colors | append: color_trimmed | append: ','
+          endunless
+        endfor
+      endif
+    endfor
+    
+    # Remove trailing comma
+    assign available_colors = available_colors | split: ','
+    assign available_colors = available_colors | uniq | sort
+    
+    # Count products for each color
+    for color in available_colors
+      assign color_count = 0
+      for product in collection.products
+        assign product_colors = product.metafields[color_metafield_namespace][color_metafield_key]
+        if product_colors != blank
+          assign product_colors_array = product_colors | split: ','
+          for product_color in product_colors_array
+            assign product_color_trimmed = product_color | strip
+            if product_color_trimmed == color
+              assign color_count = color_count | plus: 1
+              break
+            endif
+          endfor
+        endif
+      endfor
+      assign color_counts = color_counts | append: color_count | append: ','
+    endfor
+    
+    assign color_counts = color_counts | split: ','
+    
+    # Get current color filter
+    assign current_color_filter = request.query_string | split: 'filter.p.m.' | last | split: '=' | first
+    assign current_color_value = request.query_string | split: 'filter.p.m.' | last | split: '=' | last
+  -%}
+
+  {%- if available_colors.size > 0 -%}
+    <div class="farbe-wrapper">
+      <div id="Facet-4-template--23160464965896__product-grid" class="parent-display">
+        <div class="facets-wrap parent-wrap">
+          <ul class="farbe-inner facets__list list-unstyled no-js-hidden" role="list">
+            {%- for color in available_colors -%}
+              {%- liquid
+                assign color_index = forloop.index
+                assign color_count = color_counts[color_index0]
+                assign color_handle = color | handle
+                assign is_active = false
+                if current_color_value == color
+                  assign is_active = true
+                endif
+              -%}
+              
+              <li class="list-menu__item facets__item" style="order: -1;">
+                <label for="Filter-Farbe-{{ color_index }}" class="facet-checkbox">
+                  <input 
+                    type="checkbox" 
+                    name="filter.p.m.{{ color_metafield_namespace }}.{{ color_metafield_key }}" 
+                    value="{{ color }}" 
+                    id="Filter-Farbe-{{ color_index }}"
+                    {% if is_active %}checked=""{% endif %}>
+                  <div class="farbe-filter">
+                    <div class="color-swatch {{ color_handle }}-swatch">
+                      <div></div>
+                    </div>
+                    <div class="color-title">{{ color }}</div>
+                    <div class="farbe-filter-close">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                        <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M0.146447 7.14417C-0.0488155 7.33943 -0.0488155 7.65601 0.146447 7.85127C0.341709 8.04654 0.658291 8.04654 0.853553 7.85127L3.99886 4.70597L7.14417 7.85128C7.33943 8.04654 7.65601 8.04654 7.85127 7.85128C8.04654 7.65602 8.04654 7.33943 7.85127 7.14417L4.70597 3.99886L7.85127 0.853553C8.04654 0.658292 8.04654 0.341709 7.85127 0.146447C7.65601 -0.0488156 7.33943 -0.0488156 7.14417 0.146447L3.99886 3.29176L0.853553 0.146449C0.658291 -0.048813 0.341709 -0.048813 0.146447 0.146449C-0.0488155 0.341711 -0.0488155 0.658294 0.146447 0.853556L3.29175 3.99886L0.146447 7.14417Z" fill="black"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </label>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    {%- if is_active -%}
+      <div class="active-fecets-inner active-facets">
+        <facet-remove hidden="">
+          <a href="{{ collection.url }}" class="active-facets__button active-facets__button--light" role="button">
+            <span class="active-facets__button-inner button button--tertiary">
+              Farbe: {{ current_color_value }}
+              <svg aria-hidden="true" focusable="false" width="12" height="13" class="icon icon-close-small" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.48627 9.32917L2.82849 3.67098" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M2.88539 9.38504L8.42932 3.61524" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <span class="visually-hidden">Filter entfernen</span>
+            </span>
+          </a>
+        </facet-remove>
+        <facet-remove class="active-facets__button-wrapper">
+          <a href="{{ collection.url }}" class="active-facets__button-remove underlined-link" role="button">
+            <span>Alle entfernen</span>
+          </a>
+        </facet-remove>
+      </div>
+    {%- endif -%}
+  {%- endif -%}
+{%- endif -%}
+
+<style>
+  .farbe-wrapper {
+    margin-bottom: 20px;
+  }
+  
+  .farbe-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .facet-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .farbe-filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    transition: all 0.2s ease;
+  }
+  
+  .farbe-filter:hover {
+    border-color: #000;
+  }
+  
+  .facet-checkbox input[type="checkbox"]:checked + .farbe-filter {
+    border-color: #000;
+    background: #f5f5f5;
+  }
+  
+  .color-swatch {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px #ddd;
+    position: relative;
+  }
+  
+  .color-swatch div {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  /* Color swatch styles */
+  .gold-swatch div { background-color: #FFD700; }
+  .silver-swatch div { background-color: #C0C0C0; }
+  .rosegold-swatch div { background-color: #E8B4B8; }
+  .white-swatch div { background-color: #FFFFFF; border: 1px solid #ddd; }
+  .black-swatch div { background-color: #000000; }
+  .yellow-swatch div { background-color: #FFFF00; }
+  .red-swatch div { background-color: #FF0000; }
+  .blue-swatch div { background-color: #0000FF; }
+  .green-swatch div { background-color: #00FF00; }
+  .purple-swatch div { background-color: #800080; }
+  .pink-swatch div { background-color: #FFC0CB; }
+  .orange-swatch div { background-color: #FFA500; }
+  .brown-swatch div { background-color: #A52A2A; }
+  .gray-swatch div { background-color: #808080; }
+  
+  .color-title {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .farbe-filter-close {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  .facet-checkbox input[type="checkbox"]:checked + .farbe-filter .farbe-filter-close {
+    opacity: 1;
+  }
+  
+  .active-facets {
+    margin-top: 15px;
+  }
+  
+  .active-facets__button {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  .active-facets__button-remove {
+    color: #666;
+    text-decoration: underline;
+  }
+  
+  .active-facets__button-remove:hover {
+    color: #000;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Handle color filter checkbox changes
+  const colorCheckboxes = document.querySelectorAll('.facet-checkbox input[type="checkbox"]');
+  
+  colorCheckboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('change', function() {
+      const form = document.createElement('form');
+      form.method = 'GET';
+      form.action = window.location.pathname;
+      
+      // Add current URL parameters
+      const currentParams = new URLSearchParams(window.location.search);
+      currentParams.forEach(function(value, key) {
+        if (key !== 'filter.p.m.products.schmuko.color_list') {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = key;
+          input.value = value;
+          form.appendChild(input);
+        }
+      });
+      
+      // Add color filter parameter
+      if (this.checked) {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'filter.p.m.products.schmuko.color_list';
+        input.value = this.value;
+        form.appendChild(input);
+      }
+      
+      document.body.appendChild(form);
+      form.submit();
+    });
+  });
+  
+  // Handle "Remove all" button
+  const removeAllButton = document.querySelector('.active-facets__button-remove');
+  if (removeAllButton) {
+    removeAllButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.location.href = window.location.pathname;
+    });
+  }
+});
+</script> 

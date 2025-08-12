@@ -224,24 +224,41 @@
     this.init();
     this.page = 1;
     this.scrollToTopBtn = document.querySelector(".scrollToTopButton");
-    this.scrollToTopBtn.addEventListener(
-      "click",
-      this.scrollToTopFx.bind(this)
-    );
+    if (this.scrollToTopBtn) {
+      this.scrollToTopBtn.addEventListener(
+        "click",
+        this.scrollToTopFx.bind(this)
+      );
+    }
   }
-   
-           initGrid() {
-           const gridOptions = [".ProductListWrapper", "#main-collection-product-grid", "#product-grid", ".product-list", ".collection-grid__wrapper .grid", ".grid--uniform"];
-           for (let gridName of gridOptions) {
-             let grid = document.querySelector(gridName);
-             if (grid) {
-               this.gridName = gridName;
-               this.gridContainer = grid;
-               break;
-             }
-           }
-         }
-   
+  
+  initGrid() {
+    // Prefer scoping to the collection content container first
+    const gridOptions = [
+      "#CollectionAjaxContent .collection-grid__wrapper .grid",
+      "#CollectionAjaxContent .grid--uniform",
+      ".collection-grid__wrapper .grid",
+      ".grid--uniform",
+      "#product-grid",
+      "#main-collection-product-grid",
+      ".product-list",
+      ".ProductListWrapper"
+    ];
+    for (let gridName of gridOptions) {
+      const grid = document.querySelector(gridName);
+      if (grid) {
+        this.gridName = gridName;
+        this.gridContainer = grid;
+        break;
+      }
+    }
+    // Fallback to the broadest grid if nothing matched
+    if (!this.gridContainer) {
+      this.gridName = ".grid--uniform";
+      this.gridContainer = document.querySelector(this.gridName) || document.querySelector(".grid");
+    }
+  }
+  
   init() {
     const observer = new IntersectionObserver(this.revealItem.bind(this), {
       root: null,
@@ -249,7 +266,7 @@
     });
     observer.observe(this);
   }
-   
+  
   fetchNextPage(e) {
     if (!this.dataset.next) {
       console.warn("No next page URL provided.");
@@ -259,48 +276,52 @@
     i.searchParams.set("page", e);
     const r = i.href;
     console.log("Fetching next page:", r, "next:", this.dataset.next);
-    fetch(r, { method: "GET", headers: { "Content-Type": "text/html" } })
+    fetch(r, { method: "GET", headers: { "Accept": "text/html" }, credentials: "same-origin" })
       .then((e) => e.text())
       .then((e) => {
         const t = new DOMParser().parseFromString(e, "text/html");
-        const grid = t.querySelector(this.gridName);
+        // Scope to collection content if present on the fetched page
+        const scope = t.querySelector("#CollectionAjaxContent") || t;
+        let grid = scope.querySelector(this.gridName)
+          || scope.querySelector(".collection-grid__wrapper .grid")
+          || scope.querySelector(".grid--uniform")
+          || scope.querySelector(".grid");
         if (grid) {
+          // If our container was not found earlier, re-detect on current page
+          if (!this.gridContainer) {
+            this.gridContainer = document.querySelector(this.gridName)
+              || document.querySelector("#CollectionAjaxContent .collection-grid__wrapper .grid")
+              || document.querySelector("#CollectionAjaxContent .grid--uniform")
+              || document.querySelector(".collection-grid__wrapper .grid")
+              || document.querySelector(".grid--uniform")
+              || document.querySelector(".grid");
+          }
           this.gridContainer.insertAdjacentHTML("beforeend", grid.innerHTML);
           console.log("Successfully loaded next page products");
           
-          // Trigger AOS animations for newly loaded content
           if (typeof AOS !== 'undefined') {
             AOS.refresh();
           }
           
-          // Update the next page URL for the next fetch
           const nextPageUrl = this.getNextPageUrl(e);
           if (nextPageUrl) {
             this.dataset.next = nextPageUrl;
             console.log("Updated next page URL to:", nextPageUrl);
           }
         } else {
-          console.warn("No grid found in fetched page. Looking for:", this.gridName);
-          // Try alternative selectors if the main one fails
-          const alternativeSelectors = [".grid--uniform", ".collection-grid__wrapper .grid", ".grid"];
-          for (let selector of alternativeSelectors) {
-            const altGrid = t.querySelector(selector);
-            if (altGrid) {
-              this.gridContainer.insertAdjacentHTML("beforeend", altGrid.innerHTML);
-              console.log("Found grid using alternative selector:", selector);
-              
-              // Trigger AOS animations for newly loaded content
-              if (typeof AOS !== 'undefined') {
-                AOS.refresh();
-              }
-              
-              // Update the next page URL for the next fetch
-              const nextPageUrl = this.getNextPageUrl(e);
-              if (nextPageUrl) {
-                this.dataset.next = nextPageUrl;
-                console.log("Updated next page URL to:", nextPageUrl);
-              }
-              break;
+          console.warn("No grid found in fetched page. Tried:", this.gridName);
+          // Try a deeper fallback within the entire fetched document
+          const alt = t.querySelector(".grid--uniform") || t.querySelector(".collection-grid__wrapper .grid") || t.querySelector(".grid");
+          if (alt) {
+            this.gridContainer.insertAdjacentHTML("beforeend", alt.innerHTML);
+            console.log("Found grid using broad fallback selector");
+            if (typeof AOS !== 'undefined') {
+              AOS.refresh();
+            }
+            const nextPageUrl = this.getNextPageUrl(e);
+            if (nextPageUrl) {
+              this.dataset.next = nextPageUrl;
+              console.log("Updated next page URL to:", nextPageUrl);
             }
           }
         }

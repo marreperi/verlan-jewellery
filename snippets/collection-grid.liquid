@@ -68,6 +68,9 @@ Snippet Arguments
     </div>
   </div>
 
+  {%- comment -%} Color Filter Section {%- endcomment -%}
+  {%- render 'color-filter', collection: collection, enable_color_filter: true -%}
+
   <div class="grid grid--uniform{% if mobile_flush_grid %} small--grid--flush{% endif %}"{% unless enable_collection_count %} data-scroll-to{% endunless %}>
     {%- for item in items -%}
       {%- if item.object_type == 'product' -%}
