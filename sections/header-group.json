@@ -120,7 +120,7 @@
       "settings": {
         "main_menu_link_list": "main-menu",
         "mega_menu_images": true,
-        "main_menu_alignment": "center-split",
+        "main_menu_alignment": "left-center",
         "header_style": "sticky",
         "sticky_index": false,
         "sticky_collection": false,
@@ -131,7 +131,6 @@
         "show_currency_flags": false,
         "mobile_primary_menu": "prim-res-menu",
         "mobile_secondary_menu": "sekund-res-menu",
-        "mobile_overlay_color": "rgba(0,0,0,0)",
         "mobile_text_color": "#ffffff",
         "mobile_menu_gap": 8
       }
