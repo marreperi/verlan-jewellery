@@ -26,7 +26,7 @@
           "type": "variant_picker",
           "settings": {
             "variant_labels": true,
-            "picker_type": "button",
+            "picker_type": "dropdown",
             "product_dynamic_variants_enable": true,
             "color_swatches": false
           }
@@ -38,10 +38,33 @@
             "surface_pickup_enable": false
           }
         },
+        "service_usps_JGzdGW": {
+          "type": "service_usps",
+          "settings": {
+            "icon_width": 50,
+            "img1": "shopify://shop_images/nachhaltig_fair_hergestellter_schmuck_aus_recyceltem_silber_verlan_jewellery.png",
+            "text1": "<p>Mit Liebe <br/>handgefertig</p>",
+            "img2": "shopify://shop_images/plastikfrei_icon_ohne_text.png",
+            "text2": "<p>Plastikfreier<br/>Versand</p>",
+            "img3": "shopify://shop_images/nachhaltig_leaves.png",
+            "text3": "<p>Umweltschonend <br/>& Fair</p>",
+            "img4": "shopify://shop_images/Lieferung_tracking_icon_b40c4ad1-0403-4e98-b647-7b7cf79e77c9.png",
+            "text4": "<p>Versand <br/>mit Tracking</p>"
+          }
+        },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "is_tab": false
+          }
+        },
+        "tab_zhD9jw": {
+          "type": "tab",
+          "settings": {
+            "title": "Beschreibung",
+            "content": "{{ product.description }}",
+            "page": ""
           }
         },
         "2f17364e-afc6-48a2-8cc4-956e460e145b": {
@@ -74,12 +97,6 @@
             "title": "Stell uns deine Frage",
             "phone": false
           }
-        },
-        "4295efae-1bc0-4dce-bdb3-92ced01e4df8": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
         }
       },
       "block_order": [
@@ -87,12 +104,13 @@
         "size_chart_rXcDfr",
         "variant_picker",
         "buy_buttons",
+        "service_usps_JGzdGW",
         "description",
+        "tab_zhD9jw",
         "2f17364e-afc6-48a2-8cc4-956e460e145b",
         "tab",
         "tab_kDMzwc",
-        "contact",
-        "4295efae-1bc0-4dce-bdb3-92ced01e4df8"
+        "contact"
       ],
       "settings": {
         "sku_enable": false,
@@ -119,7 +137,10 @@
       "blocks": {
         "4c75f089-aad2-4c58-b0ec-26637148641d": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [
@@ -208,6 +229,7 @@
         "3cc33fd8-9bea-4cf7-a03e-59db5df9a4a1",
         "c1954f87-0549-49af-a341-3cdf123b7355"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "align_text": "center",

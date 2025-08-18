@@ -10,14 +10,14 @@
 {
   "current": {
     "color_body_bg": "#ffffff",
-    "color_body_text": "#5c5c5c",
-    "color_price": "#5c5c5c",
+    "color_body_text": "#000000",
+    "color_price": "#000000",
     "color_savings_text": "#c20000",
     "color_borders": "#e8e8e1",
-    "color_button": "#afd7c9",
+    "color_button": "#000000",
     "color_button_text": "#ffffff",
     "color_sale_tag": "#5c5c5c",
-    "color_cart_dot": "#e2b0a8",
+    "color_cart_dot": "#afd7c9",
     "color_small_image_bg": "#e2e1e1",
     "color_large_image_bg": "#e2e1e1",
     "color_header": "#ffffff",
@@ -35,13 +35,13 @@
     "color_image_text": "#ffffff",
     "color_image_overlay": "#000000",
     "color_image_overlay_text_shadow": 25,
-    "type_header_font_family": "monotype_news_gothic_n4",
+    "type_header_font_family": "figtree_n4",
     "type_header_spacing": "0",
     "type_header_base_size": 27,
     "type_header_line_height": 1,
-    "type_header_capitalize": true,
-    "type_headers_align_text": true,
-    "type_base_font_family": "monotype_news_gothic_n4",
+    "type_header_capitalize": false,
+    "type_headers_align_text": false,
+    "type_base_font_family": "figtree_n4",
     "type_base_spacing": "25",
     "type_base_size": 15,
     "type_base_line_height": 1.4,
@@ -284,11 +284,6 @@
           "position": "right"
         }
       },
-      "4372474792694305445": {
-        "type": "shopify://apps/also-bought-related-products/blocks/app-embed-block/b94b27b4-738d-4d92-9e60-43c22d1da3f2",
-        "disabled": false,
-        "settings": {}
-      },
       "15683396631634586217": {
         "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": true,
@@ -322,6 +317,11 @@
         "settings": {
           "custom_css": ".st-wishlist-button[data-type=\"details\"] {\n    position: absolute;\n    right: 0;\n    top: -10px;\n}"
         }
+      },
+      "4372474792694305445": {
+        "type": "shopify://apps/also-bought/blocks/app-embed-block/b94b27b4-738d-4d92-9e60-43c22d1da3f2",
+        "disabled": true,
+        "settings": {}
       }
     }
   },

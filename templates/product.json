@@ -12,12 +12,13 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "price": {
-          "type": "price",
-          "settings": {}
-        },
         "judgeme_preview_badge_product_page_bf4ed826": {
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
           "settings": {}
         },
         "variant_picker": {
@@ -38,8 +39,17 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "is_tab": false
+          }
+        },
+        "tab_eBic8W": {
+          "type": "tab",
+          "settings": {
+            "title": "Beschreibung",
+            "content": "{{ product.description }}",
+            "page": ""
           }
         },
         "tab": {
@@ -73,11 +83,12 @@
         }
       },
       "block_order": [
-        "price",
         "judgeme_preview_badge_product_page_bf4ed826",
+        "price",
         "variant_picker",
         "buy_buttons",
         "description",
+        "tab_eBic8W",
         "tab",
         "tab_nFUe6L",
         "contact",
@@ -108,7 +119,10 @@
       "blocks": {
         "823cf2a0-1e88-4765-bb45-b1cde0157916": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
         }
       },
       "block_order": [
