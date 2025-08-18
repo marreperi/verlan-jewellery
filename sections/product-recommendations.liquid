@@ -47,7 +47,7 @@
           </div>
         {%- endif -%}
         {%- if related_collection.products_count > 0 -%}
-          <div class="product-recommendations page-width">
+          <div class="product-recommendations">
             <div class="grid grid--uniform" data-aos="overflow__animation">
               {%- for product in related_collection.products limit: number_of_products -%}
                 {% comment %} On smaller screen sizes, 39vw is used for grid items in the CSS {% endcomment %}
