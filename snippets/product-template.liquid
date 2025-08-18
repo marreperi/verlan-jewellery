@@ -269,12 +269,12 @@
                       </div>
                     </div>
                   {%- when 'size_chart' -%}
-                    {% if connect_to_sizechart == false %}
+                    {%- if block.settings.size_chart and block.settings.size_chart.content != blank -%}
                       {%- capture size_chart_title -%}
-                        {{ 'products.general.size_chart' | t }}<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-size-chart" viewBox="0 0 64 64"><defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M22.39 33.53c-7.46 0-13.5-3.9-13.5-8.72s6-8.72 13.5-8.72 13.5 3.9 13.5 8.72a12 12 0 0 1-.22 1.73"/><ellipse cx="22.39" cy="24.81" rx="3.28" ry="2.12"/><path class="a" d="M8.89 24.81V38.5c0 7.9 6.4 9.41 14.3 9.41h31.92V33.53H22.39M46.78 33.53v7.44M38.65 33.53v7.44M30.52 33.53v7.44M22.39 33.53v7.44"/></svg>
+                        {{ 'products.general.size_chart_link' | t }}
                       {%- endcapture -%}
 
-                      <div class="size-chart__standalone" {{ block.shopify_attributes }}>
+                      <div class="product-block product-block--size-chart" {{ block.shopify_attributes }}>
                         {%- render
                           'tool-tip-trigger',
                           title: size_chart_title,
@@ -282,12 +282,17 @@
                           context: 'size-chart'
                         -%}
                         {% style %}
-                          tool-tip-trigger {
-                            text-transform: uppercase;
+                          .product-block--size-chart .tool-tip-trigger__title {
+                            color: #000;
+                            text-decoration: underline;
+                            font-weight: normal;
+                            text-transform: none;
+                            cursor: pointer;
+                            display: inline-block;
                           }
                         {% endstyle %}
                       </div>
-                    {% endif %}
+                    {%- endif -%}
                   {%- when 'variant_picker' -%}
                     <div class="product-block" {% if block.settings.product_dynamic_variants_enable %}data-dynamic-variants-enabled{% endif %} {{ block.shopify_attributes }}>
                       {%- unless product.has_only_default_variant -%}
@@ -378,6 +383,76 @@
                             </span>
                           </li>
                         </ul>
+                      </div>
+                    {%- endunless -%}
+                  {%- when 'service_usps' -%}
+                    {%- assign w = block.settings.icon_width | default: 50 -%}
+                    {%- assign items = 0 -%}
+                    {%- capture usp_items -%}
+                      {%- if block.settings.img1 or block.settings.text1 != blank -%}
+                        {%- assign items = items | plus: 1 -%}
+                        <div class="usp">
+                          {%- if block.settings.img1 -%}
+                            <img src="{{ block.settings.img1 | img_url: w | replace: 'cdn.shopify.com', 'cdn.shopify.com' }}" alt="" width="{{ w }}" height="{{ w }}" loading="lazy" />
+                          {%- endif -%}
+                          {%- if block.settings.text1 != blank -%}
+                            <div class="usp__text">{{ block.settings.text1 }}</div>
+                          {%- endif -%}
+                        </div>
+                      {%- endif -%}
+                      {%- if block.settings.img2 or block.settings.text2 != blank -%}
+                        {%- assign items = items | plus: 1 -%}
+                        <div class="usp">
+                          {%- if block.settings.img2 -%}
+                            <img src="{{ block.settings.img2 | img_url: w }}" alt="" width="{{ w }}" height="{{ w }}" loading="lazy" />
+                          {%- endif -%}
+                          {%- if block.settings.text2 != blank -%}
+                            <div class="usp__text">{{ block.settings.text2 }}</div>
+                          {%- endif -%}
+                        </div>
+                      {%- endif -%}
+                      {%- if block.settings.img3 or block.settings.text3 != blank -%}
+                        {%- assign items = items | plus: 1 -%}
+                        <div class="usp">
+                          {%- if block.settings.img3 -%}
+                            <img src="{{ block.settings.img3 | img_url: w }}" alt="" width="{{ w }}" height="{{ w }}" loading="lazy" />
+                          {%- endif -%}
+                          {%- if block.settings.text3 != blank -%}
+                            <div class="usp__text">{{ block.settings.text3 }}</div>
+                          {%- endif -%}
+                        </div>
+                      {%- endif -%}
+                      {%- if block.settings.img4 or block.settings.text4 != blank -%}
+                        {%- assign items = items | plus: 1 -%}
+                        <div class="usp">
+                          {%- if block.settings.img4 -%}
+                            <img src="{{ block.settings.img4 | img_url: w }}" alt="" width="{{ w }}" height="{{ w }}" loading="lazy" />
+                          {%- endif -%}
+                          {%- if block.settings.text4 != blank -%}
+                            <div class="usp__text">{{ block.settings.text4 }}</div>
+                          {%- endif -%}
+                        </div>
+                      {%- endif -%}
+                    {%- endcapture -%}
+                    {%- unless usp_items == blank -%}
+                      <div class="product-block product-block--usps" {{ block.shopify_attributes }}>
+                        <div class="usps-grid usps-count-{{ items }}">
+                          {{ usp_items }}
+                        </div>
+                        {% style %}
+                          .product-block--usps .usps-grid {
+                            display: grid;
+                            grid-template-columns: repeat(2, minmax(0,1fr));
+                            gap: 10px 10px;
+                            align-items: start;
+                            text-align: center;
+                          }
+                          .product-block--usps .usp img { width: {{ w }}px; height: auto; margin: 0 auto 8px; display: block; }
+                          .product-block--usps .usp__text { font-size: 16px; line-height: 1.3; }
+                          @media screen and (min-width: 769px) {
+                            .product-block--usps .usps-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+                          }
+                        {% endstyle %}
                       </div>
                     {%- endunless -%}
                   {%- when 'inventory_status' -%}

@@ -2789,11 +2789,13 @@ pre{
   margin:0 0 30px;
 }
 
+/*
 .label,label:not(.variant__button-label):not(.text-label){
   text-transform:uppercase;
   letter-spacing:0.3em;
   font-size:0.8em;
 }
+  */
 
 label{
   display:block;
@@ -3080,10 +3082,8 @@ button[disabled],html input[disabled]{
   white-space:normal;
 
   font-size:calc(var(--typeBaseSize) - 4px);
-  font-size:max(calc(var(--typeBaseSize) - 4px), 13px);
+  font-size:max(calc(var(--typeBaseSize) - 4px), 16px);
   font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:0.3em;
 
   display:inline-block;
   padding:11px 20px;
@@ -3109,7 +3109,7 @@ button[disabled],html input[disabled]{
 .btn,.rte .btn,.shopify-payment-button .shopify-payment-button__button--unbranded,.spr-container .spr-button,.spr-container .spr-summary-actions a{
     padding:9px 17px;
     font-size:calc(var(--typeBaseSize) - 5px);
-    font-size:max(calc(var(--typeBaseSize) - 5px), 11px)
+    font-size:max(calc(var(--typeBaseSize) - 5px), 16px)
 }
   }
 
@@ -3578,9 +3578,6 @@ button[disabled],html input[disabled]{
 }
 
 .collapsible-trigger-btn{
-  text-transform:uppercase;
-  letter-spacing:0.3em;
-  font-size:0.8em;
   display:block;
   width:100%;
   padding:15px 10px 15px 0
@@ -3653,6 +3650,10 @@ button[disabled],html input[disabled]{
 .payment-buttons .add-to-cart,.payment-buttons .shopify-payment-button,.payment-buttons .shopify-payment-button__button--unbranded{
     min-height:50px;
   }
+
+.add-to-cart {
+  min-height: 65px;
+}
 
 .add-to-cart.btn--secondary{
   border:1px solid;
@@ -9159,10 +9160,13 @@ select .variant-input{
 }
 
 .variant-wrapper--dropdown{
-  display:inline-block;
+  display: ruby;
   max-width:100%;
   margin-right:15px;
   margin-bottom:0;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
 }
 
 .variant__label[for]{
@@ -10530,11 +10534,9 @@ html[dir=rtl] .background-media-text__text{
   }
 
 .announcement-text{
-  font-weight:700;
+  font-weight:500;
   display:block;
-  text-transform:uppercase;
-  letter-spacing:0.2em;
-  font-size:0.9em;
+  font-size:1rem;
 }
 
 .announcement-link-text{
@@ -12487,10 +12489,12 @@ html[dir=rtl] .product-single__meta .rte{
       width:13px;
       height:13px
   }
-    }
+}
 
-.product__policies{
+.product__policies,
+.product__policies a {
   font-size:0.85em;
+  color: #858585;
 }
 
 .shopify-payment-terms{
