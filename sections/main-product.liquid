@@ -245,6 +245,209 @@
   ]
 },
 {
+        "type": "product_tip",
+        "name": "Product Tip",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "header",
+            "content": "Product Selection"
+          },
+          {
+            "type": "paragraph",
+            "content": "⚠️ Product Selection: This block uses a metaobject reference. Follow these steps to set it up:"
+          },
+          {
+            "type": "header",
+            "content": "Step 1: Create Metaobject Definition"
+          },
+          {
+            "type": "paragraph",
+            "content": "1. Go to Settings > Custom data > Metaobjects"
+          },
+          {
+            "type": "paragraph",
+            "content": "2. Click 'Add definition'"
+          },
+          {
+            "type": "paragraph",
+            "content": "3. Set the following values:"
+          },
+          {
+            "type": "paragraph",
+            "content": "   • Name: Product Tip"
+          },
+          {
+            "type": "paragraph",
+            "content": "   • Handle: product_tip"
+          },
+          {
+            "type": "paragraph",
+            "content": "4. Add these fields to the definition:"
+          },
+          {
+            "type": "paragraph",
+            "content": "   • Name (single line input, required)"
+          },
+          {
+            "type": "paragraph",
+            "content": "   • Title (single line input, optional)"
+          },
+          {
+            "type": "paragraph",
+            "content": "   • Subtitle (single line input, optional)"
+          },
+          {
+            "type": "paragraph",
+            "content": "   • Product (product_reference, required)"
+          },
+          {
+            "type": "paragraph",
+            "content": "5. Click 'Save'"
+          },
+          {
+            "type": "header",
+            "content": "Step 2: Create Metaobject Instance"
+          },
+          {
+            "type": "paragraph",
+            "content": "1. Go to Content > Metaobjects"
+          },
+          {
+            "type": "paragraph",
+            "content": "2. Click 'Add metaobject'"
+          },
+          {
+            "type": "paragraph",
+            "content": "3. Select 'Product Tip' definition"
+          },
+          {
+            "type": "paragraph",
+            "content": "4. Fill in the fields:"
+          },
+          {
+            "type": "paragraph",
+            "content": "   • Name: Give it a descriptive name"
+          },
+          {
+            "type": "paragraph",
+            "content": "   • Title: Optional title for the tip"
+          },
+          {
+            "type": "paragraph",
+            "content": "   • Subtitle: Optional subtitle"
+          },
+          {
+            "type": "paragraph",
+            "content": "   • Product: Select the product to show"
+          },
+          {
+            "type": "paragraph",
+            "content": "5. Click 'Save'"
+          },
+          {
+            "type": "header",
+            "content": "Step 3: Create Product Metafield"
+          },
+          {
+            "type": "paragraph",
+            "content": "1. Go to Settings > Custom data > Metafields"
+          },
+          {
+            "type": "paragraph",
+            "content": "2. Click 'Add definition'"
+          },
+          {
+            "type": "paragraph",
+            "content": "3. Select 'Products' as the owner"
+          },
+          {
+            "type": "paragraph",
+            "content": "4. Set the following values:"
+          },
+          {
+            "type": "paragraph",
+            "content": "   • Name: Product Tip"
+          },
+          {
+            "type": "paragraph",
+            "content": "   • Namespace: custom"
+          },
+          {
+            "type": "paragraph",
+            "content": "   • Key: product_tip"
+          },
+          {
+            "type": "paragraph",
+            "content": "   • Type: Metaobject reference"
+          },
+          {
+            "type": "paragraph",
+            "content": "   • Metaobject definition: Product Tip"
+          },
+          {
+            "type": "paragraph",
+            "content": "5. Click 'Save'"
+          },
+          {
+            "type": "header",
+            "content": "Step 4: Assign to Products"
+          },
+          {
+            "type": "paragraph",
+            "content": "1. Go to Products > Select your product"
+          },
+          {
+            "type": "paragraph",
+            "content": "2. Scroll down to 'Metafields' section"
+          },
+          {
+            "type": "paragraph",
+            "content": "3. Find 'Product Tip' field"
+          },
+          {
+            "type": "paragraph",
+            "content": "4. Select the metaobject instance you created"
+          },
+          {
+            "type": "paragraph",
+            "content": "5. Save the product"
+          },
+          {
+            "type": "header",
+            "content": "Content"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Anwendung"
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description",
+            "default": "<p>Mein <b>Sugar Lip Scrub</b> für glatte, weiche Lippen – perfekt vorbereitet für Make-up.</p>"
+          },
+          {
+            "type": "header",
+            "content": "Styling"
+          },
+          {
+            "type": "color",
+            "id": "desktop_background_color",
+            "label": "Desktop Background Color",
+            "default": "#f8f1f4"
+          },
+          {
+            "type": "color",
+            "id": "mobile_background_color",
+            "label": "Mobile Background Color",
+            "default": "#f8f1f4"
+          }
+        ]
+      },
+{
   "type": "service_usps",
   "name": "Service USPs",
   "limit": 1,

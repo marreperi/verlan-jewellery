@@ -457,7 +457,89 @@
                     {%- endunless -%}
                   {%- when 'inventory_status' -%}
                     {%- render 'product-inventory', product: product, current_variant: current_variant, block: block -%}
-                  {%- when 'share' -%}
+                  {%- when 'product_tip' -%}
+                    {%- assign tip_title = block.settings.title -%}
+                    {%- assign tip_description = block.settings.description -%}
+                    {%- assign mobile_bg_color = block.settings.mobile_background_color | default: '#f8f1f4' -%}
+                    {%- assign desktop_bg_color = block.settings.desktop_background_color | default: '#f8f1f4' -%}
+            
+                    {%- if product.metafields.custom.product_tip != blank -%}
+                        {%- assign product_tip = product.metafields.custom.product_tip.value -%}
+            
+                        {%- assign product_tip_product = product_tip.product_reference.value -%}
+            
+                          
+                          {%- if product_tip != blank and product_tip_product != blank -%}
+                      
+                                          <div class="product__tip" {{ block.shopify_attributes }}>
+                          <div class="product__tip-description" 
+                               style="background-color: {{ desktop_bg_color }};"
+                               data-mobile-bg="{{ mobile_bg_color }}"
+                               data-desktop-bg="{{ desktop_bg_color }}">
+                            
+                            <div class="content-wrapper--left">
+                              <a href="{{ product_tip_product.url }}" class="product-tip--link">
+                                <div class="image-wrapper">
+                                  <div class="responsive-image">
+                                    {%- if product_tip_product.featured_media != blank -%}
+                                      <img src="{{ product_tip_product.featured_media | image_url: width: 500 }}" 
+                                           alt="{{ product_tip_product.featured_media.alt | escape }}"
+                                           loading="lazy"
+                                           width="500" 
+                                           height="500"
+                                           class="responsive-image__image product-tip__image">
+                                    {%- endif -%}
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            
+                            <div class="content-wrapper--right">
+                              <a href="{{ product_tip_product.url }}" class="product-tip--link">
+                                <h3 class="tip--title product-tip__desktop_heading">
+                                  {{ tip_title | default: product_tip_product.title }}
+                                </h3>
+                              </a>
+                              
+                              {%- if tip_description != blank -%}
+                                <div class="tip-content">
+                                  {{ tip_description }}
+                                </div>
+                              {%- endif -%}
+                              
+                              <div class="tip-button-wrapper product-tip__button">
+                                <form method="post" 
+                                      action="/cart/add.js" 
+                                      id="ProductTipForm-{{ block.id }}" 
+                                      accept-charset="UTF-8" 
+                                      enctype="multipart/form-data" 
+                                      data-product-id="{{ product_tip_product.id }}" 
+                                      class="form form--product-tip">
+                                  <input type="hidden" name="form_type" value="product">
+                                  <input type="hidden" name="utf8" value="✓">
+                                  <input type="hidden" name="id" value="{{ product_tip_product.selected_or_first_available_variant.id }}">
+                                  <input type="hidden" name="quantity" value="1">
+                                  
+                                  <div class="tip-button-wrapper">
+                                    <button type="submit" 
+                                            name="add" 
+                                            class="action action--secondary tip-button"
+                                            data-product-id="{{ product_tip_product.id }}"
+                                            data-variant-id="{{ product_tip_product.selected_or_first_available_variant.id }}"
+                                            data-price="{{ product_tip_product.selected_or_first_available_variant.price }}">
+                                      <span>In den Warenkorb - {{ product_tip_product.selected_or_first_available_variant.price | money }}</span>
+                                    </button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        {%- endif -%}
+                    {%- endif -%}
+            
+            
+                    {%- when 'share' -%}
                     <div class="product-block" {{ block.shopify_attributes }}>
                       {%- render 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product -%}
                     </div>
