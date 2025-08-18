@@ -129,7 +129,7 @@
         "show_locale_selector": true,
         "show_currency_selector": false,
         "show_currency_flags": false,
-        "mobile_primary_menu": "main-menu",
+        "mobile_primary_menu": "prim-res-menu",
         "mobile_secondary_menu": "sekund-res-menu",
         "mobile_overlay_color": "rgba(0,0,0,0)",
         "mobile_text_color": "#ffffff",
