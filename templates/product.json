@@ -37,6 +37,20 @@
             "surface_pickup_enable": false
           }
         },
+        "service_usps_dTLbn7": {
+          "type": "service_usps",
+          "settings": {
+            "icon_width": 50,
+            "img1": "shopify://shop_images/nachhaltig_fair_hergestellter_schmuck_aus_recyceltem_silber_verlan_jewellery.png",
+            "text1": "<p>Mit Liebe <br/>handgefertig</p>",
+            "img2": "shopify://shop_images/plastikfrei_icon_ohne_text.png",
+            "text2": "<p>Plastikfreier<br/>Versand</p>",
+            "img3": "shopify://shop_images/nachhaltig_leaves.png",
+            "text3": "<p>Umweltschonend <br/>& Fair</p>",
+            "img4": "shopify://shop_images/Lieferung_tracking_icon_b40c4ad1-0403-4e98-b647-7b7cf79e77c9.png",
+            "text4": "<p>Versand <br/>mit Tracking</p>"
+          }
+        },
         "description": {
           "type": "description",
           "disabled": true,
@@ -87,6 +101,7 @@
         "price",
         "variant_picker",
         "buy_buttons",
+        "service_usps_dTLbn7",
         "description",
         "tab_eBic8W",
         "tab",
@@ -105,6 +120,20 @@
         "mobile_layout": "partial",
         "enable_video_looping": true,
         "product_video_style": "muted"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "Das könnte dir auch gefallen",
+        "related_count": 5,
+        "products_per_row": 5
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "recent_count": 5
       }
     },
     "sub": {
@@ -155,99 +184,19 @@
         "lazyload_images": true
       }
     },
-    "testimonials": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonials-0": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "5-stars",
-            "testimonial": "<p>Sehr schöner und hochwertiger Schmuck! Besonders die Philosophie von VERLAN hat mich überzeugt. 🌸</p>",
-            "author": "Liza Happe",
-            "author_info": ""
-          }
-        },
-        "testimonials-1": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "5-stars",
-            "testimonial": "<p>Schneller Versand und <br/>gute Qualität. Die Ohrringe kamen bei meiner Frau gut an :-) Jederzeit <br/>wieder. Verlan kann ich nur empfehlen.</p>",
-            "author": "André Brieg",
-            "author_info": ""
-          }
-        },
-        "testimonials-2": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "5-stars",
-            "testimonial": "<p>Sehr liebevoll gefertigte Stücke, die allesamt schon Lieblingsstücke geworden sind.</p>",
-            "author": "Katharina",
-            "author_info": ""
-          }
-        },
-        "3cc33fd8-9bea-4cf7-a03e-59db5df9a4a1": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "5-stars",
-            "testimonial": "<p>Die Kette sieht wahnsinnig schön aus und hat eine perfekte Länge, die <br/>man auch noch verstellen kann. Mit dem dazugehörigen Ring ein super <br/>schönes Set! :) Sicher nicht meine letzte Bestellung.</p>",
-            "author": "Ann-Kathrin Knoll",
-            "author_info": ""
-          }
-        },
-        "c1954f87-0549-49af-a341-3cdf123b7355": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "5-stars",
-            "testimonial": "<p>Sehr gut verarbeitet. <br/>Einfach vollkommen zufrieden!</p>",
-            "author": "Adrian Kasdorf",
-            "author_info": ""
-          }
-        }
-      },
-      "block_order": [
-        "testimonials-0",
-        "testimonials-1",
-        "testimonials-2",
-        "3cc33fd8-9bea-4cf7-a03e-59db5df9a4a1",
-        "c1954f87-0549-49af-a341-3cdf123b7355"
-      ],
-      "settings": {
-        "title": "",
-        "align_text": "center",
-        "round_images": true,
-        "color_background": "#f9f9f9",
-        "color_text": "#1c1d1d"
-      }
-    },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "disabled": true,
-      "settings": {
-        "product_recommendations_heading": "You may also like",
-        "related_count": 5,
-        "products_per_row": 3
-      }
-    },
-    "recently-viewed": {
-      "type": "recently-viewed",
-      "disabled": true,
-      "settings": {
-        "recent_count": 5
-      }
-    },
     "collection-return": {
       "type": "collection-return",
+      "disabled": true,
       "settings": {}
     }
   },
   "order": [
     "main",
+    "product-recommendations",
+    "recently-viewed",
     "sub",
     "16675482433137999d",
     "text-and-image",
-    "testimonials",
-    "product-recommendations",
-    "recently-viewed",
     "collection-return"
   ]
 }
