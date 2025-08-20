@@ -97,6 +97,15 @@
             "title": "Stell uns deine Frage",
             "phone": false
           }
+        },
+        "product_tip_bpCMWd": {
+          "type": "product_tip",
+          "settings": {
+            "title": "{{ product.metafields.custom.product_tip.value.title.value }}",
+            "description": "<p>{{ product.metafields.custom.product_tip.value.subtitle.value }}</p>",
+            "desktop_background_color": "#fff2f0",
+            "mobile_background_color": "#fff2f0"
+          }
         }
       },
       "block_order": [
@@ -110,12 +119,13 @@
         "2f17364e-afc6-48a2-8cc4-956e460e145b",
         "tab",
         "tab_kDMzwc",
-        "contact"
+        "contact",
+        "product_tip_bpCMWd"
       ],
       "settings": {
         "sku_enable": false,
         "image_position": "left",
-        "image_size": "large",
+        "image_size": "medium",
         "product_zoom_enable": true,
         "thumbnail_position": "beside",
         "thumbnail_height": "flexible",

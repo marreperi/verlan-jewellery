@@ -218,7 +218,7 @@
             "subheading": "Zu unseren",
             "heading": "",
             "textarea": "",
-            "cta_text1": "ringen",
+            "cta_text1": "Ringen",
             "cta_link1": "shopify://collections/ringe",
             "cta_text2": "",
             "cta_link2": "",
@@ -238,7 +238,7 @@
           "settings": {
             "subheading": "handmade with love",
             "heading": "",
-            "textarea": "hier entlang zu unseren",
+            "textarea": "",
             "cta_text1": "Ketten",
             "cta_link1": "shopify://collections/ketten",
             "cta_text2": "",
@@ -251,7 +251,7 @@
             "text_align": "vertical-bottom horizontal-center",
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
-            "framed": false
+            "framed": true
           }
         },
         "advanced_FHxzQP": {
@@ -259,8 +259,8 @@
           "settings": {
             "subheading": "Fair & umweltschonend",
             "heading": "",
-            "textarea": "handgefertigt",
-            "cta_text1": "unsere ohrringe",
+            "textarea": "",
+            "cta_text1": "Unsere Ohrringe",
             "cta_link1": "shopify://collections/ohrringe",
             "cta_text2": "",
             "cta_link2": "",
@@ -269,10 +269,10 @@
             "width": "33",
             "height": 500,
             "text_size": 120,
-            "text_align": "vertical-center horizontal-center",
+            "text_align": "vertical-bottom horizontal-center",
             "color_accent": "rgba(0,0,0,0)",
             "boxed": false,
-            "framed": false
+            "framed": true
           }
         }
       },

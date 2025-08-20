@@ -88,7 +88,7 @@
         "1524770014057": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Verlan_Logo_Circle_black_868e49ce-4b8c-4203-ac5b-8174c65b5eb6.png",
+            "logo": "shopify://shop_images/Verlan_Logo_Circle_black.png",
             "desktop_logo_width": 100,
             "mobile_logo_width": 60
           }
@@ -118,9 +118,9 @@
         "d9fc6f2a-4968-4824-a715-650efa49bdec"
       ],
       "settings": {
-        "main_menu_link_list": "main-menu",
+        "main_menu_link_list": "prim-res-menu",
         "mega_menu_images": true,
-        "main_menu_alignment": "left-center",
+        "main_menu_alignment": "center-split",
         "header_style": "sticky",
         "sticky_index": false,
         "sticky_collection": false,
