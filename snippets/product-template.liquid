@@ -463,10 +463,10 @@
                     {%- assign mobile_bg_color = block.settings.mobile_background_color | default: '#f8f1f4' -%}
                     {%- assign desktop_bg_color = block.settings.desktop_background_color | default: '#f8f1f4' -%}
             
-                    {%- if product.metafields.custom.product_tip != blank -%}
+                    {%- if product.metafields.custom.product_tip.value != blank -%}
                         {%- assign product_tip = product.metafields.custom.product_tip.value -%}
             
-                        {%- assign product_tip_product = product_tip.product_reference.value -%}
+                        {%- assign product_tip_product = product_tip.product.value -%}
             
                           
                           {%- if product_tip != blank and product_tip_product != blank -%}

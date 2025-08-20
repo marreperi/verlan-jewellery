@@ -5591,7 +5591,7 @@ form+.footer__social{
 @media only screen and (min-width:769px){
 
 .site-header{
-    padding:20px 0
+    padding:5px 0
 }
 
 .toolbar+.header-sticky-wrapper .site-header{
@@ -13034,8 +13034,6 @@ html[dir=rtl] .product-single__meta .rte{
   padding: 0.9375rem;
   width: 100%;
   grid-gap: 1.25rem;
-  border-radius: 0.5rem;
-  text-transform: lowercase;
   position: relative;
 }
 
@@ -13090,30 +13088,26 @@ html[dir=rtl] .product-single__meta .rte{
 }
 
 .tip-content {
-  margin-bottom: 1rem;
   font-size: 0.875rem;
   line-height: 1.4;
+  text-align: left;
 }
 
 .tip-button-wrapper {
   margin-top: auto;
+  text-align: left;
 }
 
 .tip-button {
-  background: #000;
-  color: #fff;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0;
   border-radius: 0.25rem;
   cursor: pointer;
   font-size: 0.875rem;
   font-weight: 500;
   transition: background-color 0.2s ease;
   text-transform: none;
-}
-
-.tip-button:hover {
-  background: #333;
+  text-decoration: underline;
 }
 
 .form--product-tip {
@@ -13122,9 +13116,6 @@ html[dir=rtl] .product-single__meta .rte{
 
 /* Mobile Styles */
 @media (max-width: 44.99em) {
-  .product__tip-description {
-    background-color: var(--mobile-bg-color) !important;
-  }
 
   .content-wrapper--left {
     position: relative;
@@ -13142,31 +13133,6 @@ html[dir=rtl] .product-single__meta .rte{
   }
 
   .product-tip__mobile_heading {
-    display: block;
-  }
-
-  .product-tip__desktop_heading {
-    display: none;
-  }
-}
-
-/* Desktop Styles */
-@media (min-width: 45em) {
-  .product__tip-description {
-    background-color: var(--desktop-bg-color) !important;
-  }
-
-  .product-tip__button {
-    bottom: -0.3125rem;
-    position: absolute;
-    right: 0;
-  }
-
-  .product-tip__mobile_heading {
-    display: none;
-  }
-
-  .product-tip__desktop_heading {
     display: block;
   }
 }
