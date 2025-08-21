@@ -14,16 +14,13 @@
       "settings": {
         "enable": true,
         "collection_image_enable": true,
-        "parallax": true
+        "parallax": true,
+        "parallax_direction": "top"
       }
     },
     "main-collection": {
       "type": "main-collection",
       "blocks": {
-        "collection_description": {
-          "type": "collection_description",
-          "settings": {}
-        },
         "subcollections": {
           "type": "subcollections",
           "settings": {
@@ -41,7 +38,6 @@
         }
       },
       "block_order": [
-        "collection_description",
         "subcollections",
         "product_grid"
       ],
@@ -57,6 +53,8 @@
       "type": "text-and-image",
       "settings": {
         "image": "shopify://shop_images/sunny_chains_sonnen_brillen_kette_mit_masken_halterung_handgemacht_auf_bali_boho_look_fairfashion_VERLAN_jewellery_whatsnextreisen.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
         "subtitle": "",
         "title": "Alles im griff",
         "text": "<p>Mit unseren handgefertigten Brillenketten verlierst du keine Lieblingsbrille mehr und hast deine Maske immer griffbereit.</p>",
@@ -64,8 +62,12 @@
         "button_link": "",
         "button_style": "primary",
         "align_text": "left",
+        "image_width": "50",
         "layout": "right",
-        "divider": false
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
       }
     }
   },
