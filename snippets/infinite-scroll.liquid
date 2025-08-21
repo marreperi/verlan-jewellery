@@ -15,7 +15,6 @@
     </div>
   {% endif %}
 </infinite-scroll>
-<div class="scrollToTopButton">Scroll To Top</div>
 <style>
   infinite-scroll {
     position: relative;
@@ -63,16 +62,6 @@
     -ms-transform: scale(0.3);
     -webkit-transform: scale(0.3);
     -moz-transform: scale(0.3);
-  }
-  .scrollToTopButton {
-    position: fixed;
-    bottom: 20px;
-    right: 149px;
-    background: #ececec;
-    padding: 5px 10px;
-    z-index: 1;
-    cursor: pointer;
-    border-radius: 5px;
   }
   #loading_1 {
     left: 0;
@@ -223,13 +212,6 @@
     this.initGrid();
     this.init();
     this.page = 1;
-    this.scrollToTopBtn = document.querySelector(".scrollToTopButton");
-    if (this.scrollToTopBtn) {
-      this.scrollToTopBtn.addEventListener(
-        "click",
-        this.scrollToTopFx.bind(this)
-      );
-    }
   }
   
   initGrid() {
