@@ -22,6 +22,10 @@
             "size_chart": "ringgroessen-tabelle"
           }
         },
+        "color_options_WNtAwN": {
+          "type": "color_options",
+          "settings": {}
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -111,6 +115,7 @@
       "block_order": [
         "price",
         "size_chart_rXcDfr",
+        "color_options_WNtAwN",
         "variant_picker",
         "buy_buttons",
         "service_usps_JGzdGW",
