@@ -1,0 +1,138 @@
+{%- comment -%}
+  Renders color dots for a product and its sibling products (by metafields).
+
+  Params:
+  - product: Product object (required)
+  - show_as_links: boolean (optional, default: false) — wrap dots in <a href> to product URL
+  - dot_width_mobile: number px (optional, default: 18)
+  - dot_width_desktop: number px (optional, default: 26)
+{%- endcomment -%}
+
+{%- liquid
+  assign dot_size_mobile = dot_width_mobile | default: 18
+  assign dot_size_desktop = dot_width_desktop | default: 26
+
+  assign current_color_obj = product.metafields.custom.color.value
+  if current_color_obj != blank
+    assign current_color = current_color_obj.color | default: current_color_obj.hex | default: current_color_obj
+  endif
+
+  assign siblings = product.metafields.custom.siblings.value | default: product.metafields.custom.siblings
+  if siblings == blank
+    assign siblings = ''
+  endif
+  assign siblings_list = siblings
+  if siblings_list != blank and siblings_list.handle != blank
+    assign siblings_list = '' | split: ''
+    assign siblings_list = siblings_list | push: siblings
+  elsif siblings_list != blank and siblings_list contains ','
+    assign siblings_list = siblings_list | replace: '\n', ',' | replace: ';', ',' | split: ','
+  endif
+-%}
+<div class="color-options" style="--dot-size-mobile: {{ dot_size_mobile }}px; --dot-size-desktop: {{ dot_size_desktop }}px;">
+  <ul class="color-options__list" role="list">
+    {%- if current_color != blank -%}
+      <li class="color-options__item is-current">
+        {%- if show_as_links -%}
+          <a
+            href="{{ product.url }}"
+            class="color-options__dot"
+            title="{{ product.title }}"
+            aria-label="{{ product.title }} — {{ current_color }}"
+            aria-current="true"
+            style="background: {{ current_color }};"
+          ></a>
+        {%- else -%}
+          <span
+            class="color-options__dot"
+            title="{{ product.title }}"
+            aria-label="{{ product.title }} — {{ current_color }}"
+            aria-current="true"
+            style="background: {{ current_color }};"
+          ></span>
+        {%- endif -%}
+      </li>
+    {%- endif -%}
+
+    {%- assign render_siblings = siblings_list | default: siblings -%}
+    {%- if render_siblings != blank -%}
+      {%- for sibling in render_siblings -%}
+        {%- assign sib_product = sibling -%}
+        {%- if sib_product.url == blank and sib_product.handle == blank and sibling != blank -%}
+          {%- comment -%} sibling may be a handle string {%- endcomment -%}
+          {%- assign sib_product = all_products[sibling] -%}
+        {%- endif -%}
+        {%- if sib_product and sib_product.handle != blank and sib_product.handle != product.handle -%}
+          {%- assign s_color_obj = sib_product.metafields.custom.color.value | default: sib_product.metafields.custom.color -%}
+          {%- assign s_color = '' -%}
+          {%- if s_color_obj != blank -%}
+            {%- assign s_color = s_color_obj.color | default: s_color_obj.hex | default: s_color_obj -%}
+          {%- endif -%}
+          {%- if s_color == blank -%}
+            {%- assign s_color = '#cccccc' -%}
+          {%- endif -%}
+          <li class="color-options__item">
+            {%- if show_as_links -%}
+              <a
+                href="{{ sib_product.url }}"
+                class="color-options__dot"
+                title="{{ sib_product.title }}"
+                aria-label="{{ sib_product.title }} — {{ s_color }}"
+                style="background: {{ s_color }};"
+              ></a>
+            {%- else -%}
+              <span
+                class="color-options__dot"
+                title="{{ sib_product.title }}"
+                aria-label="{{ sib_product.title }} — {{ s_color }}"
+                style="background: {{ s_color }};"
+              ></span>
+            {%- endif -%}
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+  </ul>
+
+  
+</div>
+
+<style>
+  .color-options { width: 100%; }
+  .color-options__list {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centered on mobile */
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  @media only screen and (min-width: 750px) {
+    .color-options__list { justify-content: flex-start; } /* left on desktop */
+  }
+  .color-options__item { 
+    padding: 2px;
+    border-color: #000;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    display: inline-flex;
+}
+.color-options__item.is-current { 
+    border-color: #000;
+}
+  .color-options__dot {
+    display: inline-block;
+    width: var(--dot-size-mobile);
+    height: var(--dot-size-mobile);
+    border-radius: 50%;
+  }
+  @media only screen and (min-width: 750px) {
+    .color-options__dot {
+      width: var(--dot-size-desktop);
+      height: var(--dot-size-desktop);
+    }
+  }
+</style>
+
+
