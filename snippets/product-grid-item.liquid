@@ -295,7 +295,13 @@ Arguments
       </div>
 
       {%- if product.metafields.custom.color.value != blank -%}
-        {%- render 'color-options', product: product, show_as_links: false, dot_width_mobile: 20, dot_width_desktop: 24 -%}
+        {%- render 'color-options',
+          product: product,
+          show_as_links: false,
+          dot_width_mobile: 20,
+          dot_width_desktop: 24,
+          center_desktop: true
+        -%}
       {%- endif -%}
 
     </a>

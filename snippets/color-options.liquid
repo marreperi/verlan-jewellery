@@ -29,7 +29,7 @@
     assign siblings_list = siblings_list | replace: '\n', ',' | replace: ';', ',' | split: ','
   endif
 -%}
-<div class="color-options" style="--dot-size-mobile: {{ dot_size_mobile }}px; --dot-size-desktop: {{ dot_size_desktop }}px;">
+<div class="color-options{% if center_desktop %} color-options--center-desktop{% endif %}" style="--dot-size-mobile: {{ dot_size_mobile }}px; --dot-size-desktop: {{ dot_size_desktop }}px;">
   <ul class="color-options__list" role="list">
     {%- if current_color != blank -%}
       <li class="color-options__item is-current">
@@ -131,6 +131,11 @@
     .color-options__dot {
       width: var(--dot-size-desktop);
       height: var(--dot-size-desktop);
+    }
+  }
+  @media only screen and (min-width: 750px) {
+    .color-options--center-desktop .color-options__list {
+      justify-content: center;
     }
   }
 </style>

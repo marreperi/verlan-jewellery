@@ -339,6 +339,15 @@
                         {%- endfor -%}
                       {%- endunless -%}
                     </div>
+                  {%- when 'color_options' -%}
+                    <div class="product-block" {{ block.shopify_attributes }}>
+                      {%- render 'color-options',
+                        product: product,
+                        show_as_links: true,
+                        dot_width_mobile: 28,
+                        dot_width_desktop: 28
+                      -%}
+                    </div>
                   {%- when 'buy_buttons' -%}
                     <div class="product-block" {{ block.shopify_attributes }}>
                       {%- unless product.empty? -%}
