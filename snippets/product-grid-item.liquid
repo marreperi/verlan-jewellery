@@ -296,18 +296,17 @@ Arguments
         {%- endif -%}
       </div>
 
-      {%- if product.metafields.custom.color.value != blank -%}
-        {%- render 'color-options',
-          product: product,
-          show_as_links: false,
-          dot_width_mobile: 20,
-          dot_width_desktop: 24,
-          center_desktop: true
-        -%}
-      {%- endif -%}
-
     </a>
   </div>
+  {%- if product.metafields.custom.color.value != blank -%}
+    {%- render 'color-options',
+      product: product,
+      show_as_links: true,
+      dot_width_mobile: 20,
+      dot_width_desktop: 24,
+      center_desktop: true
+    -%}
+  {%- endif -%}
   {%- if settings.enable_swatches and type == blank -%}
     {%- liquid
       assign swatch_trigger = 'products.general.color_swatch_trigger' | t | downcase
