@@ -71,6 +71,7 @@
     "cart_type": "drawer",
     "cart_notes_enable": true,
     "cart_terms_conditions_enable": false,
+    "social_pinterest_link": "https://de.pinterest.com/verlanjewellery/",
     "social_instagram_link": "https://www.instagram.com/verlan.jewellery/",
     "favicon": "shopify://shop_images/Verlan_Logo_Circle_black_cc22960d-c5ee-4a0c-aa4d-d34ee6f9904f.png",
     "search_type": "product",
@@ -320,6 +321,11 @@
       },
       "4372474792694305445": {
         "type": "shopify://apps/also-bought/blocks/app-embed-block/b94b27b4-738d-4d92-9e60-43c22d1da3f2",
+        "disabled": true,
+        "settings": {}
+      },
+      "12526071353035850722": {
+        "type": "shopify://apps/amp-back-in-stock/blocks/app-embed/bfa6a8c4-24e2-411a-9396-e35031b33f34",
         "disabled": true,
         "settings": {}
       }
