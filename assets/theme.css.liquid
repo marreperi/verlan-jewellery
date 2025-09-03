@@ -9381,7 +9381,7 @@ html[dir=rtl] .grid-product__content{
   font-size:calc(var(--typeBaseSize)*0.65);
   position:absolute;
   top:0;
-  right:0;
+  left:0;
   line-height:1;
   padding:6px 5px 6px 7px;
   background-color:{{ settings.color_button | default: "#000" }};
@@ -12445,6 +12445,11 @@ html[dir=rtl] .product-single__meta .rte{
     position:static;
     height:auto;
   }
+
+/* Hide Judge.me preview badge when there are no reviews */
+.jdgm-widget.jdgm-preview-badge:has(.jdgm-prev-badge[data-number-of-reviews="0"]){
+  display:none !important;
+}
 
 .product__thumb-icon{
   position:absolute;
