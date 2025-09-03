@@ -40,6 +40,41 @@
 
 <script>
   (function() {
+    function setUniformCellWidth(grid) {
+      if (!grid) return;
+      try {
+        var titleSpans = grid.querySelectorAll('.collection-item__title > span');
+        if (!titleSpans || !titleSpans.length) return;
+        var maxSpanWidth = 0;
+        for (var i = 0; i < titleSpans.length; i++) {
+          var span = titleSpans[i];
+          var rect = span.getBoundingClientRect();
+          var width = Math.ceil(rect.width || span.scrollWidth);
+          if (width > maxSpanWidth) maxSpanWidth = width;
+        }
+        var requiredCellWidth = maxSpanWidth + 20; // account for 10px left/right in overlaid title
+        var cells = grid.querySelectorAll('.grid__item');
+        for (var j = 0; j < cells.length; j++) {
+          cells[j].style.width = requiredCellWidth + 'px';
+          cells[j].style.maxWidth = 'none';
+          cells[j].style.flex = '0 0 auto';
+        }
+        if (grid._subcollectionsFlickity && typeof grid._subcollectionsFlickity.resize === 'function') {
+          grid._subcollectionsFlickity.resize();
+        }
+      } catch (e) {}
+    }
+
+    function clearUniformCellWidth(grid) {
+      if (!grid) return;
+      var cells = grid.querySelectorAll('.grid__item');
+      for (var i = 0; i < cells.length; i++) {
+        cells[i].style.width = '';
+        cells[i].style.maxWidth = '';
+        cells[i].style.flex = '';
+      }
+    }
+
     function initOne(grid) {
       if (!grid || !window.Flickity) return;
       var instance = grid._subcollectionsFlickity;
@@ -61,9 +96,14 @@
             });
           } catch (e) {}
         }
-      } else if (instance && typeof instance.destroy === 'function') {
-        instance.destroy();
-        grid._subcollectionsFlickity = null;
+        setUniformCellWidth(grid);
+      } else {
+        if (instance && typeof instance.destroy === 'function') {
+          instance.destroy();
+          grid._subcollectionsFlickity = null;
+        }
+        // Also normalize widths on desktop to avoid title clipping
+        setUniformCellWidth(grid);
       }
     }
 
@@ -81,6 +121,10 @@
     } else {
       initAll();
     }
+    if (document.fonts && document.fonts.ready && typeof document.fonts.ready.then === 'function') {
+      document.fonts.ready.then(function(){ initAll(); });
+    }
+    window.addEventListener('load', function(){ initAll(); setTimeout(initAll, 50); });
 
     window.addEventListener('resize', onResize);
 
@@ -98,14 +142,14 @@
     justify-content: center;
   }
   .subcollections-bubbles .grid .grid__item {
-    max-width: 185px;
+    max-width: none;
   }
   @media only screen and (max-width: 749px) {
     .subcollections-bubbles .grid {
       display: block;
     }
     .subcollections-bubbles .grid .grid__item {
-      width: 35%;
+      width: auto;
     }
   }
   .subcollections-bubbles .flickity-viewport {
