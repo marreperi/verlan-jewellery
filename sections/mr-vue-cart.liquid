@@ -404,7 +404,7 @@
         <div class="cart-footer-{{ section.id }}" v-if="cart.item_count > 0">
 
         <!-- Discount Code -->
-        <div class="cart__item-row cart__item--discount-{{ si }}">
+        <div class="cart__item-row cart__item--discount-{{ si }}" v-show="!appliedDiscountCode">
           <div class="discount-code-container-{{ si }}">
             <!-- Input field and button - hidden when discount is applied -->
             <div class="cart-discount-{{ si }} input-wrapper" v-if="!appliedDiscountCode">
