@@ -11,6 +11,7 @@
   blocks: section.blocks,
   image_position: section.settings.image_position,
   image_container_width: section.settings.image_size,
+  image_aspect_ratio: section.settings.image_aspect_ratio,
   product_zoom_enable: section.settings.product_zoom_enable,
   sku_enable: section.settings.sku_enable,
   isModal: isModal,
@@ -21,6 +22,7 @@
   video_looping: section.settings.enable_video_looping,
   video_style: section.settings.product_video_style,
   context: 'main-product',
+-%}
 -%}
 
 {% schema %}
@@ -74,6 +76,17 @@
           "value": "large",
           "label": "t:sections.main-product.settings.image_size.options.large.label"
         }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Image aspect ratio",
+      "default": "none",
+      "options": [
+        { "value": "none", "label": "Original" },
+        { "value": "1:1", "label": "1:1 (Square)" },
+        { "value": "3:4", "label": "3:4 (Portrait)" }
       ]
     },
     {

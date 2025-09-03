@@ -53,6 +53,16 @@
     assign media_width = media.preview_image.width
     assign media_height = media.preview_image.height
   endif
+
+  # Force aspect ratio if provided (supports '1:1', '3:4')
+  assign forced_ratio = image_aspect_ratio | default: 'none'
+  if forced_ratio != 'none'
+    if forced_ratio == '1:1'
+      assign media_aspect_ratio = 1
+    elsif forced_ratio == '3:4'
+      assign media_aspect_ratio = 0.75
+    endif
+  endif
 -%}
 
 <div
@@ -169,7 +179,7 @@
             data-video-type="{{ video_type }}"
             class="product__video-wrapper{% if video_type == 'youtube' or video_type == 'vimeo' %} loading{% endif %}"
             data-video-style="{{ video_style }}"
-            style="padding-bottom: {{ 100 | divided_by: media.aspect_ratio }}%;">
+            style="padding-bottom: {{ 100 | divided_by: media_aspect_ratio }}%;">
             {%- if video_type == 'youtube' or video_type == 'vimeo' -%}
               <div
                 id="ProductVideo-{{ section_id }}-{{ loopIndex }}"

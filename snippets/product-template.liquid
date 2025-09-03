@@ -30,6 +30,14 @@
   endcase
 
   assign product_img_structure = product.featured_media | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
+
+  # Determine container aspect ratio (used by JS and layout)
+  assign container_aspect_ratio = product.featured_media.aspect_ratio
+  if image_aspect_ratio == '1:1'
+    assign container_aspect_ratio = 1
+  elsif image_aspect_ratio == '3:4'
+    assign container_aspect_ratio = 0.75
+  endif
 -%}
 
 {%- liquid
@@ -64,7 +72,7 @@
   data-product-handle="{{ product.handle }}"
   data-product-title="{{ product.title | escape }}"
   data-product-url="{{ product.url | within: collection }}"
-  data-aspect-ratio="{{ 100 | divided_by: product.featured_media.aspect_ratio }}"
+  data-aspect-ratio="{{ 100 | divided_by: container_aspect_ratio }}"
   data-img-url="{{ product_img_structure }}"
   {% unless isModal %}
     data-history="true"
@@ -84,6 +92,7 @@
               product: product,
               isModal: isModal,
               image_position: image_position,
+              image_aspect_ratio: image_aspect_ratio,
               product_zoom_enable: product_zoom_enable,
               product_zoom_size: product_zoom_size,
               product_image_size: product_image_size,
@@ -524,6 +533,7 @@
               product: product,
               isModal: isModal,
               image_position: image_position,
+              image_aspect_ratio: image_aspect_ratio,
               product_zoom_enable: product_zoom_enable,
               product_zoom_size: product_zoom_size,
               product_image_size: product_image_size,
