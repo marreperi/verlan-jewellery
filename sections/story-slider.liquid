@@ -36,7 +36,9 @@
 
   .sh-bubbles-inner {
     margin: auto;
-    padding: {{ section.settings.padding-oben }}px 10px {{ section.settings.padding-unten }}px 10px;
+    padding: {{ section.settings.padding-oben }}
+    px 10px{{ section.settings.padding-unten }}
+    px 10px;
     text-align: center;
     max-width: 100%;
     overflow: auto;
@@ -50,6 +52,7 @@
   .sh-bubbles {
     background: {{ section.settings.background-color }};
     display: block;
+    padding: 1rem 0rem 1rem 1rem;
   }
 
   @media only screen and (min-width: 750px) {
@@ -182,7 +185,67 @@
       transform: rotate(0deg);
     }
   }
+  /* Keep default max-width rules; JS sets only min-width when needed */
 </style>
+
+<script>
+  (function() {
+    function setUniformStoryItemWidth(root) {
+      try {
+        var container = (root && root.querySelector) ? root.querySelector('.sh-bubbles-inner') : document.querySelector('.sh-bubbles-inner');
+        if (!container) return;
+        var items = container.querySelectorAll('.sh-bubbles a');
+        if (!items || !items.length) return;
+
+        // Reset inline sizing before measuring
+        for (var r = 0; r < items.length; r++) {
+          items[r].style.width = '';
+          items[r].style.maxWidth = '';
+          items[r].style.minWidth = '';
+        }
+
+        var maxRequired = 0;
+        for (var i = 0; i < items.length; i++) {
+          var item = items[i];
+          var bubble = item.querySelector('.sh-bubble-wrapper');
+          var titleEl = item.querySelector('.sh-bubble-wrapper + div');
+          if (!bubble || !titleEl) continue;
+
+          var bubbleWidth = Math.ceil(bubble.getBoundingClientRect().width);
+          var titleWidth = Math.ceil(titleEl.scrollWidth);
+          // Add a small safety padding
+          var required = Math.max(bubbleWidth, titleWidth + 10);
+          if (required > maxRequired) maxRequired = required;
+        }
+
+        if (maxRequired > 0) {
+          for (var j = 0; j < items.length; j++) {
+            // Ensure item is at least as wide as the longest title/bubble
+            items[j].style.minWidth = maxRequired + 'px';
+          }
+        }
+      } catch (e) {}
+    }
+
+    function initAll(root) {
+      setUniformStoryItemWidth(root);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function(){ initAll(); });
+    } else {
+      initAll();
+    }
+
+    // After fonts and images load for accurate text widths
+    if (document.fonts && document.fonts.ready && typeof document.fonts.ready.then === 'function') {
+      document.fonts.ready.then(function(){ initAll(); });
+    }
+    window.addEventListener('load', function(){ initAll(); setTimeout(initAll, 50); });
+    window.addEventListener('resize', function(){ initAll(); });
+    document.addEventListener('shopify:section:load', function(e){ initAll(e && e.target ? e.target : null); });
+  })();
+</script>
 
 {% schema %}
   {
