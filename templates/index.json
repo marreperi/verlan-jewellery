@@ -15,9 +15,9 @@
         "block_GxVnyd": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/D675DF8C-843E-4892-80E5-0469868C423C.jpg",
-            "heading": "Ringe",
-            "url": "",
+            "image": "shopify://shop_images/ringe_verlan.png",
+            "heading": "Goldringe",
+            "url": "shopify://collections/gold-ringe",
             "highlight": false,
             "show_badge1": false,
             "badge1_text": "-50%",
@@ -30,9 +30,9 @@
         "block_XyjAi9": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/DOM09488_Kopie_2.jpg",
-            "heading": "Ketten",
-            "url": "",
+            "image": "shopify://shop_images/silber-ringe_verlan.png",
+            "heading": "Silberringe",
+            "url": "shopify://collections/silber-ringe",
             "highlight": false,
             "show_badge1": false,
             "badge1_text": "-50%",
@@ -45,9 +45,9 @@
         "block_UKCPxF": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/regenbogen_ohrstecker_verlan__jewellery.jpg",
-            "heading": "Ohrringe",
-            "url": "",
+            "image": "shopify://shop_images/gold_ketten.png",
+            "heading": "Goldketten",
+            "url": "shopify://collections/goldketten",
             "highlight": false,
             "show_badge1": false,
             "badge1_text": "-50%",
@@ -60,9 +60,9 @@
         "block_rMwQMT": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/komang_armband_kunzit_verlan_Kopie.jpg",
-            "heading": "Armbänder",
-            "url": "",
+            "image": "shopify://shop_images/silber_ketten.png",
+            "heading": "Silberketten",
+            "url": "shopify://collections/silberketten",
             "highlight": false,
             "show_badge1": false,
             "badge1_text": "-50%",
@@ -75,9 +75,54 @@
         "block_pDmUEw": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/Verlan_Jewellery_Unique-Ketten_gold_987_80f5e3de-9bff-4c30-bb98-f5e19f40e627.jpg",
-            "heading": "Unique",
-            "url": "",
+            "image": "shopify://shop_images/gold_ohrringe.png",
+            "heading": "Goldohrringe",
+            "url": "shopify://collections/gold-ohrringe",
+            "highlight": false,
+            "show_badge1": false,
+            "badge1_text": "-50%",
+            "badge1_color": "#d9534f",
+            "badge1_text_color": "#ffffff",
+            "animation_enabled": false,
+            "animation_type": "bounce"
+          }
+        },
+        "block_x9eB7p": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/verstellbare_ringe.png",
+            "heading": "Verstellbare Ringe",
+            "url": "shopify://collections/verstellbare-ringe",
+            "highlight": false,
+            "show_badge1": false,
+            "badge1_text": "-50%",
+            "badge1_color": "#d9534f",
+            "badge1_text_color": "#ffffff",
+            "animation_enabled": false,
+            "animation_type": "bounce"
+          }
+        },
+        "block_8haXLK": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/anxiety_ringe.png",
+            "heading": "Anxiety Ringe",
+            "url": "shopify://collections/anxiety-ringe",
+            "highlight": false,
+            "show_badge1": false,
+            "badge1_text": "-50%",
+            "badge1_color": "#d9534f",
+            "badge1_text_color": "#ffffff",
+            "animation_enabled": false,
+            "animation_type": "bounce"
+          }
+        },
+        "block_MAkAa7": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/unique_ketten.png",
+            "heading": "Unique Collection",
+            "url": "shopify://collections/unique-collection-goldene-ketten",
             "highlight": false,
             "show_badge1": false,
             "badge1_text": "-50%",
@@ -93,7 +138,10 @@
         "block_XyjAi9",
         "block_UKCPxF",
         "block_rMwQMT",
-        "block_pDmUEw"
+        "block_pDmUEw",
+        "block_x9eB7p",
+        "block_8haXLK",
+        "block_MAkAa7"
       ],
       "name": "SH Story Slider",
       "settings": {
