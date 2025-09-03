@@ -520,7 +520,6 @@
             "show_locale_selector": true,
             "show_currency_selector": true,
             "show_currency_flags": true,
-            "mobile_overlay_color": "rgba(0,0,0,0.3)",
             "mobile_text_color": "#ffffff"
           }
         },
@@ -746,7 +745,6 @@
             "sticky_index": true,
             "sticky_collection": false,
             "toolbar_social": false,
-            "mobile_overlay_color": "rgba(0,0,0,0.3)",
             "mobile_text_color": "#ffffff"
           }
         },
