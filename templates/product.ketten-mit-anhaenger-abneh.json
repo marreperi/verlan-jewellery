@@ -113,6 +113,7 @@
         "sku_enable": false,
         "image_position": "left",
         "image_size": "large",
+        "image_aspect_ratio": "3:4",
         "product_zoom_enable": false,
         "thumbnail_position": "beside",
         "thumbnail_height": "flexible",
