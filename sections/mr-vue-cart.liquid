@@ -156,6 +156,26 @@
 
         <div class="cart-body-{{ si }}" v-if="cart.item_count > 0">
 
+        <!-- Warning Message -->
+        <div class="cart__warning-message">
+          <svg
+            viewBox="0 0 24 24"
+            width="1em"
+            height="1em"
+            fill="#666"
+            class="warning-icon"
+            focusable="false"
+            aria-hidden="true">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12c6.624-.008 11.992-5.376 12-12 0-6.627-5.373-12-12-12m0 22.5C6.201 22.5 1.5 17.799 1.5 12S6.201 1.5 12 1.5c5.796.007 10.493 4.704 10.5 10.5 0 5.799-4.701 10.5-10.5 10.5"></path>
+            <circle
+              cx="12"
+              cy="5.6"
+              r="1.1"></circle>
+            <path d="M12 8.25a.75.75 0 0 0-.75.75v9.75a.75.75 0 1 0 1.5 0V9a.75.75 0 0 0-.75-.75"></path>
+          </svg>
+          <span class="warning-text">Artikel im Warenkorb werden nicht reserviert.</span>
+        </div>
+
           <!-- Cart Items -->
 
           <transition-group name="products">
@@ -356,26 +376,6 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Warning Message -->
-          <div class="cart__warning-message">
-            <svg
-              viewBox="0 0 24 24"
-              width="1em"
-              height="1em"
-              fill="#666"
-              class="warning-icon"
-              focusable="false"
-              aria-hidden="true">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12c6.624-.008 11.992-5.376 12-12 0-6.627-5.373-12-12-12m0 22.5C6.201 22.5 1.5 17.799 1.5 12S6.201 1.5 12 1.5c5.796.007 10.493 4.704 10.5 10.5 0 5.799-4.701 10.5-10.5 10.5"></path>
-              <circle
-                cx="12"
-                cy="5.6"
-                r="1.1"></circle>
-              <path d="M12 8.25a.75.75 0 0 0-.75.75v9.75a.75.75 0 1 0 1.5 0V9a.75.75 0 0 0-.75-.75"></path>
-            </svg>
-            <span class="warning-text">Artikel im Warenkorb werden nicht reserviert.</span>
           </div>
 
         </div>
@@ -2431,15 +2431,15 @@ font-size: smaller;
 
 /* Warning Message */
 .cart__warning-message {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 15px;
-  background: #e8f3f1;
-  border: 1px solid #afd7c9;
-  margin-top: 15px;
-  font-size: 14px;
-  color: #5a8967;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background: #fff8ca;
+    border: 1px solid #baa401;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #baa401;
 }
 
 .warning-icon {
@@ -2465,11 +2465,11 @@ font-size: smaller;
 
 .cart__item--subtotal {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 1rem;
 }
 
 .cart__item--total {
-  font-size: 12px;
+  font-size: 1rem;
   border-top: 2px solid #efefef;
   margin-top: 5px;
   padding-top: 5px;
@@ -2484,7 +2484,7 @@ font-size: smaller;
 }
 
 .shipping-label {
-  font-size: 12px;
+  font-size: 1rem;
   font-weight: 400;
   color: #000;
   margin-bottom: 0;
@@ -2503,7 +2503,7 @@ font-size: smaller;
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
+  font-size: 1rem;
   color: #000;
   font-weight: 400;
   text-decoration: underline;
@@ -2577,7 +2577,7 @@ font-size: smaller;
 
 .cart__shipping-cost {
   font-weight: 600;
-  font-size: 12px;
+  font-size: 1rem;
   color: #000;
 }
 
@@ -2586,7 +2586,7 @@ font-size: smaller;
 }
 
 .cart__total-cost {
-  font-size: 12px;
+  font-size: 1rem;
   color: #000;
 }
 

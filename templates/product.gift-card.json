@@ -35,16 +35,12 @@
           }
         }
       },
-      "block_order": [
-        "variant_picker",
-        "buy_buttons",
-        "description"
-      ],
+      "block_order": ["variant_picker", "buy_buttons", "description"],
       "settings": {
         "sku_enable": false,
         "image_position": "left",
         "image_size": "medium",
-        "product_zoom_enable": true,
+        "product_zoom_enable": false,
         "thumbnail_position": "beside",
         "thumbnail_height": "flexible",
         "thumbnail_arrows": false,
@@ -75,9 +71,7 @@
           "settings": {}
         }
       },
-      "block_order": [
-        "judge_me_reviews_review_widget_94AGK4"
-      ],
+      "block_order": ["judge_me_reviews_review_widget_94AGK4"],
       "settings": {
         "full_width": false,
         "space_around": true
