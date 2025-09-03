@@ -131,6 +131,7 @@
         "sku_enable": false,
         "image_position": "left",
         "image_size": "medium",
+        "image_aspect_ratio": "3:4",
         "product_zoom_enable": false,
         "thumbnail_position": "beside",
         "thumbnail_height": "flexible",
@@ -172,7 +173,9 @@
           }
         }
       },
-      "block_order": ["4c75f089-aad2-4c58-b0ec-26637148641d"],
+      "block_order": [
+        "4c75f089-aad2-4c58-b0ec-26637148641d"
+      ],
       "settings": {
         "full_width": false,
         "space_around": true
