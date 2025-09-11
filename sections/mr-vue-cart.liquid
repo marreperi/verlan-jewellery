@@ -1118,6 +1118,21 @@
                 vm.updateCart();
                 vm.openCart();
                 vm.itemCountBubble && (vm.itemCountBubble());
+                // Also update header bubble count immediately
+                try {
+                  const bubble = document.querySelector('.cart-link__bubble');
+                  if (bubble) {
+                    const num = bubble.querySelector('.cart-link__bubble-num');
+                    if (num) {
+                      num.textContent = String(vm.cart.item_count || 0);
+                    }
+                    if ((vm.cart.item_count || 0) > 0){
+                      bubble.classList.add('cart-link__bubble--visible');
+                    } else {
+                      bubble.classList.remove('cart-link__bubble--visible');
+                    }
+                  }
+                } catch(e){}
             }, true);
 
             // Listen for localStorage changes to update bulk shipment map
@@ -1375,19 +1390,19 @@
 
         getDefaultShippingCountries() {
           return [
-            { code: 'DE', name: 'Deutschland', price: 5.50, delivery_time: '2-3 Werktage', restrictions: '' },
-            { code: 'EU', name: 'Europa', price: 8.10, delivery_time: '3-5 Werktage', restrictions: '' },
-            { code: 'CH', name: 'Schweiz', price: 15.00, delivery_time: '3-7 Werktage', restrictions: '' },
-            { code: 'AT', name: 'Österreich', price: 8.10, delivery_time: '2-4 Werktage', restrictions: '' }
+            { code: 'DE', name: 'Deutschland', price: 3.90, delivery_time: '2-3 Werktage', restrictions: '' },
+            { code: 'AT', name: 'Österreich', price: 5.90, delivery_time: '2-4 Werktage', restrictions: '' },
+            { code: 'LU', name: 'Luxemburg', price: 5.90, delivery_time: '2-4 Werktage', restrictions: '' },
+            { code: 'EU', name: 'Europa', price: 6.90, delivery_time: '3-5 Werktage', restrictions: '' }
           ];
         },
 
         isFreeShippingForCountry(country) {
-          // Only show free shipping for DE when subtotal exceeds 75€
+          // Only DE can become free via threshold setting
           if (country.code === 'DE') {
             return this.cart.total_price >= {{ ss.freeshipping | default: 7500 }};
           }
-          // For all other countries (including AT), always show the actual shipping cost
+          // AT, LU, EU are never free in this setup
           return false;
         },
 
@@ -1605,6 +1620,24 @@
               element.textContent = formattedTotal;
             });
           }
+
+          // Update header cart bubble (count + visibility) immediately
+          try {
+            const bubbles = document.querySelectorAll('.cart-link__bubble');
+            const count = cart.item_count || 0;
+            bubbles.forEach(bubble => {
+              // Put the number as the bubble text
+              bubble.textContent = String(count > 0 ? count : '');
+              // Toggle visibility class
+              if (count > 0) {
+                bubble.classList.add('cart-link__bubble--visible');
+                bubble.setAttribute('data-count', String(count));
+              } else {
+                bubble.classList.remove('cart-link__bubble--visible');
+                bubble.removeAttribute('data-count');
+              }
+            });
+          } catch(_) {}
         },
 
 
@@ -2380,8 +2413,6 @@ height: fit-content;
   opacity: 0;
   transition: opacity 0.3s ease;
   position: relative;
-  /* Debug: Force content to be visible */
-  background: yellow;
 
 }
 

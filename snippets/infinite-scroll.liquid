@@ -212,6 +212,21 @@
     this.initGrid();
     this.init();
     this.page = 1;
+    this.isRestoring = false;
+    // Fallback for next page base if not provided
+    if (!this.dataset.next) {
+      try {
+        const current = new URL(window.location.href);
+        current.searchParams.delete('page');
+        const base = current.pathname + (current.search ? current.search : '');
+        this.dataset.next = base;
+      } catch(_) {}
+    }
+    // Attempt to restore state from URL or session storage
+    setTimeout(() => {
+      this.restoreState();
+      this.attachProductClickSaver();
+    }, 0);
   }
   
   initGrid() {
@@ -242,11 +257,11 @@
   }
   
   init() {
-    const observer = new IntersectionObserver(this.revealItem.bind(this), {
+    this.observer = new IntersectionObserver(this.revealItem.bind(this), {
       root: null,
       threshold: 0.05,
     });
-    observer.observe(this);
+    this.observer.observe(this);
   }
   
   fetchNextPage(e) {
@@ -307,6 +322,23 @@
             }
           }
         }
+        // Update URL to reflect current page so users can return to the same position
+        try {
+          this.updateURLPageParam(this.page);
+          // Persist lightweight state in sessionStorage as well
+          this.saveState();
+        } catch (err) {
+          console.warn("Failed to update URL/state:", err);
+        }
+        // Update URL/state only when not restoring
+        if (!this.isRestoring) {
+          try {
+            this.updateURLPageParam(this.page);
+            this.saveState();
+          } catch (err) {
+            console.warn("Failed to update URL/state:", err);
+          }
+        }
       })
       .catch((e) => {
         console.error("Error fetching next page:", e);
@@ -332,6 +364,97 @@
     if (this.page == this.dataset.pageSize) {
       t.unobserve(i.target);
     }
+  }
+  pauseObserver() {
+    try { this.observer && this.observer.unobserve(this); } catch(_) {}
+  }
+  resumeObserver() {
+    try { this.observer && this.observer.observe(this); } catch(_) {}
+  }
+
+  updateURLPageParam(page) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("page", String(page));
+    window.history.replaceState({}, "", url.toString());
+  }
+
+  saveState(extra = {}) {
+    try {
+      const state = {
+        page: this.page,
+        scrollY: window.scrollY,
+        next: this.dataset.next || null,
+        grid: this.gridName || null,
+        ...extra
+      };
+      sessionStorage.setItem(`infiniteScrollState:${location.pathname}`, JSON.stringify(state));
+    } catch (_) {}
+  }
+
+  attachProductClickSaver() {
+    if (!this.gridContainer) return;
+    this.gridContainer.addEventListener("click", (evt) => {
+      const link = evt.target.closest && evt.target.closest("a");
+      if (link && /\/products\//.test(link.getAttribute("href") || "")) {
+        // Save page and scroll before navigating to product
+        this.saveState({ lastProductHref: link.getAttribute("href") });
+      }
+    }, true);
+  }
+
+  async restoreState() {
+    // Try URL param first
+    const url = new URL(window.location.href);
+    const urlPage = parseInt(url.searchParams.get("page") || "1", 10);
+    let targetPage = isNaN(urlPage) ? 1 : Math.max(1, urlPage);
+
+    // Try sessionStorage
+    let saved = null;
+    try {
+      const raw = sessionStorage.getItem(`infiniteScrollState:${location.pathname}`);
+      saved = raw ? JSON.parse(raw) : null;
+      if (saved && saved.page && saved.page > targetPage) targetPage = saved.page;
+    } catch (_) {}
+
+    // Ensure we have a base next URL
+    if (!this.dataset.next) {
+      try {
+        const current = new URL(window.location.href);
+        current.searchParams.delete('page');
+        const base = current.pathname + (current.search ? current.search : '');
+        this.dataset.next = base;
+      } catch(_) {}
+    }
+
+    // Preload pages up to targetPage (page 1 is already rendered)
+    this.isRestoring = true;
+    this.pauseObserver();
+    if (targetPage > 1 && this.dataset.next) {
+      for (let p = 2; p <= targetPage; p++) {
+        this.page = p - 1; // ensure internal page aligns before fetchNextPage increments history
+        await this.fetchNextPage(p);
+      }
+    }
+
+    // Restore scroll position or last product in view
+    if (saved) {
+      if (saved.lastProductHref) {
+        const selector = `a[href='${saved.lastProductHref}']`;
+        const link = document.querySelector(selector);
+        if (link) {
+          const y = link.getBoundingClientRect().top + window.scrollY - 120;
+          window.scrollTo({ top: Math.max(0, y), behavior: "auto" });
+          this.isRestoring = false;
+          this.resumeObserver();
+          return;
+        }
+      }
+      if (typeof saved.scrollY === "number") {
+        window.scrollTo({ top: saved.scrollY, behavior: "auto" });
+      }
+    }
+    this.isRestoring = false;
+    this.resumeObserver();
   }
   scrollToTopFx(e) {
     document.body.scrollTop = 0;
