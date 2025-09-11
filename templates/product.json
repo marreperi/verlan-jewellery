@@ -97,6 +97,15 @@
           "settings": {
             "text": ""
           }
+        },
+        "product_tip_a7mx6i": {
+          "type": "product_tip",
+          "settings": {
+            "title": "Mach deinen Look perfekt",
+            "description": "<p>Runde deinen Style ab mit den passenden Teil. Gemeinsam strahlen sie noch mehr.</p>",
+            "desktop_background_color": "#f8f1f4",
+            "mobile_background_color": "#f8f1f4"
+          }
         }
       },
       "block_order": [
@@ -110,7 +119,8 @@
         "tab",
         "tab_nFUe6L",
         "contact",
-        "4295efae-1bc0-4dce-bdb3-92ced01e4df8"
+        "4295efae-1bc0-4dce-bdb3-92ced01e4df8",
+        "product_tip_a7mx6i"
       ],
       "settings": {
         "sku_enable": false,
