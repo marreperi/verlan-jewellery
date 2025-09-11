@@ -314,7 +314,7 @@
       "sale": "SALE",
       "sale_price": "Salepreis",
       "regular_price": "Normaler Preis",
-      "from_text_html": "Von {{ price }}",
+      "from_text_html": "ab {{ price }}",
       "recent_products": "Zuletzt Angesehen",
       "reviews": "Rezensionen"
     },
