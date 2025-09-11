@@ -24,7 +24,7 @@
         "order_note_heading": "Möchtest du uns noch etwas mitteilen?",
         "order_note_confirm": "Speichern",
         "enable_free_shipping": true,
-        "freeshipping": 6900,
+        "freeshipping": 7900,
         "fs_not_reached": "Nur noch price zum kostenlosen Versand!",
         "fs_reached": "Deine Bestellung ist Versandkostenfrei",
         "enable_free_gift": true,
