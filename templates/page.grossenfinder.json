@@ -11,7 +11,37 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {}
+    },
+    "rich_text_WQ6Ph8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_w8aLaP": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Rich text"
+          }
+        },
+        "text_Nzf8hF": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "{{ page.content }}"
+          }
+        }
+      },
+      "block_order": [
+        "heading_w8aLaP",
+        "text_Nzf8hF"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
     },
     "faq_bk3xBt": {
       "type": "faq",
@@ -69,7 +99,7 @@
       ],
       "name": "t:sections.faq.presets.faq.name",
       "settings": {
-        "title": ""
+        "title": "Häufige Fragen"
       }
     },
     "1653286951b958a664": {
@@ -87,6 +117,7 @@
   },
   "order": [
     "main",
+    "rich_text_WQ6Ph8",
     "faq_bk3xBt",
     "1653286951b958a664"
   ]
