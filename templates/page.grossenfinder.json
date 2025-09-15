@@ -13,49 +13,63 @@
       "type": "main-page",
       "settings": {}
     },
-    "1646732417395a7413": {
-      "type": "text-and-image",
-      "disabled": true,
+    "faq_bk3xBt": {
+      "type": "faq",
+      "blocks": {
+        "question_tVkPRU": {
+          "type": "question",
+          "settings": {
+            "title": "Ich liege zwischen zwei Größen. Welche soll ich wählen?",
+            "text": "<p>Wähle in der Regel die <strong>größere</strong> Größe; bei breiten Bandringen ebenfalls eher größer.</p>"
+          }
+        },
+        "question_Xrb4kH": {
+          "type": "question",
+          "settings": {
+            "title": "Ich habe weder Schnur noch Lineal.",
+            "text": "<p>Nimm einen <strong>Papierstreifen</strong> und miss die markierte Länge später mit einem <strong>Maßband</strong> oder einer <strong>Mess-App</strong>.</p>"
+          }
+        },
+        "question_NcrynW": {
+          "type": "question",
+          "settings": {
+            "title": "Ich habe mich vermessen. Kann ich umtauschen?",
+            "text": "<p>Klar – schau in unsere <strong>Rückgabebedingungen</strong>; dort findest du Fristen und Ablauf zum Umtausch.</p>"
+          }
+        },
+        "question_pPwMH8": {
+          "type": "question",
+          "settings": {
+            "title": "Wann ist der beste Zeitpunkt zum Messen?",
+            "text": "<p><strong>Morgens und abends</strong> messen und den Mittelwert nehmen. Vermeide Messungen direkt nach Sport, Hitze oder salzigen Mahlzeiten.</p>"
+          }
+        },
+        "question_brafqV": {
+          "type": "question",
+          "settings": {
+            "title": "Was, wenn mein Knöchel breiter ist als die Fingerbasis?",
+            "text": "<p>Miss beides (Basis <strong>und</strong> über dem Knöchel) und wähle eine Größe dazwischen bzw. die größere. Drehe den Ring beim Anstecken leicht – das hilft über den Knöchel.</p>"
+          }
+        },
+        "question_XmwXw3": {
+          "type": "question",
+          "settings": {
+            "title": "Geschenk? Wie messe ich diskret?",
+            "text": "<p>Leihe dir einen Ring der Person (passender Finger), miss den <strong>Innen-Ø</strong> oder lege ihn auf den Ausdruck unserer Schablone.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_tVkPRU",
+        "question_Xrb4kH",
+        "question_NcrynW",
+        "question_pPwMH8",
+        "question_brafqV",
+        "question_XmwXw3"
+      ],
+      "name": "t:sections.faq.presets.faq.name",
       "settings": {
-        "image": "shopify://shop_images/verlan-jewellery-handmade-ring.jpg",
-        "image_mask": "none",
-        "image2": "shopify://shop_images/Ring-handgemacht-silber-schmuck-bali-manufaktur-verlan-jewellery_f67d283c-b0fa-429f-b7d9-d52271b72760.jpg",
-        "image2_mask": "none",
-        "subtitle": "",
-        "title": "#WHOMADEMYJEWELLERY",
-        "text": "<p>Die <a href=\"https://www.verlan-jewellery.com\" title=\"VERLAN Jewellery | Fair hergestellter Schmuck aus Bali | Entdecke unsere Ringe, Ketten & Ohrringe aus Sterlingsilber \">VERLAN Jewellery</a> Manufaktur liegt im Herzen Balis und wird von einer lokalen Familie betreut. Uns liegt die hohe Qualität jedes einzelnen <a href=\"https://verlan-jewellery.com/collections/verlan-jewellery-alle-schmuckstuecke\" title=\"Entdecke unseren handgefertigten Schmuck aus Bali | 925 Silber | Fair und umweltschonend handgemacht\">Schmuckstückes</a> sowie eine faire Zusammenarbeit mit unseren ProduzentInnen sehr am Herzen.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "image_width": "50",
-        "layout": "right",
-        "divider": false,
-        "top_padding": true,
-        "bottom_padding": true,
-        "lazyload_images": true
-      }
-    },
-    "1647143809dfd03f91": {
-      "type": "text-and-image",
-      "settings": {
-        "image": "shopify://shop_images/200301__Verstellbare_Groesse_291.jpg",
-        "image_mask": "none",
-        "image2": "shopify://shop_images/200301__Verstellbare_Groesse_281.jpg",
-        "image2_mask": "none",
-        "subtitle": "",
-        "title": "",
-        "text": "<p>Viele unserer Ringe bieten wir dir auch in einer verstellbaren Größe an. Hier bekommst du einen Eindruck davon.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "image_width": "50",
-        "layout": "right",
-        "divider": false,
-        "top_padding": false,
-        "bottom_padding": false,
-        "lazyload_images": true
+        "title": ""
       }
     },
     "1653286951b958a664": {
@@ -73,8 +87,7 @@
   },
   "order": [
     "main",
-    "1646732417395a7413",
-    "1647143809dfd03f91",
+    "faq_bk3xBt",
     "1653286951b958a664"
   ]
 }
