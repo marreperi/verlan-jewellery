@@ -297,16 +297,12 @@
                       </div>
                     </div>
                   {%- when 'size_chart' -%}
-                    {%- if block.settings.size_chart and block.settings.size_chart.content != blank -%}
+                    {%- if block.settings.size_chart -%}
                       {%- capture size_chart_title -%}
                         {{ 'products.general.size_chart_link' | t }}
                       {%- endcapture -%}
                       <div class="product-block product-block--size-chart" {{ block.shopify_attributes }}>
-                        {%- render 'tool-tip-trigger'
-                          , title: size_chart_title
-                          , content: block.settings.size_chart.content
-                          , context: 'size-chart'
-                        -%}
+                        <a class="tool-tip-trigger__title" href="{{ block.settings.size_chart.url }}">{{ size_chart_title }}</a>
                         {% style %}
                           .product-block--size-chart .tool-tip-trigger__title {
                             color: #000;
