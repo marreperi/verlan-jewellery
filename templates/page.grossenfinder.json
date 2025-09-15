@@ -17,11 +17,11 @@
     "rich_text_WQ6Ph8": {
       "type": "rich-text",
       "blocks": {
-        "heading_w8aLaP": {
-          "type": "heading",
-          "disabled": true,
+        "text_RM7DA7": {
+          "type": "text",
           "settings": {
-            "title": "Rich text"
+            "enlarge_text": true,
+            "text": "<h1><strong>Ringgrößen-Guide</strong></h1>"
           }
         },
         "text_Nzf8hF": {
@@ -33,7 +33,7 @@
         }
       },
       "block_order": [
-        "heading_w8aLaP",
+        "text_RM7DA7",
         "text_Nzf8hF"
       ],
       "name": "t:sections.rich-text.presets.rich_text.name",
