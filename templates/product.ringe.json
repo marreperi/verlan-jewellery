@@ -68,7 +68,8 @@
           "settings": {
             "title": "Beschreibung",
             "content": "{{ product.description }}",
-            "page": ""
+            "page": "",
+            "expand_by_default": true
           }
         },
         "2f17364e-afc6-48a2-8cc4-956e460e145b": {
@@ -76,7 +77,8 @@
           "settings": {
             "title": "Ringgröße heraus finden",
             "content": "",
-            "page": "ringe-grossenfinder"
+            "page": "ringe-grossenfinder",
+            "expand_by_default": false
           }
         },
         "tab": {
@@ -84,7 +86,8 @@
           "settings": {
             "title": "Versand Informationen",
             "content": "<p>Lieferzeiten:<br/><span style=\"text-decoration:underline\"><strong>Deutschland:</strong></span><br/>Einschreiben / Einwurf: 2-5 Tage, 3,90€ </p><p><span style=\"text-decoration:underline\"><strong>Österreich, Luxemburg:<br/></strong></span>Standardversand: 3-7 Tage, 6,90€<strong><br/></strong><br/><span style=\"text-decoration:underline\"><strong>Andere EU-Länder:</strong></span><strong><br/></strong>Standardversand:<strong> </strong>4-10 Tage, 7,90€</p><p><em>Bei allen angegebenen Versandzeiten handelt es sich um die von unseren Versandpartnern geschätzte, übliche Beförderungsdauer. Feiertage, Streiks, Fehler der Post oder in der angegebenen Adresse, Überlastung der Post oder unvorhersehbare Vorkommnisse können die Zustellung verzögern. Es kann daher keine Garantie für ein bestimmtes Zustellungsdatum übernommen werden. Die Versanddauer in Länder außerhalb Österreichs und Deutschlands ist abhängig vom lokalen Versanddienstleister.</em></p>",
-            "page": ""
+            "page": "",
+            "expand_by_default": false
           }
         },
         "tab_kDMzwc": {
@@ -92,7 +95,8 @@
           "settings": {
             "title": "Schmuck Pflege",
             "content": "<p><strong>Wie pflege ich mein Schmuckstück richtig?</strong></p><p>In unserem Blogbeitrag zur <a href=\"/blogs/verlan-jewellery-bali-blog/wie-pflege-ich-mein-schmuckstuck\" target=\"_blank\" title=\"Wie pflege ich mein Schmuckstück?\">Schmuck Pflege</a> erhältst du alle wichtigen Informationen von uns.<em>♡</em></p>",
-            "page": ""
+            "page": "",
+            "expand_by_default": false
           }
         },
         "contact": {

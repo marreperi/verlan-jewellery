@@ -3579,7 +3579,8 @@ button[disabled],html input[disabled]{
 }
 
 [data-center-text=true] .collapsible-trigger-btn{
-    text-align:center
+    text-align:left;
+    font-weight: 900;
 }
 
 .collapsible-trigger-btn{
@@ -3592,14 +3593,6 @@ button[disabled],html input[disabled]{
     text-align:left
 }
 
-.collapsible-trigger-btn--borders{
-  border:1px solid;
-  border-color:{{ settings.color_borders | default: "#1c1d1d" }};
-  border-color:var(--colorBorder);
-  border-bottom:0;
-  padding:12px
-}
-
 .collapsible-trigger-btn--borders .collapsible-trigger__icon{
     right:12px;
   }
@@ -3607,7 +3600,7 @@ button[disabled],html input[disabled]{
 @media only screen and (min-width:769px){
 
 .collapsible-trigger-btn--borders{
-    padding:15px
+    padding: 15px 0px
 }
 
     .collapsible-trigger-btn--borders .collapsible-trigger__icon{
@@ -3618,15 +3611,6 @@ button[disabled],html input[disabled]{
 .collapsible-content+.collapsible-trigger-btn--borders{
     margin-top:-1px
 }
-
-.collapsible-trigger-btn--borders+.collapsible-content .collapsible-content__inner{
-    border:1px solid;
-    border-color:{{ settings.color_borders | default: "#1c1d1d" }};
-    border-color:var(--colorBorder);
-    border-top:0;
-    padding:0 20px 20px;
-    font-size:calc(var(--typeBaseSize)*0.92);
-  }
 
 .collapsible-trigger-btn--borders+.collapsible-content--expanded{
     margin-bottom:30px
@@ -7228,6 +7212,7 @@ html[dir=rtl] .predictive-result__layout [data-type-products]{
 
 .collapsible-content--all .collapsible-content__inner{
     transform:translateY(40px);
+    padding: 20px 0px;
   }
 
 @media only screen and (max-width:768px){
