@@ -111,8 +111,8 @@
           "settings": {
             "title": "{{ product.metafields.custom.product_tip.value.title.value }}",
             "description": "<p>{{ product.metafields.custom.product_tip.value.subtitle.value }}</p>",
-            "desktop_background_color": "#fff2f0",
-            "mobile_background_color": "#fff2f0"
+            "desktop_background_color": "#D8FFF1",
+            "mobile_background_color": "#D8FFF1"
           }
         }
       },
@@ -177,9 +177,7 @@
           }
         }
       },
-      "block_order": [
-        "4c75f089-aad2-4c58-b0ec-26637148641d"
-      ],
+      "block_order": ["4c75f089-aad2-4c58-b0ec-26637148641d"],
       "settings": {
         "full_width": false,
         "space_around": true
