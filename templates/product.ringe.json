@@ -111,8 +111,8 @@
           "settings": {
             "title": "{{ product.metafields.custom.product_tip.value.title.value }}",
             "description": "<p>{{ product.metafields.custom.product_tip.value.subtitle.value }}</p>",
-            "desktop_background_color": "#D8FFF1",
-            "mobile_background_color": "#D8FFF1"
+            "desktop_background_color": "#FFE3EA",
+            "mobile_background_color": "#FFE3EA"
           }
         }
       },
