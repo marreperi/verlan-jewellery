@@ -53,10 +53,12 @@
           if (width > maxSpanWidth) maxSpanWidth = width;
         }
         var requiredCellWidth = maxSpanWidth + 20; // account for 10px left/right in overlaid title
+        var maxBubbleWidth = 145;
+        if (requiredCellWidth > maxBubbleWidth) requiredCellWidth = maxBubbleWidth;
         var cells = grid.querySelectorAll('.grid__item');
         for (var j = 0; j < cells.length; j++) {
           cells[j].style.width = requiredCellWidth + 'px';
-          cells[j].style.maxWidth = 'none';
+          cells[j].style.maxWidth = maxBubbleWidth + 'px';
           cells[j].style.flex = '0 0 auto';
         }
         if (grid._subcollectionsFlickity && typeof grid._subcollectionsFlickity.resize === 'function') {
@@ -146,7 +148,7 @@
     justify-content: center;
   }
   .subcollections-bubbles .grid .grid__item {
-    max-width: none;
+    max-width: 145px;
   }
   @media only screen and (max-width: 749px) {
     .subcollections-bubbles .grid {
