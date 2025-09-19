@@ -509,7 +509,11 @@
               }
             }
           },
-          "block_order": ["1520882467782", "1521051841065", "1520888647304"],
+          "block_order": [
+            "1520882467782",
+            "1521051841065",
+            "1520888647304"
+          ],
           "settings": {
             "main_menu_link_list": "main-menu",
             "mega_menu_images": true,
@@ -554,7 +558,11 @@
               }
             }
           },
-          "block_order": ["1494301487049", "1494292487693", "1494301487048"],
+          "block_order": [
+            "1494301487049",
+            "1494292487693",
+            "1494301487048"
+          ],
           "settings": {
             "show_locale_selector": true,
             "show_currency_selector": true,
@@ -733,7 +741,9 @@
               "settings": {}
             }
           },
-          "block_order": ["1524768779513"],
+          "block_order": [
+            "1524768779513"
+          ],
           "settings": {
             "main_menu_link_list": "main-menu",
             "main_menu_alignment": "left-center",
@@ -765,7 +775,11 @@
               }
             }
           },
-          "block_order": ["1494292487693", "1526406521795", "1525444454442"],
+          "block_order": [
+            "1494292487693",
+            "1526406521795",
+            "1525444454442"
+          ],
           "settings": {
             "show_payment_icons": true
           }
