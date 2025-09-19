@@ -42,7 +42,7 @@
           "settings": {
             "icon_width": 50,
             "img1": "shopify://shop_images/nachhaltig_fair_hergestellter_schmuck_aus_recyceltem_silber_verlan_jewellery.png",
-            "text1": "<p>Mit Liebe <br/>handgefertig</p>",
+            "text1": "<p>Mit Liebe <br/>handgefertigt</p>",
             "img2": "shopify://shop_images/plastikfrei_icon_ohne_text.png",
             "text2": "<p>Plastikfreier<br/>Versand</p>",
             "img3": "shopify://shop_images/nachhaltig_leaves.png",
@@ -102,7 +102,7 @@
           "type": "product_tip",
           "settings": {
             "title": "Mach deinen Look perfekt",
-            "description": "<p>Runde deinen Style ab mit den passenden Teil. Gemeinsam strahlen sie noch mehr.</p>",
+            "description": "<p>Runde deinen Style ab mit dem passenden Schmuckstück. Gemeinsam strahlen sie noch mehr.</p>",
             "desktop_background_color": "#f8f1f4",
             "mobile_background_color": "#f8f1f4"
           }

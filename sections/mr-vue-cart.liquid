@@ -486,7 +486,9 @@
                     type="button"
                     class="shipping-dropdown-toggle"
                     @click="toggleShippingDropdown">
-                    <span class="selected-country" v-text="selectedShippingCountry.name"></span> <span class="country-restrictions" v-text="selectedShippingCountry.restrictions"></span>
+                    <span class="selected-country selected-country--name" v-text="selectedShippingCountry.name"></span>
+                    <span class="selected-country selected-country--code" v-text="selectedShippingCountry.code"></span>
+                    <span class="country-restrictions" v-text="selectedShippingCountry.restrictions"></span>
                     <svg
                       class="shipping-chevron"
                       width="12"
@@ -511,7 +513,9 @@
                       :class="{ 'selected': selectedShippingCountry.code === country.code }"
                       @click="selectShippingCountry(country)">
                       <div class="country-info">
-                        <span class="country-name" v-text="country.name"></span> <span class="country-restrictions" v-text="country.restrictions"></span>
+                        <span class="country-name country-name--name" v-text="country.name"></span>
+                        <span class="country-name country-name--code" v-text="country.code"></span>
+                        <span class="country-restrictions" v-text="country.restrictions"></span>
                       </div>
                       <span class="country-price" v-if="isFreeShippingForCountry(country)">Kostenlos</span>
                       <span
@@ -2524,6 +2528,7 @@ font-size: smaller;
 .shipping-dropdown {
   position: relative;
   display: inline-block;
+  min-width: 0;
 }
 
 .shipping-dropdown-toggle {
@@ -2541,6 +2546,7 @@ font-size: smaller;
   text-decoration-color: #ccc;
   text-underline-offset: 2px;
   transition: all 0.2s ease;
+  min-width: 0;
 }
 
 .shipping-dropdown-toggle:hover {
@@ -2549,6 +2555,25 @@ font-size: smaller;
 
 .selected-country {
   font-weight: 500;
+}
+
+/* Default: show full country name, hide code */
+.selected-country--name { display: inline; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.selected-country--code { display: none; }
+.country-name--name { display: inline; }
+.country-name--code { display: none; }
+
+/* Allow left column of shipping row to shrink */
+.cart__item--shipping > div:first-child { min-width: 0; }
+
+@media (max-width: 500px) {
+  /* Mobile: show code instead of full name */
+  .selected-country--name { display: none; }
+  .selected-country--code { display: inline; }
+  .country-name--name { display: none; }
+  .country-name--code { display: inline; }
+  /* Optional: hide restrictions text to save space */
+  .country-restrictions { display: none; }
 }
 
 .shipping-chevron {
@@ -3447,6 +3472,8 @@ font-size: small;
   display: flex;
   gap: 10px;
   align-items: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 .discount-input-{{ si }} {
@@ -3455,6 +3482,9 @@ font-size: small;
   border: 1px solid #ddd;
   font-size: 14px;
   background-color: #f5f5f5;
+  min-width: 0;
+  max-width: 100%;
+  flex: 1 1 auto;
 }
 
 .discount-input-{{ si }}:focus {

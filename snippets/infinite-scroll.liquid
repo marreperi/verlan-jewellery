@@ -212,7 +212,11 @@
     this.initGrid();
     this.init();
     this.page = 1;
+    this._ended = false;
+    this._loading = false;
     this.isRestoring = false;
+    this.totalPages = parseInt(this.dataset.pageSize || '0', 10);
+    this.cameFromProduct = /\/products\//.test(document.referrer || '');
     // Fallback for next page base if not provided
     if (!this.dataset.next) {
       try {
@@ -263,26 +267,47 @@
     });
     this.observer.observe(this);
   }
+  endInfiniteScroll() {
+    if (this._ended) return;
+    this._ended = true;
+    try { this.observer && this.observer.unobserve(this); } catch(_) {}
+    try {
+      const loader = this.querySelector('.loadingBox');
+      if (loader) {
+        loader.style.display = 'none';
+        loader.innerText = '';
+      }
+    } catch(_) {}
+  }
   
-  fetchNextPage(e) {
+  fetchNextPage(nextPage) {
+    if (this._ended || this._loading) return;
     if (!this.dataset.next) {
       console.warn("No next page URL provided.");
+      this.endInfiniteScroll();
       return;
     }
+    try {
+      const loader = this.querySelector('.loadingBox');
+      if (loader) loader.style.display = '';
+    } catch(_) {}
+    this._loading = true;
     const i = new URL(this.dataset.next, window.location.origin);
-    i.searchParams.set("page", e);
+    i.searchParams.set("page", nextPage);
     const r = i.href;
     console.log("Fetching next page:", r, "next:", this.dataset.next);
     fetch(r, { method: "GET", headers: { "Accept": "text/html" }, credentials: "same-origin" })
-      .then((e) => e.text())
-      .then((e) => {
-        const t = new DOMParser().parseFromString(e, "text/html");
+      .then((resp) => resp.text())
+      .then((html) => {
+        const t = new DOMParser().parseFromString(html, "text/html");
         // Scope to collection content if present on the fetched page
         const scope = t.querySelector("#CollectionAjaxContent") || t;
         let grid = scope.querySelector(this.gridName)
           || scope.querySelector(".collection-grid__wrapper .grid")
           || scope.querySelector(".grid--uniform")
           || scope.querySelector(".grid");
+        var fetchedHasItems = false;
+        try { fetchedHasItems = !!(grid && grid.innerHTML && grid.innerHTML.replace(/\s+/g, '').length > 0); } catch(_) {}
         if (grid) {
           // If our container was not found earlier, re-detect on current page
           if (!this.gridContainer) {
@@ -300,10 +325,20 @@
             AOS.refresh();
           }
           
-          const nextPageUrl = this.getNextPageUrl(e);
-          if (nextPageUrl) {
-            this.dataset.next = nextPageUrl;
-            console.log("Updated next page URL to:", nextPageUrl);
+          // Determine if there is a next page available
+          const relNextEl = t.querySelector('link[rel="next"], a[rel="next"]');
+          const hasRelNext = !!(relNextEl && relNextEl.getAttribute('href'));
+          const hasMoreByTotal = this.totalPages > 0 ? (nextPage < this.totalPages) : null;
+          const hasNext = hasRelNext || (hasMoreByTotal === true);
+
+          // Advance page only after a successful append
+          if (fetchedHasItems) {
+            this.page = nextPage;
+          }
+
+          // If we just loaded last page or no items returned, end
+          if (!hasNext || !fetchedHasItems) {
+            this.endInfiniteScroll();
           }
         } else {
           console.warn("No grid found in fetched page. Tried:", this.gridName);
@@ -315,11 +350,19 @@
             if (typeof AOS !== 'undefined') {
               AOS.refresh();
             }
-            const nextPageUrl = this.getNextPageUrl(e);
-            if (nextPageUrl) {
-              this.dataset.next = nextPageUrl;
-              console.log("Updated next page URL to:", nextPageUrl);
+            const relNextEl = t.querySelector('link[rel="next"], a[rel="next"]');
+            const hasRelNext = !!(relNextEl && relNextEl.getAttribute('href'));
+            const hasMoreByTotal = this.totalPages > 0 ? (nextPage < this.totalPages) : null;
+            const hasNext = hasRelNext || (hasMoreByTotal === true);
+            const altHasItems = !!(alt && alt.innerHTML && alt.innerHTML.replace(/\s+/g, '').length > 0);
+            if (altHasItems) {
+              this.page = nextPage;
             }
+            if (!hasNext || !altHasItems) {
+              this.endInfiniteScroll();
+            }
+          } else {
+            // No grid found in fetched page; try again on next intersection
           }
         }
         // Update URL to reflect current page so users can return to the same position
@@ -342,28 +385,51 @@
       })
       .catch((e) => {
         console.error("Error fetching next page:", e);
-      });
+        // On error, avoid endless spinner
+        this.endInfiniteScroll();
+      })
+      .finally(() => { this._loading = false; });
   }
   
   getNextPageUrl(htmlContent) {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(htmlContent, "text/html");
-    const infiniteScrollElement = doc.querySelector("infinite-scroll");
-    if (infiniteScrollElement && infiniteScrollElement.dataset.next) {
-      return infiniteScrollElement.dataset.next;
-    }
+    try {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(htmlContent, "text/html");
+      // Prefer rel=next if present
+      const relNext = doc.querySelector('link[rel="next"], a[rel="next"]');
+      if (relNext && relNext.getAttribute('href')) {
+        return new URL(relNext.getAttribute('href'), window.location.origin).href;
+      }
+      // Then check our component marker
+      const infiniteScrollElement = doc.querySelector("infinite-scroll");
+      if (infiniteScrollElement && infiniteScrollElement.dataset.next) {
+        return new URL(infiniteScrollElement.dataset.next, window.location.origin).href;
+      }
+      // Fallback: any pagination link that looks like next
+      const nextCandidates = Array.from(doc.querySelectorAll('a[href*="page="]'));
+      if (nextCandidates.length) {
+        const currentPage = this.page;
+        const nextLink = nextCandidates.find(a => {
+          try {
+            const u = new URL(a.getAttribute('href'), window.location.origin);
+            const p = parseInt(u.searchParams.get('page') || '0', 10);
+            return p > currentPage;
+          } catch(_) { return false; }
+        }) || nextCandidates[0];
+        if (nextLink && nextLink.getAttribute('href')) {
+          return new URL(nextLink.getAttribute('href'), window.location.origin).href;
+        }
+      }
+    } catch(_) {}
     return null;
   }
   revealItem(e, t) {
     const [i] = e;
     if (!i.isIntersecting) return;
-    if (i.target) {
-      this.page++;
-      this.fetchNextPage(this.page);
-    }
-    if (this.page == this.dataset.pageSize) {
-      t.unobserve(i.target);
-    }
+    if (this._ended || this._loading) return;
+    const nextPage = this.page + 1;
+    if (this.totalPages > 0 && nextPage > this.totalPages) { this.endInfiniteScroll(); return; }
+    this.fetchNextPage(nextPage);
   }
   pauseObserver() {
     try { this.observer && this.observer.unobserve(this); } catch(_) {}
@@ -373,9 +439,18 @@
   }
 
   updateURLPageParam(page) {
+    if (!this.cameFromProduct) return;
     const url = new URL(window.location.href);
     url.searchParams.set("page", String(page));
     window.history.replaceState({}, "", url.toString());
+  }
+
+  removePageParamFromUrl() {
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('page');
+      window.history.replaceState({}, "", url.toString());
+    } catch(_) {}
   }
 
   saveState(extra = {}) {
@@ -406,15 +481,25 @@
     // Try URL param first
     const url = new URL(window.location.href);
     const urlPage = parseInt(url.searchParams.get("page") || "1", 10);
-    let targetPage = isNaN(urlPage) ? 1 : Math.max(1, urlPage);
+    let targetPage = 1;
 
     // Try sessionStorage
     let saved = null;
     try {
       const raw = sessionStorage.getItem(`infiniteScrollState:${location.pathname}`);
       saved = raw ? JSON.parse(raw) : null;
-      if (saved && saved.page && saved.page > targetPage) targetPage = saved.page;
     } catch (_) {}
+
+    if (this.cameFromProduct) {
+      // Only restore deep page when returning from a product page
+      targetPage = isNaN(urlPage) ? 1 : Math.max(1, urlPage);
+      if (saved && saved.page && saved.page > targetPage) targetPage = saved.page;
+    } else {
+      // Not coming from a product: start fresh and clear ?page
+      this.removePageParamFromUrl();
+      try { sessionStorage.removeItem(`infiniteScrollState:${location.pathname}`); } catch(_) {}
+      targetPage = 1;
+    }
 
     // Ensure we have a base next URL
     if (!this.dataset.next) {
@@ -436,8 +521,8 @@
       }
     }
 
-    // Restore scroll position or last product in view
-    if (saved) {
+    // Restore scroll position or last product in view only when returning from product
+    if (this.cameFromProduct && saved) {
       if (saved.lastProductHref) {
         const selector = `a[href='${saved.lastProductHref}']`;
         const link = document.querySelector(selector);
@@ -452,6 +537,9 @@
       if (typeof saved.scrollY === "number") {
         window.scrollTo({ top: saved.scrollY, behavior: "auto" });
       }
+    } else if (!this.cameFromProduct) {
+      // Ensure top of page when not coming from a product
+      try { window.scrollTo({ top: 0, behavior: "auto" }); } catch(_) {}
     }
     this.isRestoring = false;
     this.resumeObserver();
