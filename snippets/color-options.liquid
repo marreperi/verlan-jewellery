@@ -28,7 +28,25 @@
   elsif siblings_list != blank and siblings_list contains ','
     assign siblings_list = siblings_list | replace: '\n', ',' | replace: ';', ',' | split: ','
   endif
+
+  assign dot_count = 0
+  if current_color != blank
+    assign dot_count = dot_count | plus: 1
+  endif
+  assign count_render_siblings = siblings_list | default: siblings
+  if count_render_siblings != blank
+    for sibling in count_render_siblings
+      assign sib_product = sibling
+      if sib_product.url == blank and sib_product.handle == blank and sibling != blank
+        assign sib_product = all_products[sibling]
+      endif
+      if sib_product and sib_product.handle != blank and sib_product.handle != product.handle
+        assign dot_count = dot_count | plus: 1
+      endif
+    endfor
+  endif
 -%}
+{%- if dot_count > 1 -%}
 <div class="color-options{% if center_desktop %} color-options--center-desktop{% endif %}" style="--dot-size-mobile: {{ dot_size_mobile }}px; --dot-size-desktop: {{ dot_size_desktop }}px;">
   <ul class="color-options__list" role="list">
     {%- if current_color != blank -%}
@@ -139,5 +157,7 @@
     }
   }
 </style>
+
+{%- endif -%}
 
 
