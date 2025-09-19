@@ -4298,7 +4298,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   flex-direction:column;
 }
 
-.drawer__inner,.drawer__scrollable{
+.drawer__inner{
   flex:1 1 auto;
   display:flex;
   flex-direction:column;
@@ -4306,10 +4306,16 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
 }
 
 .drawer__scrollable{
+  flex:1 1 auto;
+  display:flex;
+  flex-direction:column;
+  overflow-y:auto;
+  min-height:0;
+}
+
+.drawer__scrollable{
   padding-top:20px;
   padding-top:var(--drawer-gutter);
-  overflow:hidden;
-  overflow-y:auto;
   -webkit-overflow-scrolling:touch;
 }
 
@@ -6567,7 +6573,8 @@ html[dir=rtl] .predictive-result__layout [data-type-products]{
   display:flex;
   flex-wrap:wrap;
   justify-content:stretch;
-  margin:15px 0 0px 0
+  margin:15px 0 0px 0;
+  background: white;
 }
 
 @media only screen and (min-width:769px){
