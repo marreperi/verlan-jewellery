@@ -22,13 +22,14 @@
 
           {%- if sub_collection != blank -%}
             {%- unless parent_url == sub_collection.url -%}
-              {%- render 'collection-grid-item',
-                collection: sub_collection,
-                gridView: gridView,
-                collection_title: sub_collection_link.title,
-                per_row: per_row,
-                sizeVariable: gridView,
-                fallback: 'variable',
+              {%- render 'collection-grid-item'
+                , collection: sub_collection
+                , gridView: gridView
+                , collection_title: sub_collection_link.title
+                , per_row: per_row
+                , sizeVariable: gridView
+                , fallback: 'variable'
+                ,
               -%}
             {%- endunless -%}
           {%- endif -%}
@@ -40,11 +41,46 @@
 
 <script>
   (function() {
+    function truncateTitle(titleElement, maxWidth) {
+      if (!titleElement) return;
+      var originalText = titleElement.dataset && titleElement.dataset.originalText ? titleElement.dataset.originalText : titleElement.textContent;
+      if (titleElement.dataset && !titleElement.dataset.originalText) {
+        titleElement.dataset.originalText = originalText;
+      }
+      var testElement = titleElement.cloneNode(true);
+      testElement.style.position = 'absolute';
+      testElement.style.visibility = 'hidden';
+      testElement.style.whiteSpace = 'nowrap';
+      document.body.appendChild(testElement);
+      
+      if (testElement.getBoundingClientRect().width <= maxWidth) {
+        document.body.removeChild(testElement);
+        return;
+      }
+      
+      var truncatedText = originalText;
+      while (testElement.getBoundingClientRect().width > maxWidth && truncatedText.length > 0) {
+        truncatedText = truncatedText.slice(0, -1);
+        testElement.textContent = truncatedText + '...';
+      }
+      
+      titleElement.textContent = truncatedText + '...';
+      document.body.removeChild(testElement);
+    }
+
     function setUniformCellWidth(grid) {
       if (!grid) return;
       try {
+        var maxBubbleWidth = 150;
+        var titleMaxWidth = maxBubbleWidth - 46; // account for overlaid-box span padding (8px + 15px) * 2 = 46px
+        
+        // First truncate all titles
         var titleSpans = grid.querySelectorAll('.collection-item__title > span');
-        if (!titleSpans || !titleSpans.length) return;
+        for (var i = 0; i < titleSpans.length; i++) {
+          truncateTitle(titleSpans[i], titleMaxWidth);
+        }
+        
+        // Then calculate uniform width based on truncated titles
         var maxSpanWidth = 0;
         for (var i = 0; i < titleSpans.length; i++) {
           var span = titleSpans[i];
@@ -52,14 +88,22 @@
           var width = Math.ceil(rect.width || span.scrollWidth);
           if (width > maxSpanWidth) maxSpanWidth = width;
         }
+        
         var requiredCellWidth = maxSpanWidth + 20; // account for 10px left/right in overlaid title
-        var maxBubbleWidth = 145;
         if (requiredCellWidth > maxBubbleWidth) requiredCellWidth = maxBubbleWidth;
+        
         var cells = grid.querySelectorAll('.grid__item');
         for (var j = 0; j < cells.length; j++) {
           cells[j].style.width = requiredCellWidth + 'px';
           cells[j].style.maxWidth = maxBubbleWidth + 'px';
           cells[j].style.flex = '0 0 auto';
+        }
+        
+        // Add mobile spacing if on mobile
+        var isMobile = window.matchMedia('(max-width: 749px)').matches;
+        if (isMobile && cells.length > 0) {
+          cells[0].style.marginLeft = '17px';
+          cells[cells.length - 1].style.marginRight = '17px';
         }
         if (grid._subcollectionsFlickity && typeof grid._subcollectionsFlickity.resize === 'function') {
           grid._subcollectionsFlickity.resize();
@@ -74,6 +118,19 @@
         cells[i].style.width = '';
         cells[i].style.maxWidth = '';
         cells[i].style.flex = '';
+        cells[i].style.marginLeft = '';
+        cells[i].style.marginRight = '';
+      }
+    }
+
+    function restoreOriginalTitles(grid) {
+      if (!grid) return;
+      var titleSpans = grid.querySelectorAll('.collection-item__title > span');
+      for (var i = 0; i < titleSpans.length; i++) {
+        var span = titleSpans[i];
+        if (span.dataset && span.dataset.originalText) {
+          span.textContent = span.dataset.originalText;
+        }
       }
     }
 
@@ -96,16 +153,31 @@
               wrapAround: false,
               adaptiveHeight: false,
             });
+            
+            // Add spacing to first and last items after Flickity initializes
+            var cells = grid.querySelectorAll('.grid__item');
+            if (cells.length > 0) {
+              cells[0].style.marginLeft = '17px';
+              cells[cells.length - 1].style.marginRight = '17px';
+            }
           } catch (e) {}
+        } else {
+          // Flickity already exists, just ensure spacing is applied
+          var cells = grid.querySelectorAll('.grid__item');
+          if (cells.length > 0) {
+            cells[0].style.marginLeft = '17px';
+            cells[cells.length - 1].style.marginRight = '17px';
+          }
         }
-        setUniformCellWidth(grid);
+        // Rely on CSS for mobile ellipsis and widths
       } else {
         if (instance && typeof instance.destroy === 'function') {
           instance.destroy();
           grid._subcollectionsFlickity = null;
         }
-        // Also normalize widths on desktop to avoid title clipping
-        setUniformCellWidth(grid);
+        // Clear any inline sizing and restore full titles on desktop
+        clearUniformCellWidth(grid);
+        restoreOriginalTitles(grid);
       }
     }
 
@@ -140,7 +212,12 @@
 <style>
   .subcollections-bubbles {
     background: #f3f3f3;
-    padding: 20px 0px;
+    padding: 20px 0;
+  }
+  @media only screen and (max-width: 749px) {
+    .subcollections-bubbles {
+      padding-left: 17px;
+    }
   }
   .subcollections-bubbles .grid {
     display: flex;
@@ -148,7 +225,7 @@
     justify-content: center;
   }
   .subcollections-bubbles .grid .grid__item {
-    max-width: 145px;
+    max-width: 250px;
   }
   @media only screen and (max-width: 749px) {
     .subcollections-bubbles .grid {
@@ -156,12 +233,24 @@
     }
     .subcollections-bubbles .grid .grid__item {
       width: auto;
+      max-width: 178px;
+    }
+    .subcollections-bubbles .collection-item__title > span {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: calc(178px - 46px);
     }
     .subcollections-bubbles .grid .grid__item:first-child {
       margin-left: 17px;
     }
     .subcollections-bubbles .grid .grid__item:last-child {
       margin-right: 17px;
+    }
+    .subcollections-bubbles__inner {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
   .subcollections-bubbles .flickity-viewport {
