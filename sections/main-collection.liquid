@@ -11,6 +11,7 @@
   data-section-id="{{ section.id }}"
   data-section-type="collection-grid">
   <div id="CollectionAjaxContent">
+    {%- render 'subcollections', per_row: 5 -%}
     <div class="page-width">
       <div class="grid">
         <div class="grid__item medium-up--one-fifth grid__item--sidebar">
@@ -43,11 +44,6 @@
                       <div class="rte collection__description">
                         {{ collection.description }}
                       </div>
-                    {%- endif -%}
-                  {%- when 'subcollections' -%}
-                    {%- if paginate.current_page == 1 and current_filter_size == 0 -%}
-                      {%- render 'subcollections'
-                        , per_row: block.settings.subcollections_per_row -%}
                     {%- endif -%}
                   {%- when 'product_grid' -%}
                     <div data-scroll-to>
@@ -87,6 +83,11 @@
     Override grid styles if sidebar is disabled
   {% endcomment %}
   {% style %}
+    @media only screen and (min-width: 750px) {
+      .collection-content .grid:first-of-type {
+        padding-top: 40px;
+      }
+    }
     .collection-content .grid__item--sidebar {
       width: 0;
       padding: 0;
