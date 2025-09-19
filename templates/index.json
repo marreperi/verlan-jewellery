@@ -172,16 +172,16 @@
           "type": "image",
           "settings": {
             "top_subheading": "VERLAN",
-            "title": "SUMMER SALE",
+            "title": "Buchstaben Ketten",
             "title_size": 40,
-            "subheading": "Bis zu 40% reduzierte Schmuckstücke",
-            "link": "shopify://collections/sale",
+            "subheading": "Entdecke unsere Initialen Ketten",
+            "link": "shopify://collections/buchstaben-ketten",
             "link_text": "JETZT SHOPPEN",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-bottom horizontal-center",
-            "image": "shopify://shop_images/Silber_ringe_verlan_jewellery.jpg",
+            "image": "shopify://shop_images/Buchstaben_kette_verlan_jewelry.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
