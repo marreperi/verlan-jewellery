@@ -810,6 +810,11 @@
             if (freeGift) {
                 const { threshold, is_available: isAvailable, variant_id } = freeGift;
                 
+                // Reset manual removal flag when cart total is below threshold
+                if (cartTotalPrice < threshold) {
+                    this.manuallyRemovedGifts.free_gift = false;
+                }
+                
                 // Remove free gifts if cart total is below the threshold or if there are too many
                 if (cartTotalPrice < threshold || this.freeGiftQuantities.free_gift > 1) {
                     // Remove excess free gifts (keep only 1 if threshold is met)
@@ -827,8 +832,6 @@
                     // Remove all free gifts if threshold not met
                     if (cartTotalPrice < threshold && this.freeGiftQuantities.free_gift > 0) {
                         freeGiftItems.forEach(item => this.removeProduct(item));
-                        // Reset the manual removal flag when threshold is no longer met
-                        this.manuallyRemovedGifts.free_gift = false;
                         return;
                     }
                 }
@@ -844,6 +847,11 @@
             // Handle second free gift
             if (secondFreeGift) {
                 const { threshold, is_available: isAvailable, variant_id } = secondFreeGift;
+                
+                // Reset manual removal flag when cart total is below threshold
+                if (cartTotalPrice < threshold) {
+                    this.manuallyRemovedGifts.second_free_gift = false;
+                }
                 
                 // Remove second free gifts if cart total is below the threshold or if there are too many
                 if (cartTotalPrice < threshold || this.freeGiftQuantities.second_free_gift > 1) {
@@ -862,8 +870,6 @@
                     // Remove all second free gifts if threshold not met
                     if (cartTotalPrice < threshold && this.freeGiftQuantities.second_free_gift > 0) {
                         secondFreeGiftItems.forEach(item => this.removeProduct(item));
-                        // Reset the manual removal flag when threshold is no longer met
-                        this.manuallyRemovedGifts.second_free_gift = false;
                         return;
                     }
                 }
