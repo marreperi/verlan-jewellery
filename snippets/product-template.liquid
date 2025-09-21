@@ -393,6 +393,20 @@
                           data-product-name="{{ product.title | escape }}"
                           data-base-url="{{ shop.url }}{{ routes.root_url }}"></div>
                       {%- endif -%}
+
+                      {%- comment -%} AMP Out of Stock Notification Button {%- endcomment -%}
+                      {%- unless product.tags contains 'bis-hidden' -%}
+                        <div class="product-block product-block--oosn" style="display: none;">
+                          <button 
+                            id="BIS_trigger" 
+                            type="button" 
+                            class="btn btn--full btn--secondary oosn-button"
+                            data-variant-id="{{ current_variant.id }}"
+                            style="display: none;">
+                            {{ 'products.product.notify_when_available' | t | default: 'Notify me when available' }}
+                          </button>
+                        </div>
+                      {%- endunless -%}
                     </div>
                   {%- when 'sales_point' -%}
                     {%- unless block.settings.text == blank -%}
