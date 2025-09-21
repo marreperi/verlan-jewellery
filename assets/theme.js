@@ -1129,6 +1129,7 @@ theme.recentlyViewed = {
         );
       },
 
+
       _updateHistoryState: function (variant) {
         if (!history.replaceState || !variant) {
           return;
@@ -7978,6 +7979,9 @@ theme.recentlyViewed = {
 
         this.variants = new theme.Variants(options);
 
+        // Initialize OOSN button state
+        this.initOOSNButton();
+
         // Product availability on page load
         if (this.storeAvailability) {
           var variant_id = this.variants.currentVariant
@@ -8006,6 +8010,12 @@ theme.recentlyViewed = {
         this.container.on(
           "variantUnitPriceChange" + this.settings.namespace,
           this.updateUnitPrice.bind(this)
+        );
+
+        // Listen for variant changes to update OOSN button
+        this.container.on(
+          "variantChange" + this.settings.namespace,
+          this.updateOOSNButton.bind(this)
         );
 
         if (this.container.querySelector(this.selectors.sku)) {
@@ -8066,6 +8076,38 @@ theme.recentlyViewed = {
           } else {
             this.settings.imageSetName = null;
           }
+        }
+      },
+
+      initOOSNButton: function () {
+        // Initialize the Out of Stock Notification button state
+        var currentVariant = this.variants.currentVariant;
+        if (currentVariant) {
+          this.updateOOSNButton(currentVariant);
+        }
+      },
+
+      updateOOSNButton: function (evt) {
+        // Handle both direct variant calls and event-based calls
+        var variant = evt && evt.detail ? evt.detail.variant : evt;
+        
+        // Update AMP Out of Stock Notification button
+        var oosnButton = this.container.querySelector('#BIS_trigger');
+        var oosnContainer = this.container.querySelector('.product-block--oosn');
+        
+        if (!oosnButton || !oosnContainer) {
+          return;
+        }
+
+        if (variant && variant.available) {
+          // Variant is available - hide the OOSN button
+          oosnButton.style.display = 'none';
+          oosnContainer.style.display = 'none';
+        } else {
+          // Variant is out of stock - show the OOSN button
+          oosnButton.setAttribute('data-variant-id', variant ? variant.id : '');
+          oosnButton.style.display = 'block';
+          oosnContainer.style.display = 'block';
         }
       },
 

@@ -336,7 +336,8 @@
       "will_be_in_stock_after": "Back in stock {{ date }}",
       "waiting_for_stock": "Inventory on the way",
       "view_in_space": "View in your space",
-      "view_in_space_label": "View in your space, loads item in augmented reality window"
+      "view_in_space_label": "View in your space, loads item in augmented reality window",
+      "notify_when_available": "Notify me when available"
     }
   },
   "store_availability": {
