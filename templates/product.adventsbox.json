@@ -1,0 +1,216 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "judgeme_preview_badge_product_page_bf4ed826": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": false
+          }
+        },
+        "service_usps_dTLbn7": {
+          "type": "service_usps",
+          "settings": {
+            "icon_width": 50,
+            "img1": "shopify://shop_images/nachhaltig_fair_hergestellter_schmuck_aus_recyceltem_silber_verlan_jewellery.png",
+            "text1": "<p>Mit Liebe <br/>handgefertigt</p>",
+            "img2": "shopify://shop_images/plastikfrei_icon_ohne_text.png",
+            "text2": "<p>Plastikfreier<br/>Versand</p>",
+            "img3": "shopify://shop_images/nachhaltig_leaves.png",
+            "text3": "<p>Umweltschonend <br/>& Fair</p>",
+            "img4": "shopify://shop_images/Lieferung_tracking_icon_b40c4ad1-0403-4e98-b647-7b7cf79e77c9.png",
+            "text4": "<p>Versand <br/>mit Tracking</p>"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "tab_eBic8W": {
+          "type": "tab",
+          "settings": {
+            "title": "Beschreibung",
+            "content": "{{ product.description }}",
+            "page": "",
+            "expand_by_default": true
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "title": "Versand Informationen",
+            "content": "<p>Lieferzeiten:<br/><span style=\"text-decoration:underline\"><strong>Deutschland:</strong></span><br/>Einschreiben / Einwurf: 2-5 Tage, 3,90€ </p><p><span style=\"text-decoration:underline\"><strong>Österreich, Luxemburg:<br/></strong></span>Standardversand: 3-7 Tage, 6,90€<br/><br/><span style=\"text-decoration:underline\"><strong>Andere EU-Länder:</strong></span><strong><br/></strong>Standardversand:<strong> </strong>4-10 Tage, 7,90€<strong><br/></strong></p><p><em>Bei allen angegebenen Versandzeiten handelt es sich um die von unseren Versandpartnern geschätzte, übliche Beförderungsdauer. Feiertage, Streiks, Fehler der Post oder in der angegebenen Adresse, Überlastung der Post oder unvorhersehbare Vorkommnisse können die Zustellung verzögern. Es kann daher keine Garantie für ein bestimmtes Zustellungsdatum übernommen werden. Die Versanddauer in Länder außerhalb Österreichs und Deutschlands ist abhängig vom lokalen Versanddienstleister.</em></p>",
+            "page": "",
+            "expand_by_default": false
+          }
+        },
+        "tab_nFUe6L": {
+          "type": "tab",
+          "settings": {
+            "title": "Schmuck Pflege",
+            "content": "<p><strong>Wie pflege ich mein Schmuckstück richtig?</strong></p><p>In unserem Blogbeitrag zur <a href=\"/blogs/verlan-jewellery-bali-blog/wie-pflege-ich-mein-schmuckstuck\" target=\"_blank\" title=\"Wie pflege ich mein Schmuckstück?\">Schmuck Pflege</a> erhältst du alle wichtigen Informationen von uns.<em>♡</em></p>",
+            "page": "",
+            "expand_by_default": false
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "title": "Stell uns deine Frage",
+            "phone": false
+          }
+        },
+        "4295efae-1bc0-4dce-bdb3-92ced01e4df8": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "product_tip_a7mx6i": {
+          "type": "product_tip",
+          "settings": {
+            "title": "Mach deinen Look perfekt",
+            "description": "<p>Runde deinen Style ab mit dem passenden Schmuckstück. Gemeinsam strahlen sie noch mehr.</p>",
+            "desktop_background_color": "#f8f1f4",
+            "mobile_background_color": "#f8f1f4"
+          }
+        }
+      },
+      "block_order": [
+        "judgeme_preview_badge_product_page_bf4ed826",
+        "price",
+        "variant_picker",
+        "buy_buttons",
+        "service_usps_dTLbn7",
+        "description",
+        "tab_eBic8W",
+        "tab",
+        "tab_nFUe6L",
+        "contact",
+        "4295efae-1bc0-4dce-bdb3-92ced01e4df8",
+        "product_tip_a7mx6i"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "large",
+        "image_aspect_ratio": "3:4",
+        "product_zoom_enable": false,
+        "thumbnail_position": "beside",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "Das könnte dir auch gefallen",
+        "related_count": 5,
+        "products_per_row": 5
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "16675482433137999d": {
+      "type": "apps",
+      "blocks": {
+        "823cf2a0-1e88-4765-bb45-b1cde0157916": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
+        }
+      },
+      "block_order": [
+        "823cf2a0-1e88-4765-bb45-b1cde0157916"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "text-and-image": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/verlan-jewellery-handmade-ring.jpg",
+        "image_mask": "none",
+        "image2": "shopify://shop_images/Zuschnitt-ring-verlan-jewellery.jpg",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Handmade with love",
+        "text": "<p>Alle Schmuckstücke von <a href=\"https://www.verlan-jewellery.com/\" target=\"_blank\">VERLAN Jewellery</a> werden fair und umweltschonend im Herzen Balis handgefertigt. </p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "recently-viewed",
+    "sub",
+    "16675482433137999d",
+    "text-and-image",
+    "collection-return"
+  ]
+}
