@@ -185,10 +185,29 @@
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
+        },
+        "image_P97K8R": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "endlich sind sie da: unsere",
+            "title": "ADVENTSBOXEN",
+            "title_size": 40,
+            "subheading": "",
+            "link": "shopify://products/adventsbox-gross",
+            "link_text": "JETZT ENTDECKEN",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/VERLAN_ADVENTS_BOX_adventskalender.heic",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
         }
       },
       "block_order": [
-        "0f3a0ed3-ef62-40bf-a07a-e94a1479fac6"
+        "0f3a0ed3-ef62-40bf-a07a-e94a1479fac6",
+        "image_P97K8R"
       ],
       "settings": {
         "section_height": "550px",
