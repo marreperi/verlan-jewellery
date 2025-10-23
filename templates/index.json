@@ -193,13 +193,13 @@
             "title": "ADVENTSBOXEN",
             "title_size": 40,
             "subheading": "",
-            "link": "shopify://products/adventsbox-gross",
+            "link": "shopify://collections/adventsboxen",
             "link_text": "JETZT ENTDECKEN",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/VERLAN_ADVENTS_BOX_adventskalender.heic",
+            "image": "shopify://shop_images/VERLAN_Adventsbox_Gro.heic",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
