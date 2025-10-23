@@ -12,8 +12,8 @@
     "collection-header": {
       "type": "collection-header",
       "settings": {
-        "enable": true,
-        "collection_image_enable": true,
+        "enable": false,
+        "collection_image_enable": false,
         "parallax": true,
         "parallax_direction": "top"
       }
@@ -121,7 +121,7 @@
         "1647181788df9267b5-3"
       ],
       "settings": {
-        "featured_product": "buchstaben-anhaenger-initialen-kette-gold",
+        "featured_product": "adventsbox-gross",
         "divider": false,
         "sku_enable": false,
         "image_position": "left",
@@ -171,7 +171,7 @@
         "buy_buttons_f4Jz6p"
       ],
       "settings": {
-        "featured_product": "buchstaben-anhaenger-kette-silber",
+        "featured_product": "adventsbox-klein",
         "divider": false,
         "sku_enable": false,
         "image_position": "right",
@@ -222,6 +222,7 @@
     },
     "background_image_text_YJyygY": {
       "type": "background-image-text",
+      "disabled": true,
       "settings": {
         "subtitle": "",
         "title": "",
