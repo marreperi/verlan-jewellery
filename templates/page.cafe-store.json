@@ -84,7 +84,6 @@
       "settings": {
         "image": "shopify://shop_images/200301__Verstellbare_Groesse_291.jpg",
         "image_mask": "none",
-        "image2": "shopify://shop_images/200301__Verstellbare_Groesse_281.jpg",
         "image2_mask": "none",
         "subtitle": "",
         "title": "",
@@ -117,7 +116,7 @@
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/verlan_cafe_hamburg_karoviertel.jpg",
+            "image": "shopify://shop_images/Verlan_Cafe_hamburg_vegan.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
@@ -175,9 +174,9 @@
     "79a43110-139a-4f75-9b9a-1bd530acffb7": {
       "type": "text-and-image",
       "settings": {
-        "image": "shopify://shop_images/Verlan_cafe_hamburg_shopping.jpg",
+        "image": "shopify://shop_images/Verlan_cafe_karoviertel.jpg",
         "image_mask": "none",
-        "image2": "shopify://shop_images/verlan_cafe_schmuck.jpg",
+        "image2": "shopify://shop_images/Verlan_Cafe_Hamburg_Schanze.jpg",
         "image2_mask": "none",
         "subtitle": "",
         "title": "",
