@@ -168,6 +168,25 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
+        "image_fEaCy8": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "https://verlan-jewellery.com/discount/BLACKWEEKS",
+            "link_text": "JETZT SHOPPEN",
+            "link_2": "https://verlan-jewellery.com/discount/BLACKWEEKS",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Black_weeks_verlan.png",
+            "image_mobile": "shopify://shop_images/Grau_Schwarz_Foto_Schlicht_Sale_Rabatt_Promo_Black_Friday_Werbung_Instagram_Story_Instagram-Post_45_-4.png",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        },
         "0f3a0ed3-ef62-40bf-a07a-e94a1479fac6": {
           "type": "image",
           "settings": {
@@ -207,6 +226,7 @@
         }
       },
       "block_order": [
+        "image_fEaCy8",
         "0f3a0ed3-ef62-40bf-a07a-e94a1479fac6",
         "image_P97K8R"
       ],
