@@ -50,6 +50,7 @@
         "timer_DPbgmM",
         "button_aV8AfD"
       ],
+      "disabled": true,
       "settings": {
         "layout": "banner",
         "full_width": true,

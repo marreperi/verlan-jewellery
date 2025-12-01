@@ -170,6 +170,7 @@
       "blocks": {
         "image_fEaCy8": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "",
             "title": "",
@@ -189,7 +190,6 @@
         },
         "0f3a0ed3-ef62-40bf-a07a-e94a1479fac6": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "top_subheading": "VERLAN",
             "title": "Buchstaben Ketten",
