@@ -53,9 +53,10 @@
     },
     "featured_collection_aPjkah": {
       "type": "featured-collection",
+      "custom_css": [],
       "name": "t:sections.featured-collection.presets.featured_collection.name",
       "settings": {
-        "title": "Du kennst die Ringgröße der beschenkten Person nicht? Kein Problem, für diese Schmuckstücke benötigst du keine:",
+        "title": "Du kennst die Ringgröße der beschenkten Person nicht? Kein Problem, für diese Schmuckstücke musst du sie nicht wissen:",
         "home_featured_products": "keine-ringgrosse-gold",
         "per_row": 4,
         "rows": 2,
