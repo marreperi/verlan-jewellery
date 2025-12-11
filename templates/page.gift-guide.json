@@ -14,66 +14,6 @@
       "disabled": true,
       "settings": {}
     },
-    "1646732878db94bf07": {
-      "type": "text-columns",
-      "blocks": {
-        "16467328781f96024a-0": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/manufaktur-verlan-jewellery-handmade.jpg",
-            "image_mask": "none",
-            "image_width": 310,
-            "title": "Was bedeutet Fair Fashion?",
-            "text": "<p>Mode ist dann fair, wenn sie gerecht hergestellt wird. <br/>Also Menschen, die sie herstellen, grundlegende Rechte besitzen, <br/>selbstbestimmt handeln können, gesundheitlich geschützt werden und einen angemessenen Lohn verdienen.<br/>All diese Punkte stehen für uns an höchster Stelle.<br/>Neben einer umweltfreundlichen Produktion legen wir hohen Wert auf einen respektvollen Umgang.<br/>Wir zahlen einen marktunüblich hohen Lohn an alle unsere balinesischen MitarbeiterInnen, respektieren Feiertage und übernehmen ab diesem Jahr die Krankenkassenversicherungskosten unserer PartnerInnen auf der Insel.</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "16467328781f96024a-2": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/handmade-with-love-verlan-jewellery-manufaktur.jpg",
-            "image_mask": "none",
-            "image_width": 650,
-            "title": "Umweltschonende Produktion",
-            "text": "<p>Für alle unsere Schmuckstücke verwenden wir <strong>Sterling Silber</strong>, eine <strong>22 Karat Vergoldung</strong> und unterschiedliche <strong>Halbedelsteine</strong>.<br/></p><p>Das Silber, welches für unseren Schmuck verwendet wird, beziehen wir von <a href=\"https://www.antam.com/en/csr/human-rights-i\" target=\"_blank\" title=\"ANTAM | Recycltes Silber für unsere handgefertigten Schmuckstücke aus Bali | Boho Schmuck im Bali Look\">ANTAM</a>.<br/>Zusätzlich wird für den Großteil unserer Schmuckstücke <strong>recyceltes Silber</strong> verwendet.</p><p>Auch beim Versand achten wir auf unsere Umwelt: Wir <strong>vermeiden Plastik</strong>, indem wir Kartons, Flyer & Visitenkarten aus recyceltem Papier verwenden. Versandkartons werden wiederverwendet und VERLAN Jewellery ist Teil des Dualsystems <a href=\"https://www.gruener-punkt.de/de/\" target=\"_blank\" title=\"VERLAN Jewellery beteiligt sich am Dualen System | Geüner Punkt | Plastikfreier Versand\">Grüner Punkt</a>.<br/>♡</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "16467328781f96024a-0",
-        "16467328781f96024a-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "align_text": "center",
-        "divider": false
-      }
-    },
-    "background_image_text_YBRya4": {
-      "type": "background-image-text",
-      "disabled": true,
-      "name": "t:sections.background-image-text.presets.large_image_with_text_box.name",
-      "settings": {
-        "subtitle": "",
-        "title": "",
-        "text": "",
-        "button_label": "",
-        "button_link": "",
-        "image": "shopify://shop_images/verlan_header_gift_guide_weihnachten.png",
-        "layout": "left",
-        "height": 550,
-        "framed": false,
-        "parallax": true,
-        "parallax_direction": "top",
-        "lazyload_images": true
-      }
-    },
     "slideshow_frymym": {
       "type": "slideshow",
       "blocks": {
@@ -110,12 +50,24 @@
         "autoplay_speed": 5,
         "lazyload_images": true
       }
+    },
+    "featured_collection_aPjkah": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.featured_collection.name",
+      "settings": {
+        "title": "Du kennst die Ringgröße der beschenkten Person nicht? Kein Problem, für diese Schmuckstücke benötigst du keine:",
+        "home_featured_products": "keine-ringgrosse-gold",
+        "per_row": 4,
+        "rows": 2,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
     }
   },
   "order": [
     "main",
-    "1646732878db94bf07",
-    "background_image_text_YBRya4",
-    "slideshow_frymym"
+    "slideshow_frymym",
+    "featured_collection_aPjkah"
   ]
 }
