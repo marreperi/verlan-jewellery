@@ -67,16 +67,24 @@
         "announcement-1": {
           "type": "announcement",
           "settings": {
-            "text": "SICHER DIR DEN GRÖSSTEN RABATT DES JAHRES | 20% RABATT MIT DEM CODE: BLACKWEEKS",
+            "text": "✨ Gratis Blessing Armband ab 99€   & kostenloser Versand ab 79€",
+            "link_text": "",
+            "link": ""
+          }
+        },
+        "announcement_MP9RDj": {
+          "type": "announcement",
+          "settings": {
+            "text": "Alle Bestellungen bis zum 18.12.  (DE) sollten rechtzeitig zum Fest bei euch ankommen 🎄",
             "link_text": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-1"
+        "announcement-1",
+        "announcement_MP9RDj"
       ],
-      "disabled": true,
       "settings": {
         "announcement_compact": true
       }
