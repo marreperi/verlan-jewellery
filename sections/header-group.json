@@ -14,15 +14,6 @@
     "countdown_XB7Pjd": {
       "type": "countdown",
       "blocks": {
-        "content_LY6mQT": {
-          "type": "content",
-          "settings": {
-            "heading": "",
-            "heading_size": "h2",
-            "text": "<p>Nur noch heute: 20% Rabatt auf unsere gesamte Kollektion <strong>CODE: BLACKWEEKS</strong></p>",
-            "content_alignment": "left"
-          }
-        },
         "timer_DPbgmM": {
           "type": "timer",
           "settings": {
@@ -46,7 +37,6 @@
         }
       },
       "block_order": [
-        "content_LY6mQT",
         "timer_DPbgmM",
         "button_aV8AfD"
       ],

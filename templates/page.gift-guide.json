@@ -11,34 +11,18 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "settings": {}
-    },
-    "1646732417395a7413": {
-      "type": "text-and-image",
       "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/verlan-jewellery-handmade-ring.jpg",
-        "image2": "shopify://shop_images/Ring-handgemacht-silber-schmuck-bali-manufaktur-verlan-jewellery_f67d283c-b0fa-429f-b7d9-d52271b72760.jpg",
-        "subtitle": "",
-        "title": "#WHOMADEMYJEWELLERY",
-        "text": "<p>Die <a href=\"https://www.verlan-jewellery.com\" title=\"VERLAN Jewellery | Fair hergestellter Schmuck aus Bali | Entdecke unsere Ringe, Ketten & Ohrringe aus Sterlingsilber \">VERLAN Jewellery</a> Manufaktur liegt im Herzen Balis und wird von einer lokalen Familie betreut. Uns liegt die hohe Qualität jedes einzelnen <a href=\"https://verlan-jewellery.com/collections/verlan-jewellery-alle-schmuckstuecke\" title=\"Entdecke unseren handgefertigten Schmuck aus Bali | 925 Silber | Fair und umweltschonend handgemacht\">Schmuckstückes</a> sowie eine faire Zusammenarbeit mit unseren ProduzentInnen sehr am Herzen.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "right",
-        "divider": false
-      }
+      "settings": {}
     },
     "1646732878db94bf07": {
       "type": "text-columns",
-      "disabled": true,
       "blocks": {
         "16467328781f96024a-0": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/manufaktur-verlan-jewellery-handmade.jpg",
+            "image_mask": "none",
             "image_width": 310,
             "title": "Was bedeutet Fair Fashion?",
             "text": "<p>Mode ist dann fair, wenn sie gerecht hergestellt wird. <br/>Also Menschen, die sie herstellen, grundlegende Rechte besitzen, <br/>selbstbestimmt handeln können, gesundheitlich geschützt werden und einen angemessenen Lohn verdienen.<br/>All diese Punkte stehen für uns an höchster Stelle.<br/>Neben einer umweltfreundlichen Produktion legen wir hohen Wert auf einen respektvollen Umgang.<br/>Wir zahlen einen marktunüblich hohen Lohn an alle unsere balinesischen MitarbeiterInnen, respektieren Feiertage und übernehmen ab diesem Jahr die Krankenkassenversicherungskosten unserer PartnerInnen auf der Insel.</p>",
@@ -51,6 +35,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/handmade-with-love-verlan-jewellery-manufaktur.jpg",
+            "image_mask": "none",
             "image_width": 650,
             "title": "Umweltschonende Produktion",
             "text": "<p>Für alle unsere Schmuckstücke verwenden wir <strong>Sterling Silber</strong>, eine <strong>22 Karat Vergoldung</strong> und unterschiedliche <strong>Halbedelsteine</strong>.<br/></p><p>Das Silber, welches für unseren Schmuck verwendet wird, beziehen wir von <a href=\"https://www.antam.com/en/csr/human-rights-i\" target=\"_blank\" title=\"ANTAM | Recycltes Silber für unsere handgefertigten Schmuckstücke aus Bali | Boho Schmuck im Bali Look\">ANTAM</a>.<br/>Zusätzlich wird für den Großteil unserer Schmuckstücke <strong>recyceltes Silber</strong> verwendet.</p><p>Auch beim Versand achten wir auf unsere Umwelt: Wir <strong>vermeiden Plastik</strong>, indem wir Kartons, Flyer & Visitenkarten aus recyceltem Papier verwenden. Versandkartons werden wiederverwendet und VERLAN Jewellery ist Teil des Dualsystems <a href=\"https://www.gruener-punkt.de/de/\" target=\"_blank\" title=\"VERLAN Jewellery beteiligt sich am Dualen System | Geüner Punkt | Plastikfreier Versand\">Grüner Punkt</a>.<br/>♡</p>",
@@ -63,34 +48,74 @@
         "16467328781f96024a-0",
         "16467328781f96024a-2"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "align_text": "center",
         "divider": false
       }
     },
-    "1647143304a4b69976": {
-      "type": "text-and-image",
+    "background_image_text_YBRya4": {
+      "type": "background-image-text",
       "disabled": true,
+      "name": "t:sections.background-image-text.presets.large_image_with_text_box.name",
       "settings": {
-        "image": "shopify://shop_images/200301__Verstellbare_Groesse_291.jpg",
-        "image2": "shopify://shop_images/200301__Verstellbare_Groesse_281.jpg",
         "subtitle": "",
         "title": "",
-        "text": "<p>Viele unserer Ringe bieten wir dir auch in einer verstellbaren Größe an.<br/>Hier bekommst du einen Eindruck von einem verstellbaren Ring.</p>",
+        "text": "",
         "button_label": "",
         "button_link": "",
-        "button_style": "primary",
-        "align_text": "center",
-        "layout": "right",
-        "divider": false
+        "image": "shopify://shop_images/verlan_header_gift_guide_weihnachten.png",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": true,
+        "parallax_direction": "top",
+        "lazyload_images": true
+      }
+    },
+    "slideshow_frymym": {
+      "type": "slideshow",
+      "blocks": {
+        "image_8nUYFN": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Beige_Minimalist_Christmas_Gift_Guide_Instagram_Post_Website_-2_bdfd13f9-2f66-4ab9-b921-46a21a790472.png",
+            "image_mobile": "shopify://shop_images/verlan_gift_guide_ringgroesse.png",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_8nUYFN"
+      ],
+      "name": "t:sections.slideshow.presets.hero_optional_slideshow.name",
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
       }
     }
   },
   "order": [
     "main",
-    "1646732417395a7413",
     "1646732878db94bf07",
-    "1647143304a4b69976"
+    "background_image_text_YBRya4",
+    "slideshow_frymym"
   ]
 }
