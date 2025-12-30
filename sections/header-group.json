@@ -64,6 +64,7 @@
         },
         "announcement_MP9RDj": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Wir packen & versenden eure Bestellungen innerhalb von 24h 🎄",
             "link_text": "",
