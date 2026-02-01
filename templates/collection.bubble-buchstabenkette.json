@@ -12,8 +12,8 @@
     "collection-header": {
       "type": "collection-header",
       "settings": {
-        "enable": true,
-        "collection_image_enable": true,
+        "enable": false,
+        "collection_image_enable": false,
         "parallax": true,
         "parallax_direction": "top"
       }
