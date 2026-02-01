@@ -121,6 +121,106 @@
         "1647181788df9267b5-3"
       ],
       "settings": {
+        "featured_product": "bubble-buchstaben-kette-gold",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": false,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "featured_product_H6L3fT": {
+      "type": "featured-product",
+      "blocks": {
+        "price_F9JQUV": {
+          "type": "price",
+          "settings": {}
+        },
+        "description_xDxaLN": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "variant_picker_wJ6XcQ": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "dropdown",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "buy_buttons_nzqmFA": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true
+          }
+        }
+      },
+      "block_order": [
+        "price_F9JQUV",
+        "description_xDxaLN",
+        "variant_picker_wJ6XcQ",
+        "buy_buttons_nzqmFA"
+      ],
+      "settings": {
+        "featured_product": "bubble-buchstaben-kette-silber",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "right",
+        "image_size": "medium",
+        "product_zoom_enable": false,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "featured_product_kAUkNK": {
+      "type": "featured-product",
+      "blocks": {
+        "price_fJTKn6": {
+          "type": "price",
+          "settings": {}
+        },
+        "description_WaPWVX": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "variant_picker_CKJFHD": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "dropdown",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "buy_buttons_7zFpw8": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": false
+          }
+        }
+      },
+      "block_order": [
+        "price_fJTKn6",
+        "description_WaPWVX",
+        "variant_picker_CKJFHD",
+        "buy_buttons_7zFpw8"
+      ],
+      "settings": {
         "featured_product": "buchstaben-anhaenger-initialen-kette-gold",
         "divider": false,
         "sku_enable": false,
@@ -243,6 +343,8 @@
     "rich_text_eGxFdm",
     "main-collection",
     "164718178854faeb08",
+    "featured_product_H6L3fT",
+    "featured_product_kAUkNK",
     "featured_product_HAWKAG",
     "16471820097362b6c6",
     "background_image_text_YJyygY"
