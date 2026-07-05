@@ -338,11 +338,6 @@
         "type": "shopify://apps/mida-fraud-ip-blocker/blocks/blocker-script/09aab972-8c77-47b1-a9a0-4712e9f2405d",
         "disabled": false,
         "settings": {}
-      },
-      "5280235153711299465": {
-        "type": "shopify://apps/eu-widerruf-pro/blocks/widerruf-button/019c7a79-f151-7cab-a5a7-b10009f81321",
-        "disabled": false,
-        "settings": {}
       }
     }
   },
@@ -813,5 +808,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      "a[href=\"/pages/vertrag-widerrufen\"] {background-color: #AFD7C9; font-weight: bold; padding: 8px 16px; border-radius: 4px; display: inline-block;}"
+    ]
   }
 }
