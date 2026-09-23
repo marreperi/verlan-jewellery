@@ -76,6 +76,7 @@
         "announcement-1",
         "announcement_MP9RDj"
       ],
+      "disabled": true,
       "settings": {
         "announcement_compact": true
       }

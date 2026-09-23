@@ -13,6 +13,7 @@
   "sections": {
     "mr_vue_cart_TaDNEj": {
       "type": "mr-vue-cart",
+      "disabled": true,
       "name": "Dynamischer Warenkorb",
       "settings": {
         "recommendations_title": "",
