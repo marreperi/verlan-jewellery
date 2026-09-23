@@ -119,6 +119,7 @@
         },
         "09e152e1-41bd-4996-82a6-fb57939f9082": {
           "type": "menu",
+          "disabled": true,
           "settings": {
             "show_footer_title": true,
             "menu": "bestellung",

@@ -13,6 +13,25 @@
       "type": "main-page",
       "settings": {}
     },
+    "179018289432d7b546": {
+      "type": "apps",
+      "blocks": {
+        "wave_instagram_feed_tiktok_block_rework_instagram_gallery_main_page_pKeq7L": {
+          "type": "shopify://apps/wave-instagram-feed-tiktok/blocks/block.rework.instagram-gallery-main-page/af4b13c8-5fdf-4065-8045-d1fe22f45f5a",
+          "settings": {
+            "option_galleries_id": "1",
+            "option_galleries_layout": "0"
+          }
+        }
+      },
+      "block_order": [
+        "wave_instagram_feed_tiktok_block_rework_instagram_gallery_main_page_pKeq7L"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
     "rich-text": {
       "type": "rich-text",
       "blocks": {
@@ -46,6 +65,7 @@
   },
   "order": [
     "main",
+    "179018289432d7b546",
     "rich-text",
     "form"
   ]
