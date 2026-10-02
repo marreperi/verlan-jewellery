@@ -11,14 +11,27 @@
       {%- capture widths -%}{{ block.settings.desktop_logo_height | times: block.settings.logo.aspect_ratio }}, {{ block.settings.desktop_logo_height | times: block.settings.logo.aspect_ratio | times: 2 | at_most: block.settings.logo.width }}{%- endcapture -%}
       {%- capture style -%}max-width: {{ block.settings.desktop_logo_height | times: block.settings.logo.aspect_ratio }}px;max-height: {{ block.settings.desktop_logo_height }}px;{%- endcapture -%}
 
-      {%- render 'image-element',
-        img: block.settings.logo,
-        img_height: height,
-        sizes: sizes,
-        widths: widths,
-        style: style,
-        alt: block.settings.logo.alt | default: shop.name,
-      -%}
+      {%- render 'image-element', img: block.settings.logo, img_height: height, sizes: sizes, widths: widths, style: style, alt: block.settings.logo.alt, default: shop.name -%}
     </a>
   </div>
 {%- endif -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%- render 'image-element',
+            img: block.settings.logo,
+            img_height: height,
+            sizes: sizes,
+            widths: widths,
+            style: style,
+            alt: block.settings.logo.alt | default: shop.name,
+          -%}
+  to: "{%- render 'image-element', img: block.settings.logo, img_height: height, sizes:
+    sizes, widths: widths, style: style, alt: block.settings.logo.alt, default: shop.name
+    -%}"
+  position: 870..1040
+{% endcomment %}
