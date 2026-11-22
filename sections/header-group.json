@@ -17,11 +17,11 @@
         "timer_DPbgmM": {
           "type": "timer",
           "settings": {
-            "year": "2025",
+            "year": "2026",
             "month": "11",
-            "day": "31",
-            "hour": "00",
-            "minute": "00",
+            "day": "29",
+            "hour": "23",
+            "minute": "59",
             "hide_timer": true,
             "text": ""
           }
@@ -40,7 +40,6 @@
         "timer_DPbgmM",
         "button_aV8AfD"
       ],
-      "disabled": true,
       "settings": {
         "layout": "banner",
         "full_width": true,
@@ -54,8 +53,17 @@
     "announcement": {
       "type": "announcement",
       "blocks": {
+        "announcement_79Mt9k": {
+          "type": "announcement",
+          "settings": {
+            "text": "BLACK WEEK",
+            "link_text": "Der größte Rabatt des Jahres | 15% RABATT AUF ALLES | CODE: BLACKWEEK",
+            "link": ""
+          }
+        },
         "announcement-1": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "✨ Gratis Blessing Armband ab 99€   & kostenloser Versand ab 79€",
             "link_text": "",
@@ -73,10 +81,10 @@
         }
       },
       "block_order": [
+        "announcement_79Mt9k",
         "announcement-1",
         "announcement_MP9RDj"
       ],
-      "disabled": true,
       "settings": {
         "announcement_compact": true
       }
